@@ -1,0 +1,89 @@
+# Browser Automation Configuration
+# This file provides configuration for the browser automation integration
+# All settings can also be overridden using environment variables with prefix BROWSER_AUTOMATION_
+
+# Global settings
+enabled: true
+log_level: "INFO"
+debug_mode: false
+performance_monitoring: true
+
+# Resource limits
+max_memory_mb: 2048
+max_cpu_percent: 80
+
+# Integration settings
+playwright_mcp_enabled: true
+fallback_to_playwright: true
+
+# Browser-Use Wrapper Configuration
+browser_use:
+  headless: true
+  browser_type: "chromium"  # chromium, firefox, webkit
+  viewport_width: 1920
+  viewport_height: 1080
+  timeout_seconds: 30
+  max_sessions: 5
+  session_timeout_minutes: 30
+  screenshots_enabled: true
+  screenshots_dir: "screenshots"
+  user_agent: null
+  proxy: null
+  extra_args: []
+
+# Session Manager Configuration
+session_manager:
+  storage_dir: "browser_sessions"
+  max_sessions: 100
+  session_timeout_minutes: 60
+  cleanup_interval_seconds: 300
+  enable_persistence: true
+  max_result_age_days: 7
+
+# Task Classifier Configuration
+task_classifier:
+  confidence_threshold: 0.7
+  enable_url_analysis: true
+  enable_site_profiling: true
+  cache_site_profiles: true
+
+# Orchestrator Configuration
+orchestrator:
+  routing_strategy: "best_fit"  # browser_use_first, playwright_first, best_fit, parallel
+  default_timeout_seconds: 300
+  max_concurrent_sessions: 5
+  enable_screenshots: true
+  screenshot_on_error: true
+
+# Environment-specific configurations can be added here
+# For example:
+
+# Development environment
+development:
+  debug_mode: true
+  browser_use:
+    headless: false
+    max_sessions: 2
+  orchestrator:
+    max_concurrent_sessions: 2
+
+# Production environment
+production:
+  log_level: "WARNING"
+  browser_use:
+    headless: true
+    max_sessions: 10
+  session_manager:
+    max_sessions: 500
+  orchestrator:
+    max_concurrent_sessions: 10
+
+# Staging environment
+staging:
+  log_level: "INFO"
+  browser_use:
+    max_sessions: 5
+  session_manager:
+    max_sessions: 200
+  orchestrator:
+    max_concurrent_sessions: 5
