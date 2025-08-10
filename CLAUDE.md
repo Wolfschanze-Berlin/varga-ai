@@ -140,3 +140,4 @@ This project is in early development phase. The `projectBrief.md` contains compr
 
 The documentation site (gutenberg/) will serve as both project documentation and potential customer-facing content for the SaaS platform.
 - FOLLOW STRICTLY @projectBrief.md
+- ULTRA IMPORTANT ALL DOCS NEEDS TO BE WRITTE IN gutenberg/ with proper folder structure
