@@ -1,0 +1,11 @@
+[project]
+name = "varga-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "autogen-agentchat>=0.7.2",
+    "autogen-ext[openai]>=0.7.2",
+    "autogenstudio>=0.1.5",
+]
