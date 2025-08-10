@@ -1,0 +1,10 @@
+{
+  "label": "User Guides",
+  "position": 6,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "User guides, tutorials, and how-to documentation for SME customers using the platform."
+  }
+}

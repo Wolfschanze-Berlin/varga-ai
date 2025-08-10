@@ -2,46 +2,71 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Varga AI Platform
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the **Varga AI Platform** - an AutoGen-based SaaS platform that democratizes AI automation for Small and Medium Enterprises (SMEs).
+
+## Overview
+
+The Varga AI Platform provides pre-built AI agents that handle common business tasks such as customer service, invoicing, appointment scheduling, and more, without requiring customers to create their own agents.
+
+### Key Features
+
+- **No-code agent configuration** - SMEs can activate and configure pre-built agents without technical expertise
+- **Pre-built templates** for common SME tasks (invoicing, customer service, inventory management)
+- **Pay-per-use model** for cost efficiency
+- **Quick deployment** capability
+- **Seamless integrations** with popular SME tools
+
+### Target Market
+
+We solve key problems for SMEs:
+- Limited IT resources
+- High cost of custom automation solutions
+- Complex integration requirements
+- Lack of AI/automation expertise
+- Budget constraints preventing automation adoption
+
+## Quick Start
+
+### Python Backend Development
+
+```bash
+# Install dependencies using uv
+uv sync
+
+# Run the main application
+uv run python main.py
+
+# Enter Python environment
+uv shell
+```
+
+### Documentation Development
+
+```bash
+cd gutenberg
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+## Architecture Overview
+
+The platform consists of:
+
+1. **Python Backend**: Core AutoGen-based automation platform
+2. **Documentation Site**: Docusaurus-based documentation
+3. **Agent Marketplace**: 25-30 pre-built agents across 5 categories
+4. **Workflow Orchestration**: Visual workflow builder
+5. **Analytics Dashboard**: Real-time monitoring and ROI tracking
 
 ## Getting Started
 
-Get started by **creating a new site**.
-
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-### What you'll need
-
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Explore the documentation sections to learn about:
+- [Implementation Summary](./development/implementation-status) - Technical implementation details
+- [Architecture](./architecture/overview) - System design and components  
+- [Tools](./development/tools-overview) - Available tools and their capabilities

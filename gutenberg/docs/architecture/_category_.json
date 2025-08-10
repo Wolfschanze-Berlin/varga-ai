@@ -1,0 +1,10 @@
+{
+  "label": "Architecture",
+  "position": 4,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "System architecture, design patterns, and technical specifications for the Varga AI platform."
+  }
+}

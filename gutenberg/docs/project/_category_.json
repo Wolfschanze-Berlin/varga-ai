@@ -1,0 +1,10 @@
+{
+  "label": "Project Overview",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Complete project specifications, goals, and business requirements for the Varga AI platform."
+  }
+}

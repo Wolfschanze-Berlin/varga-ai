@@ -2,56 +2,109 @@
 sidebar_position: 2
 ---
 
-# Create a Document
+# Development Setup
 
-Documents are **groups of pages** connected through:
+Learn how to set up and contribute to the Varga AI Platform development environment.
 
-- a **sidebar**
-- **previous/next navigation**
-- **versioning**
+## Prerequisites
 
-## Create your first Doc
+Before getting started, ensure you have the following installed:
 
-Create a Markdown file at `docs/hello.md`:
+- **Python 3.12+**: Required for the backend platform
+- **Node.js 18+**: Required for the documentation site
+- **uv**: Python package manager for dependency management
+- **Git**: Version control
 
-```md title="docs/hello.md"
-# Hello
+## Project Structure
 
-This is my **first Docusaurus document**!
+The project is organized as follows:
+
+```
+varga-ai/
+├── src/                       # Python backend source
+├── gutenberg/                 # Docusaurus documentation
+├── pyproject.toml            # Python dependencies
+├── main.py                   # Application entry point
+└── .claude/                  # Claude Code configuration
 ```
 
-A new document is now available at [http://localhost:3000/docs/hello](http://localhost:3000/docs/hello).
+## Backend Development Setup
 
-## Configure the Sidebar
+### 1. Clone the Repository
 
-Docusaurus automatically **creates a sidebar** from the `docs` folder.
-
-Add metadata to customize the sidebar label and position:
-
-```md title="docs/hello.md" {1-4}
----
-sidebar_label: 'Hi!'
-sidebar_position: 3
----
-
-# Hello
-
-This is my **first Docusaurus document**!
+```bash
+git clone <repository-url>
+cd varga-ai
 ```
 
-It is also possible to create your sidebar explicitly in `sidebars.js`:
+### 2. Install Python Dependencies
 
-```js title="sidebars.js"
-export default {
-  tutorialSidebar: [
-    'intro',
-    // highlight-next-line
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-};
+```bash
+# Install dependencies using uv
+uv sync
+
+# Activate the virtual environment
+uv shell
 ```
+
+### 3. Configure Environment
+
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env with your configuration
+# Add your API keys and settings
+```
+
+### 4. Run the Application
+
+```bash
+# Run the main application
+uv run python main.py
+
+# Or run with the virtual environment activated
+python main.py
+```
+
+## Documentation Development
+
+### 1. Navigate to Documentation Directory
+
+```bash
+cd gutenberg
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Start Development Server
+
+```bash
+npm start
+```
+
+The documentation site will be available at [http://localhost:3000](http://localhost:3000).
+
+## Development Guidelines
+
+### Code Structure
+- Follow the 1-file-1-class principle
+- Maximum 400 lines per file
+- Use centralized logging with loguru
+- Implement comprehensive error handling
+
+### Python Development
+- Use type hints for all functions
+- Follow PEP 8 style guidelines
+- Write comprehensive docstrings
+- Include unit tests for new features
+
+### Documentation
+- Use clear, concise language
+- Include code examples
+- Update documentation with code changes
+- Follow Docusaurus markdown conventions

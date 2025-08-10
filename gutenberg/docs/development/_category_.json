@@ -1,0 +1,10 @@
+{
+  "label": "Development",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "description": "Developer guides, implementation details, and technical documentation for contributing to the Varga AI platform."
+  }
+}
