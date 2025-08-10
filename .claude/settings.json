@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npx create-docusaurus:*)",
+      "Bash(env)",
+      "Bash(python test:*)",
+      "Bash(mv:*)",
+      "mcp__sequentialthinking__sequentialthinking",
+      "Bash(cp:*)",
+      "Bash(*:*)"
+    ],
+    "deny": []
+  },
+  "enabledMcpjsonServers": [
+    "context7",
+    "sequentialthinking",
+    "memory",
+    "duckduckgo",
+    "playwright",
+    "MCP_DOCKER"
+  ]
+}
