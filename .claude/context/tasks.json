@@ -1,0 +1,404 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2025-08-11",
+    "last_updated": "2025-08-11",
+    "description": "Master task tracking for Varga AI AutoGen SME Platform",
+    "usage_instructions": {
+      "when_to_check": "Always check this file at the start of each session",
+      "when_to_update": "Update immediately when task status changes",
+      "status_values": ["not_started", "in_progress", "completed", "blocked", "deferred"],
+      "priority_levels": {
+        "P0": "Critical - Blocks everything",
+        "P1": "High - Core functionality",
+        "P2": "Medium - Important features",
+        "P3": "Low - Nice to have"
+      },
+      "integration": "Update history.json when tasks complete with learnings"
+    }
+  },
+  "phases": {
+    "phase_1_foundation": {
+      "name": "Core Platform Foundation",
+      "target_completion": "2025-01-30",
+      "description": "Essential infrastructure for multi-tenant SaaS",
+      "status": "in_progress"
+    },
+    "phase_2_agents": {
+      "name": "Agent Library Expansion",
+      "target_completion": "2025-02-28",
+      "description": "Build 25-30 production agents",
+      "status": "not_started"
+    },
+    "phase_3_monetization": {
+      "name": "Monetization Infrastructure",
+      "target_completion": "2025-03-15",
+      "description": "Billing, subscriptions, usage tracking",
+      "status": "not_started"
+    },
+    "phase_4_growth": {
+      "name": "Growth Features",
+      "target_completion": "2025-04-30",
+      "description": "Visual builder, analytics, marketplace",
+      "status": "not_started"
+    }
+  },
+  "tasks": [
+    {
+      "id": "DB-001",
+      "title": "Implement PostgreSQL Database Layer",
+      "description": "Set up PostgreSQL with SQLAlchemy ORM, multi-tenant schema isolation, and migration system",
+      "phase": "phase_1_foundation",
+      "priority": "P0",
+      "status": "not_started",
+      "effort_days": 5,
+      "dependencies": [],
+      "completion_criteria": [
+        "PostgreSQL connection established",
+        "SQLAlchemy models for core entities",
+        "Multi-tenant isolation working",
+        "Alembic migrations configured",
+        "Connection pooling optimized"
+      ],
+      "technical_details": {
+        "location": "src/database/",
+        "files_needed": ["models.py", "session.py", "migrations/", "tenant_manager.py"],
+        "integrations": ["All agents and tools need DB access"]
+      }
+    },
+    {
+      "id": "AUTH-001",
+      "title": "Implement Authentication System",
+      "description": "Auth0 integration with JWT tokens, role-based access control, and tenant isolation",
+      "phase": "phase_1_foundation",
+      "priority": "P0",
+      "status": "not_started",
+      "effort_days": 4,
+      "dependencies": ["DB-001"],
+      "completion_criteria": [
+        "Auth0 configured and integrated",
+        "JWT token validation",
+        "RBAC middleware implemented",
+        "Tenant isolation in auth",
+        "API key management for agents"
+      ],
+      "technical_details": {
+        "location": "src/auth/",
+        "files_needed": ["auth_manager.py", "jwt_handler.py", "rbac.py", "api_keys.py"],
+        "integrations": ["FastAPI middleware", "All API endpoints"]
+      }
+    },
+    {
+      "id": "API-001",
+      "title": "Build FastAPI Backend",
+      "description": "REST API for agent orchestration, workflow management, and platform operations",
+      "phase": "phase_1_foundation",
+      "priority": "P0",
+      "status": "not_started",
+      "effort_days": 7,
+      "dependencies": ["DB-001", "AUTH-001"],
+      "completion_criteria": [
+        "FastAPI app structure",
+        "Agent management endpoints",
+        "Workflow execution endpoints",
+        "WebSocket support for real-time",
+        "OpenAPI documentation",
+        "Rate limiting and throttling"
+      ],
+      "technical_details": {
+        "location": "src/api/",
+        "files_needed": ["main.py", "routers/", "schemas/", "middleware/", "websockets/"],
+        "endpoints": ["/agents", "/workflows", "/tasks", "/integrations", "/analytics"]
+      }
+    },
+    {
+      "id": "UI-001",
+      "title": "Create Basic Web Dashboard",
+      "description": "React/Next.js dashboard for agent management and monitoring",
+      "phase": "phase_1_foundation",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 10,
+      "dependencies": ["API-001"],
+      "completion_criteria": [
+        "Login/logout functionality",
+        "Agent marketplace view",
+        "Agent configuration forms",
+        "Task monitoring dashboard",
+        "Basic analytics views"
+      ],
+      "technical_details": {
+        "location": "frontend/",
+        "stack": "Next.js, TypeScript, Tailwind CSS",
+        "pages": ["dashboard", "agents", "workflows", "integrations", "settings"]
+      }
+    },
+    {
+      "id": "AGENT-001",
+      "title": "Lead Qualifier Agent",
+      "description": "Automatically qualify incoming leads based on criteria",
+      "phase": "phase_2_agents",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 3,
+      "dependencies": ["DB-001"],
+      "category": "sales",
+      "completion_criteria": [
+        "Lead scoring algorithm",
+        "CRM integration",
+        "Email parsing capability",
+        "Qualification criteria configuration",
+        "AutoGen conversation flow"
+      ]
+    },
+    {
+      "id": "AGENT-002",
+      "title": "Invoice Processor Agent",
+      "description": "Automate invoice creation, sending, and tracking",
+      "phase": "phase_2_agents",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 4,
+      "dependencies": ["DB-001"],
+      "category": "finance",
+      "completion_criteria": [
+        "Invoice generation from templates",
+        "QuickBooks integration",
+        "Payment tracking",
+        "Automated reminders",
+        "PDF generation"
+      ]
+    },
+    {
+      "id": "AGENT-003",
+      "title": "Ticket Handler Agent",
+      "description": "Automated customer support ticket management",
+      "phase": "phase_2_agents",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 4,
+      "dependencies": ["DB-001"],
+      "category": "customer_service",
+      "completion_criteria": [
+        "Ticket categorization",
+        "Auto-response generation",
+        "Escalation detection",
+        "Knowledge base integration",
+        "Sentiment analysis"
+      ]
+    },
+    {
+      "id": "AGENT-004",
+      "title": "Appointment Scheduler Agent",
+      "description": "Automated appointment booking and calendar management",
+      "phase": "phase_2_agents",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 3,
+      "dependencies": ["DB-001"],
+      "category": "sales",
+      "completion_criteria": [
+        "Calendar integration (Google, Outlook)",
+        "Availability checking",
+        "Automated scheduling",
+        "Reminder sending",
+        "Rescheduling handling"
+      ]
+    },
+    {
+      "id": "AGENT-005",
+      "title": "FAQ Responder Agent",
+      "description": "Intelligent FAQ answering with knowledge base",
+      "phase": "phase_2_agents",
+      "priority": "P2",
+      "status": "not_started",
+      "effort_days": 2,
+      "dependencies": ["DB-001"],
+      "category": "customer_service",
+      "completion_criteria": [
+        "Knowledge base integration",
+        "Semantic search",
+        "Multi-channel support",
+        "Learning from interactions",
+        "Fallback to human"
+      ]
+    },
+    {
+      "id": "AGENT-006",
+      "title": "Workflow Automator Agent",
+      "description": "Orchestrate multi-step business processes",
+      "phase": "phase_2_agents",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 5,
+      "dependencies": ["DB-001", "API-001"],
+      "category": "operations",
+      "completion_criteria": [
+        "Workflow definition language",
+        "Trigger management",
+        "Conditional logic",
+        "Error handling",
+        "Audit logging"
+      ]
+    },
+    {
+      "id": "BILL-001",
+      "title": "Stripe Billing Integration",
+      "description": "Subscription management and payment processing",
+      "phase": "phase_3_monetization",
+      "priority": "P0",
+      "status": "not_started",
+      "effort_days": 5,
+      "dependencies": ["API-001", "DB-001"],
+      "completion_criteria": [
+        "Stripe account setup",
+        "Subscription plans configured",
+        "Payment processing",
+        "Invoice generation",
+        "Webhook handling",
+        "Dunning management"
+      ]
+    },
+    {
+      "id": "BILL-002",
+      "title": "Usage Metering System",
+      "description": "Track and bill for agent usage",
+      "phase": "phase_3_monetization",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 4,
+      "dependencies": ["DB-001", "BILL-001"],
+      "completion_criteria": [
+        "Usage tracking per agent",
+        "Cost calculation",
+        "Usage limits enforcement",
+        "Overage handling",
+        "Usage analytics"
+      ]
+    },
+    {
+      "id": "FLOW-001",
+      "title": "Visual Workflow Builder",
+      "description": "Drag-and-drop workflow designer",
+      "phase": "phase_4_growth",
+      "priority": "P2",
+      "status": "not_started",
+      "effort_days": 15,
+      "dependencies": ["UI-001", "AGENT-006"],
+      "completion_criteria": [
+        "React Flow integration",
+        "Node library for agents",
+        "Connection logic",
+        "Workflow validation",
+        "Export/import functionality"
+      ]
+    },
+    {
+      "id": "ANALYTICS-001",
+      "title": "Analytics Dashboard",
+      "description": "Comprehensive analytics and reporting",
+      "phase": "phase_4_growth",
+      "priority": "P2",
+      "status": "not_started",
+      "effort_days": 8,
+      "dependencies": ["DB-001", "UI-001"],
+      "completion_criteria": [
+        "Real-time metrics",
+        "Historical trends",
+        "ROI calculator",
+        "Export functionality",
+        "Custom reports"
+      ]
+    },
+    {
+      "id": "TEST-001",
+      "title": "Comprehensive Test Suite",
+      "description": "Unit, integration, and E2E tests for platform",
+      "phase": "phase_1_foundation",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 10,
+      "dependencies": [],
+      "completion_criteria": [
+        "80% code coverage",
+        "Unit tests for all agents",
+        "Integration tests for tools",
+        "E2E tests for workflows",
+        "Performance tests"
+      ]
+    },
+    {
+      "id": "DEPLOY-001",
+      "title": "Production Deployment Pipeline",
+      "description": "AWS infrastructure and CI/CD setup",
+      "phase": "phase_1_foundation",
+      "priority": "P1",
+      "status": "not_started",
+      "effort_days": 5,
+      "dependencies": ["API-001", "DB-001"],
+      "completion_criteria": [
+        "AWS ECS setup",
+        "RDS configuration",
+        "GitHub Actions CI/CD",
+        "Environment management",
+        "Monitoring setup"
+      ]
+    },
+    {
+      "id": "DOC-001",
+      "title": "Complete Platform Documentation",
+      "description": "User guides, API docs, and tutorials",
+      "phase": "phase_1_foundation",
+      "priority": "P2",
+      "status": "in_progress",
+      "effort_days": 7,
+      "dependencies": [],
+      "completion_criteria": [
+        "User manual",
+        "API reference",
+        "Agent documentation",
+        "Integration guides",
+        "Video tutorials"
+      ],
+      "notes": "Partially complete - Docusaurus structure exists"
+    }
+  ],
+  "blockers": [
+    {
+      "task_id": "DB-001",
+      "blocker": "Need to decide between RDS vs Aurora for PostgreSQL",
+      "severity": "medium"
+    },
+    {
+      "task_id": "AUTH-001",
+      "blocker": "Need Auth0 account and pricing plan decision",
+      "severity": "high"
+    }
+  ],
+  "metrics": {
+    "total_tasks": 17,
+    "completed": 0,
+    "in_progress": 1,
+    "not_started": 16,
+    "blocked": 0,
+    "completion_percentage": 5.88,
+    "critical_path": ["DB-001", "AUTH-001", "API-001", "BILL-001"]
+  },
+  "next_actions": [
+    {
+      "priority": 1,
+      "action": "Start DB-001: PostgreSQL Database Layer",
+      "reason": "Blocks all other development"
+    },
+    {
+      "priority": 2,
+      "action": "Complete AUTH-001: Authentication System",
+      "reason": "Required for multi-tenant isolation"
+    },
+    {
+      "priority": 3,
+      "action": "Build API-001: FastAPI Backend",
+      "reason": "Platform core functionality"
+    }
+  ]
+}

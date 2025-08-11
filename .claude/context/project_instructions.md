@@ -26,6 +26,19 @@
 
 ```
 varga-ai/
+├── .claude/                   # Claude Code configuration
+│   ├── context/              # Project context and history
+│   │   ├── project_instructions.md
+│   │   ├── tasks.json       # Master task tracking
+│   │   └── history.json    # Development history
+│   └── plans/               # Implementation plans
+│       ├── plan_template.md
+│       └── {plan_name}/     # Individual plans
+│           ├── plan.md      # Main plan document
+│           ├── status.json  # Progress tracking
+│           ├── decisions.md # Architectural decisions
+│           └── notes/       # Research notes
+│
 ├── agents/                     # AutoGen agent implementations
 │   ├── base/                  # Base agent classes and registry
 │   ├── categories/            # Domain-specific agents
@@ -76,8 +89,40 @@ git status
 git branch
 
 # Read context FIRST
-cat .claude/context/history.json
+cat .claude/context/tasks.json      # Check priority tasks
+cat .claude/context/history.json    # Review recent changes
+ls .claude/plans/                   # Check active plans
 ```
+
+### 📋 Plan Workflow
+
+When implementing complex features or P0/P1 tasks:
+
+1. **Create a Plan** (for any task from tasks.json)
+   ```bash
+   mkdir -p .claude/plans/{TASK_ID}-{name}/notes
+   cp .claude/plans/plan_template.md .claude/plans/{TASK_ID}-{name}/plan.md
+   ```
+
+2. **Plan Structure**
+   - `plan.md` - Main implementation plan
+   - `status.json` - Progress tracking
+   - `decisions.md` - Architectural decisions
+   - `notes/` - Research and working notes
+
+3. **Plan Lifecycle**
+   - **planning** → **approved** → **in_progress** → **completed**
+   - Update status.json as you progress
+   - Document decisions and pivots
+   - Archive after 30 days (never delete)
+
+4. **When to Create Plans**
+   - User requests "plan mode"
+   - Starting any P0 or P1 task
+   - Making architectural decisions
+   - Multiple implementation paths exist
+
+See `.claude/PLAN_WORKFLOW.md` for complete details
 
 ### Adding New Features
 
@@ -244,11 +289,14 @@ uv run python language_teacher_bot.py
 
 ### MUST DO
 1. **ALWAYS** use `uv` for Python package management
-2. **ALWAYS** update `.claude/context/history.json` for significant changes
-3. **ALWAYS** check existing patterns before implementing new features
-4. **ALWAYS** use centralized logging (never print())
-5. **ALWAYS** follow 1-file-1-class rule (max 400 lines)
-6. **ALWAYS** write docs in `gutenberg/` with proper structure
+2. **ALWAYS** check `.claude/context/tasks.json` at session start
+3. **ALWAYS** create plans for P0/P1 tasks before implementation
+4. **ALWAYS** update `.claude/context/history.json` for significant changes
+5. **ALWAYS** check existing patterns before implementing new features
+6. **ALWAYS** use centralized logging (never print())
+7. **ALWAYS** follow 1-file-1-class rule (max 400 lines)
+8. **ALWAYS** write docs in `gutenberg/` with proper structure
+9. **ALWAYS** update plan status.json when making progress
 
 ### NEVER DO
 1. **NEVER** commit `.env` files or secrets
@@ -289,7 +337,10 @@ git push origin dev
 ### Key Files
 - `projectBrief.md` - Full project specification
 - `CLAUDE.md` - Claude Code instructions
+- `.claude/PLAN_WORKFLOW.md` - Plan creation workflow
+- `.claude/context/tasks.json` - Master task tracking
 - `.claude/context/history.json` - Development history
+- `.claude/plans/` - Implementation plans
 - `src/config/settings.py` - Main configuration
 - `agents/base/agent_registry.py` - Agent registry
 - `src/tools/base/tool_registry.py` - Tool registry
