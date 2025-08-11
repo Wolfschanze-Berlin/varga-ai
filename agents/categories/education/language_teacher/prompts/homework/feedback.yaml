@@ -1,0 +1,432 @@
+# Homework Feedback and Evaluation Prompts
+# Constructive, detailed feedback that promotes learning
+
+feedback_structure:
+  comprehensive_feedback:
+    template: |
+      📋 **Assignment Feedback: {assignment_title}**
+      
+      ## 🌟 **Overall Assessment**
+      {overall_performance}
+      
+      ## ✅ **What You Did Well**
+      {strengths_identified}
+      
+      ## 💡 **Areas for Improvement**
+      {improvement_areas}
+      
+      ## 🎯 **Specific Corrections**
+      {detailed_corrections}
+      
+      ## 📈 **Progress Notes**
+      {progress_observations}
+      
+      ## 🚀 **Next Steps**
+      {recommendations}
+      
+      **Overall Grade:** {grade_or_level} | **Effort Recognition:** {effort_rating}
+
+  quick_feedback:
+    template: |
+      ✨ **Quick Feedback: {assignment_title}**
+      
+      **Great job on:** {key_strength}
+      **Focus next time on:** {key_improvement}
+      **Specific fix:** {one_main_correction}
+      
+      **Keep up the excellent work!** 🎉
+
+feedback_categories:
+  vocabulary_usage:
+    excellent:
+      template: |
+        🌟 **Vocabulary Excellence!**
+        
+        Your vocabulary usage shows real growth! I'm particularly impressed by:
+        
+        - **Range:** You used {vocabulary_count} different words accurately
+        - **Precision:** Great choices like "{example_word}" in "{example_context}"
+        - **Sophistication:** Using words like "{advanced_words}" shows expanding knowledge
+        
+        **Standout moment:** {specific_example}
+        
+        This vocabulary richness makes your {target_language} much more expressive and natural!
+    
+    good:
+      template: |
+        👍 **Solid Vocabulary Work**
+        
+        Your vocabulary usage is developing well:
+        
+        **Strengths:**
+        - Accurate use of core vocabulary
+        - Good attempts at new words from our conversations
+        - Clear meaning throughout
+        
+        **Growth opportunities:**
+        - Try incorporating more descriptive adjectives
+        - Consider synonyms for repeated words like "{repeated_word}"
+        - {specific_vocabulary_suggestion}
+        
+        **Next goal:** Experiment with 2-3 more advanced words in your next assignment
+    
+    needs_work:
+      template: |
+        💪 **Vocabulary Development Focus**
+        
+        I can see you're working hard with vocabulary! Let's strengthen this area:
+        
+        **Current level:** Using basic vocabulary accurately
+        **Next step:** Expanding range and precision
+        
+        **Specific improvements:**
+        - "{word_correction_1}"
+        - "{word_correction_2}"
+        - "{word_correction_3}"
+        
+        **Practice suggestion:** {targeted_vocabulary_exercise}
+        
+        **Remember:** Building vocabulary takes time - you're on the right track!
+  
+  grammar_accuracy:
+    strong_grammar:
+      template: |
+        🔧 **Grammar Mastery!**
+        
+        Your grammar control is impressive! Notable achievements:
+        
+        **Complex structures:** You successfully used {complex_structures}
+        **Consistency:** {grammar_point} was accurate throughout
+        **Natural flow:** Your sentences connect smoothly
+        
+        **Perfect examples:**
+        - "{perfect_sentence_1}"
+        - "{perfect_sentence_2}"
+        
+        **Minor refinements:** {minor_grammar_notes}
+        
+        This level of grammar accuracy allows your ideas to shine through clearly!
+    
+    developing_grammar:
+      template: |
+        ⚙️ **Grammar Development**
+        
+        Your grammar is progressing steadily! Here's what I noticed:
+        
+        **Solid foundation:** {grammar_strengths}
+        **Inconsistent areas:** {inconsistent_grammar}
+        **Growth pattern:** {improvement_pattern}
+        
+        **Key corrections:**
+        1. {correction_1}
+        2. {correction_2}
+        3. {correction_3}
+        
+        **Practice focus:** {grammar_practice_area}
+        
+        **Confidence note:** These are normal learning stages - you're developing well!
+    
+    grammar_challenges:
+      template: |
+        🎯 **Grammar Focus Needed**
+        
+        Let's work together to strengthen your grammar foundation:
+        
+        **Priority areas:** {priority_grammar_issues}
+        **Pattern I noticed:** {error_pattern}
+        
+        **Specific help:**
+        - **Issue:** {grammar_issue}
+        - **Rule:** {grammar_rule}
+        - **Correct form:** {correct_examples}
+        - **Practice:** {practice_suggestion}
+        
+        **Encouragement:** Grammar rules take time to internalize. Every correction is progress!
+
+  content_and_ideas:
+    excellent_content:
+      template: |
+        💭 **Outstanding Content!**
+        
+        Your ideas and content are engaging and well-developed:
+        
+        **Creativity:** {creative_elements}
+        **Depth:** {content_depth}
+        **Personal connection:** {personal_elements}
+        **Organization:** {structure_quality}
+        
+        **What impressed me most:** {standout_content}
+        
+        This kind of thoughtful, personal content makes language learning meaningful and memorable!
+    
+    good_content:
+      template: |
+        📝 **Well-Developed Content**
+        
+        Your content shows good thinking and organization:
+        
+        **Strengths:**
+        - Clear main ideas
+        - Relevant supporting details
+        - {content_strength}
+        
+        **Enhancement suggestions:**
+        - {content_suggestion_1}
+        - {content_suggestion_2}
+        
+        **Next level:** Try adding more {specific_content_element} to make your writing even more engaging
+    
+    content_development_needed:
+      template: |
+        📋 **Content Development Focus**
+        
+        Let's work on developing your ideas more fully:
+        
+        **Current level:** Basic ideas present
+        **Goal:** More detailed, engaging content
+        
+        **Suggestions:**
+        - Expand on {underdeveloped_idea}
+        - Add personal examples or experiences
+        - Include more specific details
+        
+        **Question to consider:** {thought_provoking_question}
+        
+        **Remember:** Good content comes from sharing your genuine thoughts and experiences!
+
+error_analysis:
+  pattern_identification:
+    recurring_errors:
+      template: |
+        🔍 **Error Pattern Analysis**
+        
+        I've noticed a consistent pattern that we can work on together:
+        
+        **Pattern:** {error_pattern}
+        **Frequency:** Appeared {error_frequency} times
+        **Examples:** 
+        - {error_example_1}
+        - {error_example_2}
+        
+        **Why this happens:** {explanation_of_cause}
+        **Simple rule to remember:** {memory_aid}
+        **Practice strategy:** {targeted_practice}
+        
+        **Progress note:** Once you master this pattern, your accuracy will improve significantly!
+    
+    improvement_trends:
+      template: |
+        📈 **Improvement Trends I'm Seeing**
+        
+        **Great progress on:**
+        - {improvement_area_1}: Was challenging {time_period} ago, now much more consistent
+        - {improvement_area_2}: Showing steady improvement
+        
+        **Current focus areas:** {current_challenges}
+        
+        **Pattern:** You tend to master concepts in about {learning_timeline}, which is excellent progress!
+        
+        **Prediction:** Based on this trend, I expect you'll have {next_milestone} mastered soon!
+  
+  error_prioritization:
+    high_priority:
+      template: |
+        🚨 **Priority Grammar Focus**
+        
+        Let's prioritize fixing this error because it affects communication clarity:
+        
+        **Error:** {high_priority_error}
+        **Impact:** {communication_impact}
+        **Quick fix:** {immediate_solution}
+        **Practice:** {focused_practice}
+        
+        **Goal:** Let's get this solid in the next few assignments!
+    
+    medium_priority:
+      template: |
+        ⚠️ **Medium Priority - Polish and Refine**
+        
+        These areas are good for ongoing improvement:
+        
+        **Areas:** {medium_priority_areas}
+        **Impact:** Don't affect understanding but will make you sound more natural
+        **Approach:** Work on these gradually as you practice
+        
+        **Timeline:** No rush - focus when you feel comfortable with higher priorities
+    
+    low_priority:
+      template: |
+        ℹ️ **Future Refinements**
+        
+        These are advanced details to perfect later:
+        
+        **Areas:** {low_priority_areas}
+        **Note:** These are sophisticated aspects that even advanced learners work on
+        **Timing:** Great goals for when you're feeling confident with the basics
+        
+        **Recognition:** The fact that these are your main "errors" shows how far you've come!
+
+motivational_feedback:
+  effort_recognition:
+    high_effort:
+      template: |
+        🏆 **Exceptional Effort Recognized!**
+        
+        The care and attention you put into this assignment really shows:
+        
+        **Evidence of effort:**
+        - {effort_indicator_1}
+        - {effort_indicator_2}
+        - {effort_indicator_3}
+        
+        **Impact:** This kind of dedication is exactly what leads to rapid improvement in language learning.
+        
+        **Personal note:** {personalized_encouragement}
+        
+        Keep up this outstanding work ethic - it's truly inspiring!
+    
+    good_effort:
+      template: |
+        👏 **Good Work Ethic**
+        
+        I can see you put solid effort into this assignment:
+        
+        **What shows your effort:** {effort_indicators}
+        **Result:** Clear progress from your last assignment
+        
+        **Encouragement:** Consistent effort like this builds real fluency over time.
+        
+        **Challenge:** Ready to push yourself a little further next time?
+    
+    encouraging_low_effort:
+      template: |
+        🌱 **Every Step Counts**
+        
+        I understand that some assignments feel more challenging than others. That's completely normal!
+        
+        **What you accomplished:** {positive_aspects}
+        **Small wins:** {minor_successes}
+        
+        **Gentle suggestion:** {supportive_suggestion}
+        
+        **Remember:** Learning happens at different speeds, and you're still moving forward!
+  
+  progress_celebration:
+    breakthrough_moment:
+      template: |
+        🎉 **Breakthrough Achievement!**
+        
+        This assignment shows a significant leap in your {skill_area}!
+        
+        **The breakthrough:** {specific_breakthrough}
+        **Compare to:** {comparison_to_earlier_work}
+        **What this means:** {significance_explanation}
+        
+        **Celebration:** This is the kind of progress that makes language teachers incredibly proud!
+        
+        **Next adventure:** Now that you've mastered this, you're ready for {next_challenge}!
+    
+    steady_progress:
+      template: |
+        📊 **Steady Progress Confirmed**
+        
+        Your consistent improvement continues to impress me:
+        
+        **This assignment vs. last week:** {week_comparison}
+        **This month's growth:** {monthly_progress}
+        **Overall trajectory:** {long_term_trend}
+        
+        **What I love:** You're building skills methodically and thoroughly.
+        
+        **Keep it up:** This steady approach creates lasting fluency!
+
+targeted_recommendations:
+  specific_study_suggestions:
+    template: |
+      📚 **Personalized Study Recommendations**
+      
+      **Based on this assignment, focus your study time on:**
+      
+      **Priority 1:** {priority_study_area}
+      - Recommended time: {time_allocation_1}
+      - Specific practice: {specific_practice_1}
+      - Resources: {suggested_resources_1}
+      
+      **Priority 2:** {secondary_study_area}
+      - Recommended time: {time_allocation_2}
+      - Specific practice: {specific_practice_2}
+      
+      **Maintenance:** {maintenance_areas}
+      - Keep practicing these areas to maintain your progress
+      
+      **Timeline:** Plan for {study_timeline} to see significant improvement
+  
+  next_assignment_preview:
+    template: |
+      👀 **Looking Ahead: Next Assignment Preview**
+      
+      **Building on today's work:** Your next assignment will focus on {next_focus}
+      **Connection:** This directly addresses {connection_to_current}
+      **New challenge:** We'll add {new_element}
+      
+      **Preparation:** {preparation_suggestion}
+      
+      **Confidence building:** Based on today's performance, I'm confident you'll handle this well!
+
+feedback_delivery_style:
+  encouraging_tone:
+    template: |
+      Your {target_language} journey continues to impress me! {specific_encouragement}
+      
+      {main_feedback_content}
+      
+      Remember, every assignment teaches us something new about how languages work. You're building real skills here!
+  
+  analytical_tone:
+    template: |
+      Let's analyze your performance systematically:
+      
+      {detailed_analysis}
+      
+      This data-driven approach helps us identify exactly where to focus your energy for maximum improvement.
+  
+  personal_tone:
+    template: |
+      I really enjoyed reading your work on {assignment_topic}! {personal_connection}
+      
+      {feedback_content}
+      
+      Your unique perspective makes these assignments interesting and helps me understand how to support you better.
+
+assignment_grading:
+  holistic_assessment:
+    excellent: "Exceeds expectations - Shows mastery and creativity"
+    proficient: "Meets expectations - Solid understanding and application"  
+    developing: "Approaching expectations - Good foundation with areas for growth"
+    beginning: "Below expectations - Requires focused practice and support"
+  
+  skills_based_rubric:
+    vocabulary: "{vocabulary_score}/5 - {vocabulary_comment}"
+    grammar: "{grammar_score}/5 - {grammar_comment}"
+    content: "{content_score}/5 - {content_comment}"
+    effort: "{effort_score}/5 - {effort_comment}"
+    overall: "{overall_score}/5 - {overall_comment}"
+
+feedback_timing:
+  immediate_feedback:
+    template: |
+      ⚡ **Quick Response to Your Submission**
+      
+      {immediate_impressions}
+      
+      **Detailed feedback coming soon!** I want to give your work the thorough response it deserves.
+  
+  detailed_feedback:
+    template: |
+      📖 **Comprehensive Assignment Review**
+      
+      I've carefully reviewed your work and have detailed feedback ready:
+      
+      {comprehensive_feedback}
+      
+      **Questions welcome!** If anything in this feedback isn't clear, please ask!

@@ -1,0 +1,446 @@
+# Beginner Level (A1-A2) Adaptive Prompts
+# Simple, repetitive, visual, and supportive prompts for new learners
+
+level_characteristics:
+  target_level: "A1-A2 (Beginner)"
+  vocabulary_range: "300-500 high-frequency words"
+  grammar_complexity: "Present tense, basic past, simple questions"
+  sentence_length: "5-10 words average"
+  error_tolerance: "High - focus on communication over accuracy"
+  repetition_frequency: "High repetition for reinforcement"
+  visual_support: "Extensive use of examples and patterns"
+
+conversation_adaptations:
+  simplified_responses:
+    basic_acknowledgment:
+      template: |
+        Good! You said "{student_response}". 
+        
+        {simple_expansion}
+        
+        Can you tell me more? Use simple words.
+      
+      examples:
+        student_says: "I like pizza"
+        teacher_responds: "Good! You like pizza. Pizza is delicious! What pizza do you like? Cheese pizza? Meat pizza?"
+    
+    vocabulary_scaffolding:
+      template: |
+        {acknowledgment} 
+        
+        New word for you: "{new_word}" means {simple_definition}.
+        
+        Try using it: "{example_sentence_start}..."
+      
+      examples:
+        introduction: "Great! New word for you: 'delicious' means very, very good food. Try using it: 'Pizza is...' "
+    
+    error_handling_gentle:
+      template: |
+        I understand! You mean "{corrected_version}".
+        
+        {encouraging_phrase}
+        
+        {continuation_with_correct_form}
+      
+      examples:
+        student_says: "I go shopping yesterday"
+        teacher_responds: "I understand! You went shopping yesterday. Good! What did you buy when you went shopping?"
+
+  question_simplification:
+    yes_no_questions:
+      template: |
+        {context_setup}
+        
+        **Question:** {simple_yes_no_question}
+        
+        Just say "Yes" or "No" first, then tell me more if you can! 😊
+      
+      examples:
+        - "Do you like coffee?"
+        - "Are you tired today?"
+        - "Is your family big?"
+    
+    either_or_questions:
+      template: |
+        {context_setup}
+        
+        **Choose:** {option_a} or {option_b}?
+        
+        {helpful_phrases}
+      
+      examples:
+        question: "Do you prefer morning or evening?"
+        helpful_phrases: "You can say: 'I prefer morning' or 'I like evening better'"
+    
+    guided_responses:
+      template: |
+        {question_setup}
+        
+        **Start with:** "{sentence_starter}"
+        **Add:** {what_to_add}
+        **Example:** "{complete_example}"
+        
+        Now you try!
+      
+      examples:
+        question_setup: "Tell me about your morning"
+        sentence_starter: "In the morning, I..."
+        what_to_add: "what you do first"
+        complete_example: "In the morning, I drink coffee"
+
+grammar_support:
+  present_tense_focus:
+    daily_routines:
+      template: |
+        Let's practice talking about things you do every day!
+        
+        **Pattern:** I + verb + (what/where/when)
+        
+        **Examples:**
+        - I wake up at 7 AM
+        - I eat breakfast  
+        - I go to work
+        
+        **Your turn:** Tell me 3 things you do every day.
+        **Start each one with "I..."**
+    
+    simple_descriptions:
+      template: |
+        Practice describing things!
+        
+        **Pattern:** [Something] is [description word]
+        
+        **Examples:**
+        - My house is big
+        - Coffee is hot
+        - My dog is friendly
+        
+        **Your turn:** Describe 3 things you can see right now.
+        **Use:** [Thing] is [description word]
+  
+  basic_past_tense:
+    recent_activities:
+      template: |
+        Let's talk about yesterday or last weekend!
+        
+        **Simple past words:**
+        - went (go → went)
+        - ate (eat → ate)  
+        - saw (see → saw)
+        - was/were (be → was/were)
+        
+        **Try this:** "Yesterday I..." or "Last weekend I..."
+        
+        **Need help?** I'll give you the past form of any verb!
+    
+    past_tense_practice:
+      template: |
+        Change these to past tense - I'll help!
+        
+        **Today:** I eat breakfast at 8 AM
+        **Yesterday:** I ??? breakfast at 8 AM
+        
+        **Today:** I go to the store
+        **Yesterday:** I ??? to the store
+        
+        **Hint:** The answers are "ate" and "went"
+        
+        **Your turn:** Change this one: "Today I see my friend"
+
+vocabulary_building:
+  high_frequency_words:
+    survival_vocabulary:
+      template: |
+        🌟 **Super Important Words** 🌟
+        
+        These words are very useful every day:
+        
+        {word_list_with_examples}
+        
+        **Practice:** Use each word in a sentence about you.
+        **Example:** "I need coffee in the morning"
+        
+        **Remember:** These words help you in many situations!
+      
+      categories:
+        basic_needs: ["need", "want", "like", "have", "get"]
+        time: ["today", "yesterday", "tomorrow", "now", "later"]
+        places: ["home", "work", "store", "restaurant", "school"]
+        feelings: ["happy", "sad", "tired", "excited", "angry"]
+    
+    family_relationships:
+      template: |
+        👨‍👩‍👧‍👦 **Family Words** 👨‍👩‍👧‍👦
+        
+        **Learn these family words:**
+        
+        {family_vocabulary_with_visuals}
+        
+        **Practice questions:**
+        - How many people are in your family?
+        - Do you have brothers or sisters?
+        - Where does your family live?
+        
+        **Start simple:** "I have..." or "My family has..."
+      
+      vocabulary_set:
+        - "mother/mom - the woman who is your parent"
+        - "father/dad - the man who is your parent" 
+        - "brother - male sibling"
+        - "sister - female sibling"
+        - "family - all your relatives together"
+    
+    daily_objects:
+      template: |
+        🏠 **Things Around You** 🏠
+        
+        **Useful words for everyday things:**
+        
+        {object_vocabulary}
+        
+        **Practice game:** Look around you. Can you name 5 things you see using these words?
+        
+        **Sentence practice:** "I see a..." or "There is a..."
+      
+      categories:
+        home: ["house", "table", "chair", "bed", "door", "window"]
+        technology: ["phone", "computer", "TV", "car", "bus"]
+        food: ["food", "water", "coffee", "bread", "fruit"]
+
+cultural_introductions:
+  basic_cultural_concepts:
+    greetings_simple:
+      template: |
+        👋 **How to Say Hello** 👋
+        
+        **In {target_language}:**
+        - {formal_greeting} - for people you don't know well
+        - {informal_greeting} - for friends and family
+        
+        **When to use:**
+        - Morning: {morning_greeting}
+        - All day: {general_greeting}
+        
+        **Practice:** Try greeting me both ways!
+        **Remember:** {cultural_tip}
+    
+    basic_politeness:
+      template: |
+        😊 **Being Polite** 😊
+        
+        **Magic words in {target_language}:**
+        - Please: {please_word}
+        - Thank you: {thank_you_word}
+        - Excuse me: {excuse_me_word}
+        - Sorry: {sorry_word}
+        
+        **Practice sentences:**
+        - "{please_word}, can you help me?"
+        - "{thank_you_word} for your help!"
+        
+        **Try it:** Make a polite request using "{please_word}"
+
+encouragement_strategies:
+  celebration_of_attempts:
+    first_attempts:
+      template: |
+        🎉 **Great First Try!** 🎉
+        
+        You said "{student_attempt}" - I understand you perfectly!
+        
+        {specific_praise}
+        
+        **Learning tip:** Every time you try to speak, you get stronger in {target_language}!
+        
+        **Keep going:** What else can you tell me?
+    
+    mistake_reframing:
+      template: |
+        ✨ **Good Learning Moment!** ✨
+        
+        You tried to say "{student_attempt}". That shows you're thinking in {target_language}!
+        
+        **We say:** "{correct_version}"
+        **You were close!** {encouragement_specific}
+        
+        **Try again:** Can you say it the new way?
+        
+        **Remember:** Mistakes help us learn! 🌱
+  
+  progress_recognition:
+    small_wins:
+      template: |
+        🌟 **You Did Something Great!** 🌟
+        
+        {specific_achievement}
+        
+        **This is big because:** {why_its_important}
+        
+        **Compare to last time:** {progress_comparison}
+        
+        **You should feel proud!** Learning {target_language} is not easy, but you're doing it! 💪
+    
+    vocabulary_growth:
+      template: |
+        📚 **Your Vocabulary is Growing!** 📚
+        
+        **New words you used today:** {new_words_list}
+        **Total words you know:** About {estimated_vocabulary} words!
+        
+        **That means:** You can have simple conversations in {target_language}!
+        
+        **Next goal:** Learn {next_vocabulary_target} more words this week!
+
+task_simplification:
+  breaking_down_complex_ideas:
+    step_by_step:
+      template: |
+        🔢 **Let's Do This Step by Step** 🔢
+        
+        **Big task:** {complex_task}
+        
+        **Step 1:** {simple_step_1}
+        **Step 2:** {simple_step_2}  
+        **Step 3:** {simple_step_3}
+        
+        **Start with Step 1 only!** When you finish, we'll do Step 2.
+        
+        **No pressure:** Take your time with each step.
+    
+    choice_reduction:
+      template: |
+        🎯 **Simple Choices** 🎯
+        
+        **Instead of:** {complex_question}
+        
+        **Choose one:**
+        - Option A: {simple_option_a}
+        - Option B: {simple_option_b}
+        
+        **Just pick one and tell me more!**
+        
+        **Example:** {example_response}
+
+error_tolerance:
+  high_tolerance_responses:
+    understanding_focus:
+      template: |
+        👍 **I Understand You!** 👍
+        
+        Your message is clear! {acknowledgment_of_meaning}
+        
+        **Grammar comes later:** Right now, communication is most important!
+        
+        **Keep talking:** Tell me more about {topic_to_continue}
+        
+        **You're doing great!** 🌟
+    
+    gentle_modeling:
+      template: |
+        {natural_response_with_correct_form}
+        
+        **Continue the conversation...** {follow_up_question}
+        
+        **Note:** I used the words a little differently, but your idea was perfect!
+    
+    celebration_of_communication:
+      template: |
+        🎯 **Perfect Communication!** 🎯
+        
+        You told me exactly what you wanted to say! That's the most important skill in language learning.
+        
+        **Your message:** {student_meaning}
+        **My understanding:** {teacher_understanding}
+        **Result:** Perfect communication! ✅
+        
+        **Grammar gets easier with practice - communication is the goal!**
+
+visual_and_contextual_support:
+  example_heavy_responses:
+    pattern_demonstration:
+      template: |
+        📋 **Pattern Practice** 📋
+        
+        **Pattern:** {grammar_pattern}
+        
+        **Examples:**
+        - {example_1}
+        - {example_2}
+        - {example_3}
+        
+        **Your turn:** Make your own sentence using this pattern!
+        
+        **Help:** You can change {changeable_elements} to make it about you.
+    
+    comparative_examples:
+      template: |
+        📊 **See the Difference** 📊
+        
+        **Your way:** {student_version}
+        **Native way:** {native_version}
+        
+        **Both are good!** The native way is just what people usually say.
+        
+        **Practice:** Try saying it the native way once, then continue with your story!
+
+repetition_and_reinforcement:
+  spaced_repetition:
+    key_phrase_repetition:
+      template: |
+        🔄 **Let's Practice This Important Phrase** 🔄
+        
+        **Key phrase:** "{target_phrase}"
+        **Meaning:** {phrase_meaning}
+        
+        **Practice:**
+        1. Say it once: "{target_phrase}"
+        2. Use it in a sentence: "{example_usage}"
+        3. Make your own sentence with this phrase
+        
+        **Use this phrase 3 times this week!**
+    
+    concept_reinforcement:
+      template: |
+        💡 **Important Concept Review** 💡
+        
+        **We learned:** {key_concept}
+        
+        **Examples we practiced:**
+        - {example_1}
+        - {example_2}
+        
+        **Your examples:**
+        - {student_example_1}
+        - {student_example_2}
+        
+        **Keep using this pattern!** It will become automatic with practice.
+
+beginner_specific_scenarios:
+  first_week_support:
+    template: |
+      🌱 **Your First Week Learning {target_language}!** 🌱
+      
+      **What you've accomplished:**
+      - You can introduce yourself
+      - You know basic greetings  
+      - You can talk about simple preferences
+      
+      **This week's focus:** {weekly_focus}
+      
+      **Remember:** Every language learner starts here. You're doing exactly what you should be doing! 💚
+  
+  confidence_building:
+    template: |
+      💪 **You Can Do This!** 💪
+      
+      **What you CAN say in {target_language}:**
+      - {capability_1}
+      - {capability_2}  
+      - {capability_3}
+      
+      **That's amazing progress!** Most people can't even say these things.
+      
+      **Today's small goal:** Learn one new way to say {small_goal}
+      
+      **You're already a {target_language} speaker!** 🌟

@@ -1,0 +1,516 @@
+# Language Teacher Telegram Bot Configuration
+# Complete configuration for the AI-powered language learning bot
+
+# Bot Information
+bot_info:
+  name: "AI Language Teacher"
+  version: "1.0.0"
+  description: "AI-powered adaptive language learning through Telegram"
+  author: "Varga AI"
+
+# Telegram Configuration
+telegram:
+  # Bot token will be loaded from environment variable
+  bot_token: "${LANGUAGE_TEACHER_BOT_TOKEN}"
+  
+  # Webhook configuration (optional - can use polling instead)
+  webhook:
+    enabled: false
+    url: ""
+    port: 8443
+    ssl_cert_path: ""
+    ssl_key_path: ""
+  
+  # Polling configuration
+  polling:
+    enabled: true
+    interval_seconds: 1
+    timeout_seconds: 30
+    
+  # Message handling
+  message_limits:
+    max_message_length: 4096
+    max_voice_duration_seconds: 60
+    max_file_size_mb: 20
+    rate_limit_per_minute: 20
+    rate_limit_per_hour: 200
+
+# Database Configuration
+database:
+  # Database file path (SQLite)
+  db_path: "agents/data/language_teacher.db"
+  
+  # Connection settings
+  connection_pool_size: 5
+  connection_timeout: 30
+  
+  # Backup settings
+  backup:
+    enabled: true
+    interval_hours: 24
+    keep_backups: 7
+    backup_path: "agents/data/backups/"
+
+# Language Teacher Agent Configuration
+language_teacher:
+  # Default settings
+  default_language: "english"
+  default_level: "beginner"
+  
+  # Supported languages and their settings
+  supported_languages:
+    english:
+      name: "English"
+      flag: "🇺🇸"
+      levels: ["beginner", "elementary", "intermediate", "upper_intermediate", "advanced", "proficient"]
+      voice_enabled: true
+      
+    spanish:
+      name: "Spanish"
+      flag: "🇪🇸"
+      levels: ["beginner", "elementary", "intermediate", "upper_intermediate", "advanced", "proficient"]
+      voice_enabled: true
+      
+    french:
+      name: "French"
+      flag: "🇫🇷"
+      levels: ["beginner", "elementary", "intermediate", "upper_intermediate", "advanced", "proficient"]
+      voice_enabled: true
+      
+    german:
+      name: "German"
+      flag: "🇩🇪"
+      levels: ["beginner", "elementary", "intermediate", "upper_intermediate", "advanced", "proficient"]
+      voice_enabled: true
+      
+    italian:
+      name: "Italian"
+      flag: "🇮🇹"
+      levels: ["beginner", "elementary", "intermediate", "upper_intermediate", "advanced", "proficient"]
+      voice_enabled: true
+      
+    portuguese:
+      name: "Portuguese"
+      flag: "🇵🇹"
+      levels: ["beginner", "elementary", "intermediate", "upper_intermediate", "advanced", "proficient"]
+      voice_enabled: true
+
+# AI Components Configuration
+ai_components:
+  # Adaptive Learning Engine
+  adaptive_learning:
+    initial_difficulty: 0.3
+    difficulty_adjustment_rate: 0.1
+    min_difficulty: 0.1
+    max_difficulty: 1.0
+    performance_window_size: 10
+    target_accuracy: 0.75
+    
+    # IRT Model parameters
+    irt_model:
+      ability_prior_mean: 0.0
+      ability_prior_std: 1.0
+      discrimination_prior_mean: 1.0
+      discrimination_prior_std: 0.5
+    
+    # BKT Model parameters  
+    bkt_model:
+      initial_knowledge: 0.1
+      learning_rate: 0.3
+      guess_rate: 0.2
+      slip_rate: 0.1
+
+  # Natural Language Processing
+  nlp_processor:
+    # Grammar checking
+    grammar_check:
+      enabled: true
+      severity_threshold: 0.5
+      max_errors_shown: 5
+      
+    # Complexity analysis
+    complexity_analysis:
+      vocabulary_database: "agents/data/vocabulary_levels.json"
+      sentence_complexity_factors:
+        - "sentence_length"
+        - "subordinate_clauses"
+        - "passive_voice_usage"
+        - "vocabulary_level"
+    
+    # Semantic similarity
+    semantic_similarity:
+      threshold: 0.7
+      model: "sentence_transformers"
+      
+  # Spaced Repetition System
+  spaced_repetition:
+    # SM-2+ Algorithm parameters
+    sm2_parameters:
+      initial_interval: 1
+      initial_ef: 2.5
+      minimum_ef: 1.3
+      ef_increment: 0.1
+      ef_decrement: 0.2
+      
+    # Review scheduling
+    review_scheduling:
+      max_reviews_per_session: 10
+      review_window_hours: 24
+      overdue_penalty: 1.2
+      
+    # Card management
+    card_management:
+      max_cards_per_deck: 1000
+      auto_archive_mastered: true
+      mastery_threshold: 0.9
+      
+  # Learning Analytics
+  learning_analytics:
+    # Metrics collection
+    metrics:
+      - accuracy
+      - speed
+      - engagement
+      - retention
+      - improvement_rate
+      
+    # Insight generation
+    insights:
+      min_sessions_for_insights: 5
+      insight_categories:
+        - learning_patterns
+        - difficulty_progression
+        - skill_strengths
+        - improvement_areas
+        
+    # Performance tracking
+    performance_tracking:
+      session_aggregation_window: 7  # days
+      trend_analysis_window: 30      # days
+      
+  # Content Generator
+  content_generator:
+    # Content types and difficulty mapping
+    content_types:
+      vocabulary:
+        beginner: 
+          word_list_size: 500
+          definition_complexity: "simple"
+          example_sentence_length: 8
+        intermediate:
+          word_list_size: 2000
+          definition_complexity: "moderate" 
+          example_sentence_length: 12
+        advanced:
+          word_list_size: 5000
+          definition_complexity: "complex"
+          example_sentence_length: 16
+          
+      grammar:
+        focus_areas:
+          beginner: ["basic_tenses", "articles", "pronouns"]
+          intermediate: ["complex_tenses", "conditionals", "passive_voice"]
+          advanced: ["subjunctive", "advanced_structures", "nuanced_usage"]
+          
+      conversation:
+        topics_per_level:
+          beginner: ["introductions", "family", "hobbies", "daily_routines"]
+          intermediate: ["travel", "work", "opinions", "future_plans"]
+          advanced: ["current_events", "abstract_concepts", "debate_topics"]
+
+# Voice Processing Configuration
+voice_processing:
+  # Supported formats and limits
+  supported_formats: ["ogg", "mp3", "m4a", "wav", "opus"]
+  max_duration_seconds: 60
+  max_file_size_mb: 10
+  
+  # Speech recognition (would integrate with external services)
+  speech_recognition:
+    provider: "whisper"  # openai_whisper, google_speech, azure_speech
+    language_models:
+      english: "en-US"
+      spanish: "es-ES" 
+      french: "fr-FR"
+      german: "de-DE"
+      italian: "it-IT"
+      portuguese: "pt-PT"
+      
+  # Pronunciation analysis
+  pronunciation_analysis:
+    scoring_method: "phoneme_accuracy"
+    confidence_threshold: 0.6
+    
+    # Feedback levels
+    feedback_levels:
+      excellent: 0.9
+      good: 0.7
+      fair: 0.5
+      needs_improvement: 0.0
+      
+  # Text-to-Speech (for pronunciation examples)
+  text_to_speech:
+    enabled: true
+    provider: "elevenlabs"  # elevenlabs, google_tts, azure_tts
+    voice_settings:
+      english: "voice_id_english"
+      spanish: "voice_id_spanish"
+      french: "voice_id_french"
+
+# Progress Tracking Configuration
+progress_tracking:
+  # Activity logging
+  activity_logging:
+    track_response_time: true
+    track_error_patterns: true
+    track_hint_usage: true
+    
+  # Streak calculation
+  streak_settings:
+    min_daily_minutes: 5
+    grace_period_hours: 6  # Allow late night sessions to count for previous day
+    streak_freeze_limit: 3  # Number of streak freezes per month
+    
+  # Goals and milestones
+  goal_settings:
+    default_daily_minutes: 15
+    weekly_goals_enabled: true
+    monthly_challenges_enabled: true
+    
+  # Leaderboards
+  leaderboards:
+    enabled: true
+    anonymize_users: true
+    time_periods: ["weekly", "monthly", "all_time"]
+    categories: ["time_studied", "exercises_completed", "streak_length"]
+
+# Achievement System Configuration
+achievement_system:
+  # Achievement categories and point values
+  categories:
+    welcome:
+      base_points: 10
+      multiplier: 1.0
+      
+    streak:
+      base_points: 25  
+      multiplier: 1.5
+      milestones: [3, 7, 14, 30, 60, 100, 365]
+      
+    activity:
+      base_points: 1
+      multiplier: 1.0
+      milestones: [1, 10, 25, 50, 100, 250, 500, 1000]
+      
+    skill:
+      base_points: 50
+      multiplier: 2.0
+      
+    milestone:
+      base_points: 100
+      multiplier: 3.0
+      
+    dedication:
+      base_points: 75
+      multiplier: 2.5
+      milestones: [60, 300, 600, 1200, 3600]  # minutes
+      
+    exploration:
+      base_points: 100
+      multiplier: 2.0
+      
+    mastery:
+      base_points: 200
+      multiplier: 4.0
+  
+  # Badge rarity and visual settings
+  badge_settings:
+    rarity_colors:
+      common: "🟢"
+      uncommon: "🟡" 
+      rare: "🟠"
+      epic: "🟣"
+      legendary: "🟨"
+      
+    notification_settings:
+      show_progress_updates: true
+      progress_update_threshold: 0.25  # Show when 25% progress made
+      celebration_effects: true
+
+# User Interface Configuration
+user_interface:
+  # Menu and keyboard settings
+  keyboards:
+    main_menu_columns: 2
+    language_selection_columns: 2
+    level_selection_columns: 1
+    settings_menu_columns: 1
+    
+  # Message formatting
+  formatting:
+    use_markdown: true
+    use_emojis: true
+    max_line_length: 80
+    
+  # Response timing
+  timing:
+    typing_indicator_duration: 3  # seconds
+    response_delay_ms: 500
+    
+  # Accessibility
+  accessibility:
+    large_text_support: true
+    simple_language_mode: false
+    audio_descriptions: false
+
+# Session Management
+session_management:
+  # Session timeouts
+  timeouts:
+    idle_timeout_minutes: 30
+    max_session_duration_minutes: 120
+    cleanup_interval_minutes: 60
+    
+  # Session persistence
+  persistence:
+    save_incomplete_exercises: true
+    session_history_days: 30
+    auto_resume_sessions: true
+    
+  # Concurrent sessions
+  concurrency:
+    max_concurrent_sessions_per_user: 1
+    session_conflict_resolution: "newer_wins"
+
+# Logging and Monitoring
+logging:
+  # Log levels and destinations
+  level: "INFO"
+  
+  # File logging
+  file_logging:
+    enabled: true
+    file_path: "logs/language_teacher.log"
+    max_file_size_mb: 100
+    backup_count: 5
+    
+  # Console logging
+  console_logging:
+    enabled: true
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    
+  # Performance monitoring
+  performance_monitoring:
+    enabled: true
+    slow_query_threshold_ms: 1000
+    memory_usage_alerts: true
+    
+  # Error tracking
+  error_tracking:
+    enabled: true
+    error_notification_threshold: 10  # per hour
+    send_error_reports: false
+
+# Security Configuration
+security:
+  # Rate limiting
+  rate_limiting:
+    enabled: true
+    global_limit_per_hour: 1000
+    per_user_limit_per_hour: 100
+    per_user_limit_per_minute: 20
+    
+  # Data privacy
+  data_privacy:
+    anonymize_logs: true
+    data_retention_days: 365
+    allow_data_export: true
+    allow_data_deletion: true
+    
+  # Input validation
+  input_validation:
+    max_text_length: 1000
+    filter_profanity: true
+    sanitize_html: true
+    validate_file_types: true
+
+# Integration Settings
+integrations:
+  # OpenAI/GPT Integration
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4"
+    max_tokens: 1500
+    temperature: 0.7
+    
+  # AutoGen Framework
+  autogen:
+    enable_group_chat: true
+    max_round: 6
+    speaker_selection_method: "round_robin"
+    
+  # External APIs
+  external_apis:
+    # Translation services
+    translation:
+      provider: "google_translate"
+      api_key: "${GOOGLE_TRANSLATE_API_KEY}"
+      
+    # Dictionary/Vocabulary services
+    dictionary:
+      provider: "oxford_dict"
+      api_key: "${OXFORD_DICT_API_KEY}"
+      
+    # Pronunciation services
+    pronunciation:
+      provider: "forvo"
+      api_key: "${FORVO_API_KEY}"
+
+# Development and Testing
+development:
+  # Debug settings
+  debug:
+    enabled: false
+    verbose_logging: false
+    save_raw_messages: false
+    
+  # Testing
+  testing:
+    mock_voice_processing: true
+    mock_ai_responses: false
+    test_user_profiles: true
+    
+  # Performance
+  performance:
+    cache_responses: true
+    cache_duration_minutes: 60
+    preload_exercises: true
+
+# Deployment Configuration
+deployment:
+  # Environment
+  environment: "production"  # development, staging, production
+  
+  # Resources
+  resources:
+    max_memory_mb: 1024
+    max_cpu_cores: 2
+    
+  # Scaling
+  scaling:
+    auto_scale_enabled: false
+    min_instances: 1
+    max_instances: 3
+    scale_threshold_cpu: 80
+    
+  # Health checks
+  health_checks:
+    enabled: true
+    interval_seconds: 30
+    timeout_seconds: 5
+    
+  # Backup and recovery
+  backup:
+    database_backup_enabled: true
+    config_backup_enabled: true
+    backup_schedule: "0 2 * * *"  # Daily at 2 AM

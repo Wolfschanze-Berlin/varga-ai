@@ -1,0 +1,393 @@
+# Homework Assignment Prompts
+# Structured practice exercises and assignments
+
+assignment_types:
+  vocabulary_practice:
+    word_association:
+      beginner:
+        template: |
+          📚 **Vocabulary Practice: Word Connections**
+          
+          Today's words from our conversation: {vocabulary_list}
+          
+          **Your task:** Create simple sentences using each word. Don't worry about being creative - just show me you understand what they mean!
+          
+          **Example:** 
+          Word: "restaurant"
+          Your sentence: "I went to a restaurant with my family."
+          
+          **Time estimate:** 10-15 minutes
+          **Due:** Before our next conversation
+          
+          **Success criteria:** ✅ One clear sentence per word
+          
+          Need help? Just ask me for hints! 🤔
+      
+      intermediate:
+        template: |
+          📚 **Vocabulary Challenge: Context and Connections**
+          
+          From our discussion about {conversation_topic}, here are key words to master: {vocabulary_list}
+          
+          **Your assignment:**
+          1. Write a short paragraph (5-6 sentences) using ALL these words
+          2. The paragraph should tell a story or describe a situation
+          3. Try to show you understand the connections between these words
+          
+          **Bonus challenge:** Include one synonym for any of these words
+          
+          **Time estimate:** 20-25 minutes
+          **Success criteria:** 
+          ✅ All words used correctly in context
+          ✅ Coherent story or description
+          ✅ Shows understanding of word relationships
+      
+      advanced:
+        template: |
+          📚 **Advanced Vocabulary: Nuance and Style**
+          
+          Today we explored some sophisticated vocabulary: {vocabulary_list}
+          
+          **Your task:** Write two versions of the same scenario:
+          1. **Formal version:** Using professional/academic language
+          2. **Casual version:** Using everyday conversational language
+          
+          **Scenario:** {scenario_prompt}
+          
+          **Focus:** Show how the same ideas can be expressed differently depending on context and audience.
+          
+          **Time estimate:** 30-35 minutes
+          **Evaluation:** Appropriate register, accurate usage, natural flow
+    
+    definition_and_usage:
+      template: |
+        📚 **Word Mastery Exercise**
+        
+        **Part 1: Define in your own words**
+        {vocabulary_list}
+        
+        **Part 2: Use in context**
+        Create meaningful sentences that show the word's meaning clearly.
+        
+        **Part 3: Personal connection**
+        Choose 3 words and explain how they relate to your own life or experiences.
+        
+        **Remember:** I want to see YOUR understanding, not dictionary definitions!
+
+  grammar_reinforcement:
+    pattern_practice:
+      verb_tenses:
+        template: |
+          🔧 **Grammar Focus: {grammar_point}**
+          
+          **Pattern:** {grammar_pattern}
+          
+          **Your practice:**
+          1. Complete these sentences: {fill_in_blanks}
+          2. Transform these sentences: {transformation_exercise}
+          3. Create 5 original sentences using this pattern about your own life
+          
+          **Common mistakes to avoid:** {common_errors}
+          
+          **Self-check questions:**
+          - Does my verb agree with the subject?
+          - Am I using the right time reference?
+          - Does this sound natural?
+      
+      sentence_building:
+        beginner:
+          template: |
+            🔧 **Sentence Building Practice**
+            
+            **Today's challenge:** Build sentences using these elements
+            
+            **Word groups:** {word_groups}
+            
+            **Instructions:**
+            1. Pick one word from each group
+            2. Make a complete sentence
+            3. Make sure it makes sense!
+            4. Create 8 different sentences
+            
+            **Example:** 
+            Groups: [I/She/They] + [like/enjoy/love] + [pizza/music/reading]
+            Sentence: "She enjoys reading books."
+            
+            **Bonus:** Can you make any of your sentences into questions?
+        
+        intermediate:
+          template: |
+            🔧 **Complex Sentence Construction**
+            
+            **Goal:** Combine simple ideas into more sophisticated sentences
+            
+            **Simple sentences to combine:** {simple_sentences}
+            
+            **Tools to use:**
+            - because, although, while, when
+            - who, which, that
+            - however, therefore, moreover
+            
+            **Challenge:** Turn every set of 2-3 simple sentences into 1 complex sentence
+            
+            **Quality check:** Does your sentence flow naturally when read aloud?
+    
+    error_correction:
+      template: |
+        🔍 **Error Detective Challenge**
+        
+        **Instructions:** Find and fix the mistakes in these sentences. Some sentences might be correct!
+        
+        **Sentences to check:** {error_sentences}
+        
+        **Types of errors to look for:**
+        {error_types}
+        
+        **Format your answers like this:**
+        Original: "She don't like coffee."
+        Corrected: "She doesn't like coffee."
+        Error type: Subject-verb agreement
+        
+        **Bonus:** Explain why the original was incorrect.
+
+  listening_comprehension:
+    audio_tasks:
+      template: |
+        🎧 **Listening Practice Assignment**
+        
+        **Your task:** Listen to this short audio clip about {topic}: {audio_link}
+        
+        **While listening:**
+        1. First listen: Get the general idea
+        2. Second listen: Take notes on key points
+        3. Third listen: Focus on specific details
+        
+        **Questions to answer:**
+        {comprehension_questions}
+        
+        **Vocabulary support:** {key_vocabulary}
+        
+        **Time estimate:** 25-30 minutes
+        **Tip:** Don't worry if you don't catch every word - focus on understanding the main message!
+    
+    pronunciation_practice:
+      template: |
+        🗣️ **Pronunciation Assignment**
+        
+        **Focus sounds:** {target_sounds}
+        
+        **Practice words:** {practice_words}
+        
+        **Your task:**
+        1. Record yourself saying each word clearly
+        2. Listen to your recording
+        3. Compare with the model pronunciation: {audio_models}
+        4. Re-record any words that need improvement
+        
+        **Sentence practice:** Read these sentences aloud, focusing on the target sounds:
+        {practice_sentences}
+        
+        **Self-evaluation:** Rate your confidence with each sound (1-5 scale)
+
+  writing_tasks:
+    descriptive_writing:
+      beginner:
+        template: |
+          ✍️ **Writing Practice: Describe Your Day**
+          
+          **Task:** Write 6-8 sentences about what you did today or yesterday.
+          
+          **Include:**
+          - Time expressions (in the morning, at noon, in the evening)
+          - Action verbs (went, ate, met, watched, etc.)
+          - Feelings (happy, tired, excited, etc.)
+          
+          **Structure helper:**
+          1. What time did you wake up?
+          2. What did you have for breakfast?
+          3. Where did you go?
+          4. Who did you see?
+          5. What was the best part of your day?
+          6. How did you feel?
+          
+          **Success criteria:** Clear timeline, varied vocabulary, personal details
+      
+      intermediate:
+        template: |
+          ✍️ **Descriptive Writing: A Special Place**
+          
+          **Assignment:** Write a detailed description (150-200 words) of a place that's important to you.
+          
+          **Include:**
+          - Physical description (What does it look like?)
+          - Sensory details (What do you see, hear, smell?)
+          - Personal connection (Why is it special?)
+          - Specific memories or experiences there
+          
+          **Language focus:** 
+          - Descriptive adjectives
+          - Present and past tenses
+          - Transition words (first, then, also, finally)
+          
+          **Check your work:** Read it aloud - does it paint a clear picture?
+      
+      advanced:
+        template: |
+          ✍️ **Advanced Writing: Argumentative Essay**
+          
+          **Topic:** {essay_topic}
+          
+          **Task:** Write a well-structured essay (300-400 words) presenting your position on this topic.
+          
+          **Structure:**
+          1. **Introduction:** Present the issue and your thesis
+          2. **Body paragraph 1:** Your main argument with examples
+          3. **Body paragraph 2:** Address a counterargument
+          4. **Conclusion:** Restate your position and broader implications
+          
+          **Language goals:**
+          - Use sophisticated vocabulary appropriately
+          - Vary sentence structures
+          - Use linking words effectively
+          - Maintain formal register throughout
+          
+          **Evaluation criteria:** Clear argumentation, language accuracy, essay structure
+    
+    creative_writing:
+      story_continuation:
+        template: |
+          📝 **Creative Writing: Continue the Story**
+          
+          **Story beginning:** {story_starter}
+          
+          **Your task:** Continue this story for 10-15 sentences.
+          
+          **Include:**
+          - Dialogue (what characters say to each other)
+          - Action (what happens next)
+          - Emotions (how characters feel)
+          - A conclusion or cliffhanger
+          
+          **Creative challenge:** Add an unexpected twist!
+          
+          **Language focus:** Past tenses, descriptive language, direct speech
+          
+          **Have fun with it!** Creative writing should be enjoyable.
+
+assignment_delivery:
+  submission_formats:
+    text_response:
+      template: |
+        📤 **How to Submit Your Work**
+        
+        **For text assignments:**
+        - Type your answers directly in our chat
+        - Use this format: "Assignment: [Your work here]"
+        - Number your answers if there are multiple parts
+        
+        **For longer writing:**
+        - Break into smaller messages if needed
+        - Let me know when you're finished with "Assignment complete"
+    
+    voice_message:
+      template: |
+        📤 **Voice Assignment Submission**
+        
+        **For speaking/pronunciation practice:**
+        - Send voice messages in Telegram
+        - Speak clearly and at normal speed
+        - If you make a mistake, don't worry - just continue
+        - Maximum 2 minutes per recording
+        
+        **I'll listen for:**
+        - Pronunciation accuracy
+        - Natural rhythm and intonation
+        - Confidence in speaking
+    
+    mixed_media:
+      template: |
+        📤 **Multimedia Submission Options**
+        
+        You can submit this assignment in any of these ways:
+        - ✍️ Written text
+        - 🎙️ Voice recording  
+        - 📸 Photo of handwritten work
+        - 🎥 Short video explanation
+        
+        Choose the format that feels most comfortable for you!
+
+difficulty_scaling:
+  adaptive_assignments:
+    template: |
+      📊 **Personalized Assignment Level**
+      
+      **Based on your recent progress:** {progress_assessment}
+      
+      **Today's assignment difficulty:** {difficulty_level}
+      
+      **Why this level?** {reasoning}
+      
+      **If this feels too easy/hard:** Let me know and I'll adjust!
+      
+      **Assignment:** {scaled_assignment}
+  
+  challenge_options:
+    template: |
+      🎯 **Assignment Options - Choose Your Challenge**
+      
+      **Option A (Comfortable):** {easy_option}
+      **Option B (Stretch):** {challenging_option}  
+      **Option C (Advanced):** {difficult_option}
+      
+      **My recommendation:** Based on our recent conversations, I think Option {recommended_option} would be perfect for you right now.
+      
+      **Remember:** It's better to do well on an easier assignment than to struggle with something too difficult!
+
+time_management:
+  time_estimates:
+    accurate_planning:
+      template: |
+        ⏱️ **Time Planning for This Assignment**
+        
+        **Total estimated time:** {total_time}
+        
+        **Breakdown:**
+        - Understanding the task: {understanding_time}
+        - Completing the work: {completion_time}
+        - Review and editing: {review_time}
+        
+        **Tip:** If it's taking much longer, take a break and ask me for help!
+        
+        **Deadline:** {deadline} (but quality over speed!)
+  
+  progress_tracking:
+    template: |
+      📈 **Assignment Progress Check**
+      
+      **Completion status:** {completion_percentage}%
+      
+      **What you've accomplished:**
+      {completed_sections}
+      
+      **Still to do:**
+      {remaining_sections}
+      
+      **Need help with anything?** Just ask - I'm here to support you!
+
+feedback_preparation:
+  self_assessment:
+    template: |
+      🤔 **Before You Submit: Self-Check**
+      
+      **Ask yourself:**
+      - Did I answer all parts of the assignment?
+      - Did I use the target vocabulary/grammar correctly?
+      - Does my work make sense to someone else?
+      - Am I proud of the effort I put in?
+      
+      **Rate your confidence (1-5):** 
+      - Understanding of the task: ___
+      - Quality of your work: ___
+      - Use of target language: ___
+      
+      **Any specific questions for my feedback?**

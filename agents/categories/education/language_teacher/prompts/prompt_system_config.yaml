@@ -1,0 +1,312 @@
+# Language Teacher Prompt System Configuration
+# Master configuration for the comprehensive prompt system
+
+system_architecture:
+  prompt_categories:
+    base:
+      description: "Core teacher personalities and foundational behaviors"
+      files:
+        - teacher_personalities.yaml
+      priority: "highest"
+      load_order: 1
+    
+    conversation:
+      description: "Interactive conversation teaching prompts"
+      files:
+        - greetings.yaml
+        - topics.yaml  
+        - corrections.yaml
+        - encouragement.yaml
+      priority: "high"
+      load_order: 2
+    
+    homework:
+      description: "Structured practice and assignment prompts"
+      files:
+        - assignments.yaml
+        - feedback.yaml
+        - hints.yaml
+      priority: "high"
+      load_order: 3
+    
+    adaptive:
+      description: "Level-specific adaptive prompts"
+      files:
+        - beginner.yaml
+        - intermediate.yaml
+        - advanced.yaml
+      priority: "high"
+      load_order: 4
+    
+    system:
+      description: "Error handling and system management"
+      files:
+        - errors.yaml
+        - motivation.yaml
+      priority: "medium"
+      load_order: 5
+
+prompt_selection_engine:
+  context_factors:
+    student_level:
+      values: ["beginner", "intermediate", "advanced"]
+      weight: 0.3
+      influences: ["vocabulary_complexity", "grammar_structures", "topic_depth"]
+    
+    interaction_type:
+      values: ["conversation", "homework", "assessment", "correction", "encouragement"]
+      weight: 0.25
+      influences: ["prompt_category", "response_style", "feedback_approach"]
+    
+    student_emotional_state:
+      values: ["confident", "frustrated", "motivated", "struggling", "excited"]
+      weight: 0.2
+      influences: ["encouragement_level", "challenge_difficulty", "support_intensity"]
+    
+    session_context:
+      values: ["first_session", "regular_session", "return_after_break", "streak_milestone"]
+      weight: 0.15
+      influences: ["greeting_type", "expectation_setting", "motivation_approach"]
+    
+    error_frequency:
+      values: ["low", "medium", "high", "very_high"]
+      weight: 0.1
+      influences: ["correction_strategy", "patience_level", "simplification_degree"]
+
+dynamic_prompt_assembly:
+  template_structure:
+    system_prompt:
+      components:
+        - base_personality
+        - level_adaptation
+        - session_context
+        - error_tolerance_settings
+      max_tokens: 1500
+    
+    response_prompt:
+      components:
+        - interaction_type_prompt
+        - topic_specific_guidance
+        - correction_strategy
+        - encouragement_elements
+      max_tokens: 1000
+    
+    fallback_prompt:
+      components:
+        - error_recovery
+        - motivation_support
+        - system_limitation_acknowledgment
+      max_tokens: 500
+
+personalization_parameters:
+  student_profile:
+    learning_style:
+      visual: 
+        prompt_modifications: ["add_examples", "use_visual_metaphors", "structured_presentations"]
+      auditory:
+        prompt_modifications: ["encourage_reading_aloud", "rhythm_emphasis", "sound_patterns"]
+      kinesthetic:
+        prompt_modifications: ["action_oriented_tasks", "hands_on_activities", "movement_integration"]
+    
+    cultural_background:
+      considerations:
+        - native_language_interference_patterns
+        - cultural_communication_styles
+        - educational_system_expectations
+        - formality_preferences
+    
+    motivation_drivers:
+      professional: ["career_advancement", "business_communication", "industry_specific_vocabulary"]
+      academic: ["test_preparation", "research_skills", "formal_writing"]
+      personal: ["travel", "cultural_connection", "family_communication"]
+      social: ["making_friends", "online_communities", "entertainment_consumption"]
+
+gamification_integration:
+  achievement_system:
+    vocabulary_milestones:
+      - name: "First 100 Words"
+        threshold: 100
+        prompt_template: "vocabulary_milestone_100"
+        celebration_level: "moderate"
+      
+      - name: "Conversational Vocabulary"
+        threshold: 500
+        prompt_template: "vocabulary_milestone_500"
+        celebration_level: "high"
+      
+      - name: "Advanced Vocabulary"
+        threshold: 1500
+        prompt_template: "vocabulary_milestone_1500"
+        celebration_level: "high"
+    
+    streak_achievements:
+      weekly:
+        prompt_template: "streak_7_days"
+        reward_type: "encouragement"
+      monthly:
+        prompt_template: "streak_30_days"
+        reward_type: "major_celebration"
+    
+    skill_breakthroughs:
+      first_full_conversation:
+        detection_criteria: ["sustained_dialogue", "topic_completion", "natural_flow"]
+        prompt_template: "breakthrough_conversation"
+        celebration_level: "very_high"
+
+error_handling_hierarchy:
+  level_1_gentle:
+    triggers: ["minor_grammar_error", "vocabulary_imprecision"]
+    response_strategy: "recasting"
+    prompt_category: "corrections.gentle_modeling"
+  
+  level_2_instructional:
+    triggers: ["repeated_error_pattern", "structural_confusion"]
+    response_strategy: "explicit_teaching"
+    prompt_category: "corrections.explicit_teaching_moments"
+  
+  level_3_supportive:
+    triggers: ["communication_breakdown", "student_frustration"]
+    response_strategy: "patience_and_guidance"
+    prompt_category: "system.errors.communication_breakdown_recovery"
+  
+  level_4_crisis:
+    triggers: ["major_confusion", "emotional_distress", "learning_crisis"]
+    response_strategy: "crisis_intervention"
+    prompt_category: "system.motivation.crisis_intervention"
+
+cultural_sensitivity_framework:
+  cultural_awareness_prompts:
+    high_context_cultures:
+      modifications: ["indirect_communication", "relationship_emphasis", "patience_with_silence"]
+    
+    low_context_cultures:
+      modifications: ["direct_feedback", "explicit_instructions", "efficiency_focus"]
+    
+    collectivist_cultures:
+      modifications: ["group_harmony", "face_saving_corrections", "community_connection"]
+    
+    individualist_cultures:
+      modifications: ["personal_achievement", "independent_learning", "self_expression"]
+
+quality_assurance:
+  prompt_validation_criteria:
+    linguistic_accuracy:
+      - grammatical_correctness
+      - vocabulary_appropriateness
+      - register_consistency
+    
+    pedagogical_effectiveness:
+      - clear_learning_objectives
+      - appropriate_scaffolding
+      - engaging_content
+    
+    cultural_sensitivity:
+      - respectful_language
+      - inclusive_examples
+      - cultural_awareness
+    
+    emotional_intelligence:
+      - empathetic_responses
+      - motivation_support
+      - confidence_building
+
+usage_analytics:
+  tracking_parameters:
+    prompt_effectiveness:
+      metrics: ["student_engagement", "learning_progress", "error_reduction"]
+      measurement_frequency: "weekly"
+    
+    student_satisfaction:
+      metrics: ["session_completion_rate", "return_frequency", "feedback_scores"]
+      measurement_frequency: "monthly"
+    
+    system_performance:
+      metrics: ["response_time", "error_rates", "fallback_usage"]
+      measurement_frequency: "daily"
+
+integration_specifications:
+  telegram_bot_integration:
+    message_length_limits:
+      - single_message_max: 4096
+      - auto_split_strategy: "sentence_boundaries"
+      - continuation_indicators: "... (continued)"
+    
+    multimedia_support:
+      - voice_message_prompts: "conversation.pronunciation_practice"
+      - image_description_tasks: "homework.visual_assignments"
+      - document_sharing: "homework.submission_formats"
+    
+    notification_system:
+      - streak_reminders: "motivation.re_engagement"
+      - achievement_announcements: "gamification.milestone_celebrations"
+      - gentle_return_invitations: "system.motivation.inactive_user_re_engagement"
+
+maintenance_and_updates:
+  version_control:
+    prompt_versioning:
+      - semantic_versioning: "major.minor.patch"
+      - backward_compatibility: "maintain_2_versions"
+      - update_rollout: "gradual_deployment"
+    
+    content_refresh:
+      frequency: "quarterly"
+      focus_areas:
+        - cultural_references_update
+        - vocabulary_relevance_check
+        - pedagogical_best_practices_integration
+    
+    performance_optimization:
+      - token_efficiency_analysis: "monthly"
+      - response_time_optimization: "continuous"
+      - fallback_pattern_improvement: "quarterly"
+
+extensibility_framework:
+  future_enhancements:
+    additional_languages:
+      - prompt_localization_strategy
+      - cultural_adaptation_requirements
+      - linguistic_pattern_variations
+    
+    specialized_domains:
+      - business_english_prompts
+      - academic_writing_prompts
+      - conversational_fluency_prompts
+    
+    advanced_features:
+      - ai_tutor_personality_variants
+      - adaptive_difficulty_algorithms
+      - collaborative_learning_prompts
+
+deployment_configuration:
+  environment_settings:
+    development:
+      validation_level: "strict"
+      fallback_frequency: "high"
+      logging_detail: "verbose"
+    
+    staging:
+      validation_level: "standard"
+      fallback_frequency: "medium"
+      logging_detail: "standard"
+    
+    production:
+      validation_level: "essential"
+      fallback_frequency: "low"
+      logging_detail: "errors_only"
+
+security_considerations:
+  data_privacy:
+    student_information:
+      - no_personal_data_in_prompts
+      - anonymized_progress_tracking
+      - secure_cultural_preference_storage
+    
+    content_filtering:
+      - inappropriate_content_detection
+      - cultural_sensitivity_screening
+      - age_appropriate_content_verification
+    
+    system_security:
+      - prompt_injection_prevention
+      - output_sanitization
+      - rate_limiting_integration

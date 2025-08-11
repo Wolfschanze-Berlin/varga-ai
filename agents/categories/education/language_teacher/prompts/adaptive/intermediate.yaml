@@ -1,0 +1,412 @@
+# Intermediate Level (B1-B2) Adaptive Prompts
+# Contextual, practical, and challenging prompts for developing learners
+
+level_characteristics:
+  target_level: "B1-B2 (Intermediate)"
+  vocabulary_range: "1500-3000 words including specialized terms"
+  grammar_complexity: "All tenses, conditionals, passive voice, complex sentences"
+  sentence_length: "10-20 words average, varied structures"
+  error_tolerance: "Moderate - accuracy becomes important"
+  repetition_frequency: "Moderate - focus on consolidation"
+  challenge_level: "Push boundaries while maintaining confidence"
+
+conversation_adaptations:
+  sophisticated_responses:
+    detailed_feedback:
+      template: |
+        That's an interesting perspective on {topic}! I appreciate how you {specific_observation}.
+        
+        {content_expansion}
+        
+        Let me challenge you a bit: {follow_up_challenge}
+        
+        **Language note:** You could also express this by saying "{alternative_expression}". How does that version sound to you?
+      
+      examples:
+        topic: "work-life balance"
+        specific_observation: "connected it to your personal experience"
+        content_expansion: "Your point about modern technology affecting family time is something many people struggle with."
+        follow_up_challenge: "Do you think there are any benefits to this technological integration, or is it mostly problematic?"
+    
+    nuanced_corrections:
+      template: |
+        Your argument is compelling, and I can see you're thinking deeply about this issue.
+        
+        **Small refinement:** Instead of "{student_phrase}", you might say "{refined_version}" - it's more precise for this context.
+        
+        **Why this matters:** {explanation_of_nuance}
+        
+        Now, continuing with your idea about {topic_continuation}...
+      
+      examples:
+        student_phrase: "I am agree with this opinion"
+        refined_version: "I agree with this viewpoint" or "I share this opinion"
+        explanation_of_nuance: "In formal discussions, 'viewpoint' suggests you've considered multiple angles, and 'share' implies thoughtful agreement rather than simple accord."
+    
+    analytical_guidance:
+      template: |
+        You're developing a strong analytical approach to {language_target}! 
+        
+        I notice you're successfully using {successful_element}, which shows real progress in {skill_area}.
+        
+        **Next level challenge:** Try incorporating {advanced_element} into your next response. For example: {example_usage}
+        
+        **This will help you:** {benefit_explanation}
+
+  complex_question_types:
+    hypothetical_scenarios:
+      template: |
+        Let's explore some hypothetical situations - great for practicing conditionals and subjunctive mood!
+        
+        **Scenario:** {hypothetical_situation}
+        
+        **Consider:** 
+        - What would you do if {condition_1}?
+        - How might this change if {condition_2}?
+        - What factors would influence your decision?
+        
+        **Language goal:** Use "would," "might," "could," and "should" naturally in your response.
+        
+        **Challenge:** Try to present both sides of the dilemma!
+      
+      scenarios:
+        career: "Imagine you were offered your dream job, but it required moving to a country where you don't speak the language fluently"
+        technology: "What if artificial intelligence could do your job better than humans - how should society handle this transition?"
+        environment: "If you had unlimited resources, how would you address climate change in your community?"
+    
+    opinion_with_justification:
+      template: |
+        This is a topic where thoughtful people disagree - perfect for developing argumentation skills!
+        
+        **Issue:** {controversial_topic}
+        
+        **Your task:**
+        1. State your position clearly
+        2. Provide at least two supporting reasons
+        3. Acknowledge one potential counterargument
+        4. Explain why your position is still stronger
+        
+        **Useful expressions:**
+        - "From my perspective..."
+        - "The evidence suggests..."
+        - "While I understand that some people believe..."
+        - "However, I maintain that..."
+        
+        **Goal:** Convince me through logic and evidence, not just opinion!
+    
+    cause_and_effect_analysis:
+      template: |
+        Let's analyze the relationships between different factors - excellent for complex sentence structures!
+        
+        **Topic:** {analysis_topic}
+        
+        **Explore:**
+        - What causes {phenomenon}?
+        - What are the immediate effects?
+        - What are the long-term consequences?
+        - Are there any unexpected connections?
+        
+        **Language focus:** Use connecting words like "consequently," "as a result," "due to," "leads to," "stems from."
+        
+        **Challenge:** Try to identify both direct and indirect relationships!
+
+grammar_challenges:
+  advanced_tense_usage:
+    perfect_aspects:
+      template: |
+        Perfect tenses show relationships between different time periods - let's master these sophisticated structures!
+        
+        **Present Perfect:** Actions connecting past to present
+        **Past Perfect:** Actions completed before other past actions  
+        **Future Perfect:** Actions that will be completed before future points
+        
+        **Practice scenario:** {scenario_for_practice}
+        
+        **Your challenge:** Tell this story using all three perfect tenses appropriately. I'll help you identify the time relationships!
+      
+      scenarios:
+        life_changes: "Describe how your life has changed over the past five years, what had prepared you for these changes, and what you will have accomplished by next year."
+        skill_development: "Talk about a skill you have developed, what experiences had led to your interest in it, and where you will have progressed by the end of this year."
+    
+    conditional_mastery:
+      template: |
+        Conditionals express possibilities, regrets, and hypothetical situations - essential for sophisticated communication!
+        
+        **Review:**
+        - First conditional: Likely future situations
+        - Second conditional: Unlikely or hypothetical present
+        - Third conditional: Past hypotheticals and regrets
+        - Mixed conditionals: Combining different time periods
+        
+        **Complex scenario:** {conditional_scenario}
+        
+        **Your task:** Address this scenario using at least two different types of conditionals. Show the relationships between different possibilities!
+      
+      scenarios:
+        career_path: "If you had chosen a completely different career path ten years ago, how would your life be different now, and what would you do if you could start over today?"
+        personal_growth: "If you had known what you know now when you were younger, what would you have done differently, and how might that have changed who you are today?"
+  
+  complex_sentence_structures:
+    relative_clause_mastery:
+      template: |
+        Relative clauses add sophistication and precision to your expressions - let's refine this skill!
+        
+        **Types to master:**
+        - Defining: Essential information (no commas)
+        - Non-defining: Extra information (with commas)  
+        - Reduced: More concise forms
+        
+        **Practice task:** {relative_clause_task}
+        
+        **Challenge:** Combine these simple sentences into complex ones using various relative clause structures. Focus on natural flow and precise meaning!
+      
+      tasks:
+        description: "Describe a person who has influenced your thinking, a place that holds special memories, and an experience that changed your perspective - use varied relative clause structures."
+        comparison: "Compare two different approaches to the same problem, explaining the advantages each one offers and the circumstances where each would be most effective."
+
+vocabulary_expansion:
+  academic_and_professional:
+    formal_register:
+      template: |
+        Professional and academic contexts require more sophisticated vocabulary - let's expand your formal register!
+        
+        **Topic area:** {professional_topic}
+        
+        **Vocabulary upgrade:**
+        {vocabulary_transformations}
+        
+        **Practice context:** {formal_context}
+        
+        **Your task:** Discuss {discussion_topic} using this elevated vocabulary. Focus on precision and appropriate formality level.
+        
+        **Tip:** Notice how word choice affects tone and perceived expertise!
+      
+      transformations:
+        basic_to_formal:
+          - "big problem → significant challenge"
+          - "bad result → adverse outcome"
+          - "good idea → viable solution"
+          - "show → demonstrate"
+          - "think about → consider"
+    
+    idiomatic_expressions:
+      template: |
+        Idioms and fixed expressions make your language more natural and native-like!
+        
+        **Today's expressions:** {idiom_set}
+        
+        **Context practice:** {idiom_context}
+        
+        **Your challenge:** Use at least three of these expressions naturally in a discussion about {discussion_topic}.
+        
+        **Cultural insight:** {cultural_explanation}
+        
+        **Warning:** These expressions are {register_level} - use them in {appropriate_context}!
+      
+      idiom_sets:
+        business: ["think outside the box", "low-hanging fruit", "move the needle", "circle back", "touch base"]
+        everyday: ["break the ice", "hit the nail on the head", "cost an arm and a leg", "piece of cake", "spill the beans"]
+        emotions: ["over the moon", "down in the dumps", "on cloud nine", "get cold feet", "have mixed feelings"]
+  
+  contextual_vocabulary:
+    domain_specific_practice:
+      template: |
+        Let's dive deep into {specialized_domain} vocabulary - essential for real-world communication in this area!
+        
+        **Core terms:** {domain_vocabulary}
+        **Related concepts:** {related_concepts}  
+        **Common collocations:** {typical_combinations}
+        
+        **Scenario:** {domain_scenario}
+        
+        **Your task:** Navigate this scenario using the specialized vocabulary naturally and accurately. Show you understand both the terms and their practical applications!
+      
+      domains:
+        technology: "software development, user interface, algorithm, debugging, scalability"
+        healthcare: "symptoms, diagnosis, treatment, prognosis, preventive care"
+        finance: "investment, portfolio, risk assessment, market volatility, diversification"
+        education: "curriculum, assessment, pedagogical approach, learning outcomes, differentiation"
+
+cultural_competency:
+  advanced_cultural_concepts:
+    cultural_comparison:
+      template: |
+        Cultural competency involves understanding subtle differences in values, communication styles, and social norms.
+        
+        **Topic:** {cultural_topic}
+        
+        **Explore:**
+        - How does your culture approach {cultural_aspect}?
+        - What have you observed about {target_culture}'s approach?
+        - Where do you see potential misunderstandings arising?
+        - How might someone bridge these differences?
+        
+        **Language goal:** Use hedging language ("tends to," "generally," "in many cases") to avoid overgeneralization.
+        
+        **Sophistication:** Show awareness of cultural complexity and individual variation within cultures.
+    
+    pragmatic_competence:
+      template: |
+        Understanding when and how to use different language forms is crucial for effective communication.
+        
+        **Situation:** {pragmatic_situation}
+        
+        **Consider:**
+        - What's the relationship between speakers?
+        - What's the social context?
+        - What's the purpose of the communication?
+        - What cultural expectations apply?
+        
+        **Your challenge:** Provide several different ways to handle this situation, explaining why each approach would be appropriate or inappropriate.
+        
+        **Language focus:** Register variation, politeness strategies, indirect communication.
+
+critical_thinking_integration:
+  analysis_and_evaluation:
+    argument_analysis:
+      template: |
+        Critical thinking skills are essential for advanced language use - let's analyze arguments systematically!
+        
+        **Argument to analyze:** {argument_presented}
+        
+        **Your analytical task:**
+        1. Identify the main claim and supporting evidence
+        2. Evaluate the strength of the reasoning
+        3. Consider alternative perspectives
+        4. Assess potential biases or assumptions
+        5. Form your own reasoned response
+        
+        **Language skills:** Use analytical vocabulary, hedging language, and sophisticated sentence structures to express complex thoughts.
+        
+        **Goal:** Show both critical thinking and advanced language control simultaneously.
+    
+    synthesis_and_creation:
+      template: |
+        Synthesis involves combining multiple sources and perspectives to create new understanding - a hallmark of advanced proficiency!
+        
+        **Sources to synthesize:** {multiple_sources}
+        
+        **Your task:**
+        - Identify common themes and contradictions
+        - Evaluate the credibility of different sources
+        - Develop your own integrated perspective
+        - Present a nuanced conclusion that acknowledges complexity
+        
+        **Language challenge:** Use sophisticated connecting devices, vary your sentence structures, and maintain coherent argumentation throughout.
+
+error_correction_strategies:
+  accuracy_expectations:
+    targeted_feedback:
+      template: |
+        Your communication is clear and effective! Now let's focus on accuracy to help you sound more native-like.
+        
+        **Pattern I noticed:** {error_pattern}
+        **Impact:** {accuracy_impact}
+        **Correction strategy:** {specific_strategy}
+        
+        **Practice:** {targeted_practice}
+        
+        **Goal:** Eliminate this pattern over the next few conversations. You have the foundation - now we're polishing!
+    
+    self_monitoring:
+      template: |
+        Developing self-correction skills is crucial at your level - let's work on recognizing and fixing your own errors.
+        
+        **Self-check strategy:** {self_monitoring_technique}
+        **Red flags to watch for:** {common_error_indicators}
+        
+        **Practice:** Before you submit your next response, use this checklist: {checklist}
+        
+        **Independence goal:** The more you can catch your own errors, the more natural and confident your language becomes!
+
+motivation_and_challenge:
+  intermediate_plateau:
+    breaking_through:
+      template: |
+        I can see you're at that intermediate plateau where progress feels slower - this is completely normal and shows you're ready for the next breakthrough!
+        
+        **What's happening:** Your brain is consolidating complex patterns. Progress is less visible but very real.
+        
+        **Evidence of growth:** {specific_improvements}
+        
+        **Next breakthrough area:** {challenge_area}
+        **Strategy:** {breakthrough_strategy}
+        
+        **Remember:** This plateau precedes a major leap in fluency. Stay consistent!
+    
+    advanced_challenges:
+      template: |
+        You're ready for some advanced challenges that will push your language to the next level!
+        
+        **Challenge:** {advanced_challenge}
+        **Why this matters:** {skill_importance}  
+        **Support available:** {scaffolding_offered}
+        
+        **Success criteria:** {advanced_success_metrics}
+        
+        **Confidence note:** I'm giving you this challenge because I believe you can handle it. Growth happens at the edge of your comfort zone!
+
+real_world_application:
+  professional_scenarios:
+    workplace_communication:
+      template: |
+        Let's practice language for professional settings - essential for career advancement!
+        
+        **Scenario:** {professional_scenario}
+        **Role:** {your_role}
+        **Objective:** {communication_goal}
+        
+        **Language skills needed:**
+        - Appropriate formality level
+        - Clear, concise expression
+        - Professional terminology
+        - Diplomatic phrasing
+        
+        **Challenge:** Navigate this scenario while maintaining professionalism and achieving your objective.
+  
+  academic_preparation:
+    academic_discourse:
+      template: |
+        Academic communication requires specific skills - let's develop your ability to engage with complex ideas!
+        
+        **Academic task:** {academic_task}
+        **Expectations:** {academic_standards}
+        
+        **Skills focus:**
+        - Objective analysis
+        - Evidence-based reasoning
+        - Formal register
+        - Clear argumentation
+        
+        **Success measure:** Could your response appear in an academic context? Let's make it publication-ready!
+
+intermediate_specific_scenarios:
+  confidence_building:
+    template: |
+      🎯 **Intermediate Confidence Check** 🎯
+      
+      **What you've mastered:**
+      - Complex conversations on abstract topics
+      - Most grammatical structures  
+      - Nuanced expression of opinions
+      - Cultural awareness and sensitivity
+      
+      **Your current challenge:** {current_focus_area}
+      
+      **Next milestone:** {upcoming_goal}
+      
+      **Reality check:** You can function effectively in {target_language} in most situations. That's remarkable progress! 🌟
+  
+  autonomy_development:
+    template: |
+      🚀 **Developing Language Independence** 🚀
+      
+      **Self-direction skills:**
+      - Identify your own learning needs
+      - Monitor your progress
+      - Seek out appropriate challenges
+      - Apply feedback independently
+      
+      **Your assignment:** {autonomy_task}
+      
+      **Support:** I'm here for guidance, but you're driving your learning journey now! 💪

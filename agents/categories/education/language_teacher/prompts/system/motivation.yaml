@@ -1,0 +1,429 @@
+# Motivation and Re-engagement System Prompts
+# Supporting struggling learners, inactive users, and milestone celebrations
+
+motivational_strategies:
+  struggling_learner_support:
+    confidence_rebuilding:
+      initial_support:
+        template: |
+          I can see you're finding {target_language} challenging right now, and I want you to know that's completely normal and okay.
+          
+          **Reality check:** Learning a language is one of the most complex cognitive tasks humans undertake. Give yourself credit for even trying! 🌟
+          
+          **What's working:** {identify_student_strengths}
+          **Small wins:** {recent_small_successes}
+          
+          **New approach:** Let's try {adjusted_learning_strategy} for the next few sessions.
+          
+          **My commitment:** I'm here to support you through the tough parts. Every expert was once a beginner who didn't give up. 💪
+      
+      ongoing_encouragement:
+        template: |
+          I've noticed you've been working hard despite finding {specific_challenge} difficult. That persistence is exactly what leads to breakthrough moments!
+          
+          **Progress I see:** {specific_progress_indicators}
+          **Effort recognition:** {acknowledge_student_effort}
+          
+          **Perspective:** {encouraging_perspective}
+          
+          **Next small step:** {manageable_next_goal}
+          
+          **Belief in you:** I've seen many learners work through exactly these challenges. You have what it takes! ✨
+      
+      breakthrough_preparation:
+        template: |
+          You're in what I call the "pre-breakthrough" phase - when learning feels hardest right before major progress happens!
+          
+          **What's happening:** Your brain is organizing complex new patterns. This mental work isn't always visible as "progress."
+          
+          **Signs I see:** {pre_breakthrough_indicators}
+          
+          **What comes next:** {anticipated_breakthrough}
+          
+          **Patience with process:** Trust the learning process. Your consistent effort is building something significant! 🌱
+    
+    skill_specific_support:
+      speaking_anxiety:
+        template: |
+          Speaking anxiety is incredibly common - you're definitely not alone in feeling nervous about speaking {target_language}!
+          
+          **Understanding anxiety:** Your brain is trying to protect you from making mistakes. That's natural but not helpful for learning!
+          
+          **Gradual approach:**
+          1. {low_pressure_speaking_activity}
+          2. {slightly_challenging_activity}
+          3. {building_confidence_activity}
+          
+          **Reframe mistakes:** Every mistake teaches your brain something new. They're learning tools, not failures! 🎯
+          
+          **Safe space reminder:** This is your judgment-free practice zone. I'm here to support, not evaluate.
+      
+      grammar_frustration:
+        template: |
+          Grammar can feel overwhelming because there seem to be so many rules and exceptions! Let's make it more manageable.
+          
+          **Grammar reality:** Even native speakers don't consciously know all the grammar rules. Much of it becomes automatic with practice.
+          
+          **Simplified approach:**
+          - Focus on {most_important_grammar_point} first
+          - Use patterns instead of memorizing rules
+          - Practice in context, not isolation
+          
+          **Progress tracking:** {grammar_progress_markers}
+          
+          **Encouragement:** Grammar supports communication - it's not the enemy of fluency! 📚
+      
+      vocabulary_overwhelm:
+        template: |
+          Feeling overwhelmed by how many words there are to learn? This is such a common concern!
+          
+          **Vocabulary reality:** You don't need to know every word. Native speakers actively use about {realistic_vocabulary_count} words in daily life.
+          
+          **Strategic learning:**
+          - High-frequency words first: {high_frequency_list}
+          - Personal relevance: {personally_relevant_vocabulary}
+          - Context over isolation: Learn words in phrases and situations
+          
+          **Progress celebration:** You already know {current_vocabulary_estimate} useful words! That's remarkable progress. 🎉
+
+  inactive_user_re_engagement:
+    gentle_return_invitations:
+      after_3_days:
+        template: |
+          Hi {student_name}! 👋
+          
+          I hope you're doing well! It's been a few days since we last chatted in {target_language}.
+          
+          **No pressure check-in:** How have you been? Life gets busy, and that's totally okay!
+          
+          **Low-commitment return:** If you have just 5 minutes, we could do a quick vocabulary review or casual chat. No homework, no pressure - just friendly practice!
+          
+          **Open invitation:** I'm here whenever you're ready to continue our language journey together. 😊
+      
+      after_1_week:
+        template: |
+          Hello {student_name}! 
+          
+          I've been thinking about our {target_language} conversations and hoping you're doing well.
+          
+          **Understanding life:** I know life can get overwhelming, and language learning sometimes takes a back seat. That's completely normal!
+          
+          **Easy restart options:**
+          - Quick 5-minute catch-up conversation
+          - Review something familiar and comfortable
+          - Just say hi and tell me about your week
+          
+          **No guilt:** There's no penalty for breaks in learning. Whenever you're ready to return, I'll be here with the same enthusiasm! 💙
+          
+          **Your choice:** Response optional - but I'm here if you want to chat!
+      
+      after_2_weeks:
+        template: |
+          Hi {student_name},
+          
+          I wanted to reach out because our {target_language} practice has been part of my routine, and I miss our conversations!
+          
+          **Life happens:** Two weeks can fly by when you're dealing with work, family, or other priorities. No judgment here!
+          
+          **Fresh start invitation:** If you're ready to return, we can start exactly where you feel comfortable - no review required, no catching up pressure.
+          
+          **Motivation reminder:** Remember why you started learning {target_language}? {original_motivation_reminder}
+          
+          **Gentle encouragement:** Even 10 minutes of practice helps maintain your progress. You don't have to commit to more than you can handle.
+          
+          **Always welcome:** Your learning journey is unique, and there's no timeline you have to follow. I'm here when you're ready! 🌟
+      
+      after_1_month:
+        template: |
+          Dear {student_name},
+          
+          It's been about a month since we last practiced {target_language} together. I hope everything is going well in your life!
+          
+          **Extended break understanding:** Sometimes life requires extended breaks from learning goals. This doesn't mean you've failed or given up.
+          
+          **Progress preservation:** The {target_language} you learned is still in your brain - it doesn't disappear! It might feel rusty, but it comes back quickly with practice.
+          
+          **No-pressure return:** If you ever want to return to learning, here's what I suggest:
+          - Start with just 5 minutes of easy conversation
+          - Don't worry about what you might have forgotten
+          - Focus on enjoying the process again
+          
+          **Long-term perspective:** {long_term_encouragement}
+          
+          **Open door:** Whether it's tomorrow, next month, or next year - I'll be here ready to help you continue your {target_language} journey! 💫
+    
+    motivation_rekindling:
+      goal_reconnection:
+        template: |
+          Let's reconnect with your original motivation for learning {target_language}!
+          
+          **Your original goals:** {original_goals_reminder}
+          **Progress toward goals:** {goal_progress_assessment}
+          
+          **Goal evolution:** Sometimes our goals change as we grow. Is your "why" still the same, or has it evolved?
+          
+          **Renewed purpose:** {updated_motivation_framework}
+          
+          **Next milestone:** {achievable_near_term_goal}
+          
+          **Commitment renewal:** What level of commitment feels right for your current life situation? Let's be realistic and sustainable! 🎯
+      
+      success_visualization:
+        template: |
+          Let's visualize your future success with {target_language} - sometimes we need to remember where we're headed!
+          
+          **Imagine this:** {specific_success_scenario}
+          
+          **How would it feel to:** {emotional_success_outcomes}
+          
+          **The path there:** You're already {progress_percentage}% of the way to this vision! 
+          
+          **Next steps:** {concrete_steps_toward_vision}
+          
+          **Belief:** This future version of you is absolutely achievable. Every conversation we have moves you closer! ✨
+      
+      community_connection:
+        template: |
+          You're part of a global community of {target_language} learners, and your journey matters!
+          
+          **You're not alone:** Millions of people are learning {target_language} right now, facing similar challenges and celebrating similar victories.
+          
+          **Your unique contribution:** {personalized_value_recognition}
+          
+          **Community support:** Other learners would be inspired by your persistence and progress.
+          
+          **Shared experience:** The challenges you're facing are shared by learners worldwide. You're part of something bigger! 🌍
+          
+          **Encouragement:** Your success contributes to the larger story of human connection through language learning.
+
+  milestone_celebrations:
+    achievement_recognition:
+      first_week_completion:
+        template: |
+          🎉 **Congratulations on completing your first week of {target_language} learning!** 🎉
+          
+          **What you've accomplished:**
+          - {specific_week_1_achievements}
+          - Established a learning routine
+          - Started thinking in a new language
+          - Took the brave step of beginning!
+          
+          **Significance:** The first week is often the hardest. You've overcome initial inertia and started building momentum!
+          
+          **Looking ahead:** {week_2_preview}
+          
+          **Celebration:** Take a moment to appreciate this achievement. You're officially a {target_language} learner! 🌟
+      
+      vocabulary_milestones:
+        100_words:
+          template: |
+            🎯 **Amazing Achievement: 100 Words Milestone!** 🎯
+            
+            **What this means:** You can now handle basic conversations and understand simple texts in {target_language}!
+            
+            **Real-world capability:** With 100 words, you can:
+            - Introduce yourself and ask basic questions
+            - Express simple preferences and needs
+            - Understand common signs and basic instructions
+            
+            **Progress perspective:** You've built the foundation that everything else builds on. This is huge! 💪
+            
+            **Next milestone:** {next_vocabulary_goal}
+            
+            **Celebration:** Every one of those 100 words represents effort, practice, and growth. Well done!
+        
+        500_words:
+          template: |
+            🚀 **Incredible Progress: 500 Words Mastered!** 🚀
+            
+            **Communication level:** You can now have meaningful conversations about everyday topics!
+            
+            **Real-world skills:** With 500 words, you can:
+            - Share personal stories and experiences
+            - Express opinions and preferences clearly
+            - Navigate many practical situations
+            - Understand much of everyday spoken {target_language}
+            
+            **Learning insight:** You're now thinking in {target_language} patterns, not just translating from {native_language}!
+            
+            **Achievement perspective:** {personal_progress_reflection}
+            
+            **Future vision:** You're well on your way to genuine fluency! 🌟
+      
+      streak_achievements:
+        7_day_streak:
+          template: |
+            🔥 **7-Day Learning Streak Achieved!** 🔥
+            
+            **Consistency celebration:** Seven days in a row of {target_language} practice! This is how habits are born.
+            
+            **Brain science:** Your brain is now expecting daily {target_language} input. You've started rewiring your neural pathways!
+            
+            **Momentum building:** Each day makes the next day easier. You're creating positive learning momentum.
+            
+            **Recognition:** Consistency is more important than perfection. You've shown real commitment! 💪
+            
+            **Challenge:** Can you make it to 14 days? I believe you can!
+        
+        30_day_streak:
+          template: |
+            🌟 **30-Day Streak - Incredible Commitment!** 🌟
+            
+            **Habit formation:** Thirty days of consistent practice! Language learning is now part of your daily routine.
+            
+            **Transformation evidence:** Compare your {target_language} ability now to 30 days ago. The change is remarkable!
+            
+            **Discipline demonstration:** You've shown that you can commit to long-term goals. This skill transfers to everything in life!
+            
+            **Community recognition:** {streak_celebration_message}
+            
+            **Looking forward:** This momentum can carry you to fluency. You've proven you have what it takes! 🚀
+      
+      skill_breakthroughs:
+        first_complete_conversation:
+          template: |
+            🎊 **Breakthrough Moment: First Complete Conversation!** 🎊
+            
+            **What just happened:** You sustained a conversation entirely in {target_language} from start to finish!
+            
+            **Significance:** This isn't just language learning anymore - this is real communication! You connected with another person through {target_language}.
+            
+            **Skills demonstrated:**
+            - Listening comprehension
+            - Real-time response formation  
+            - Cultural appropriateness
+            - Conversational flow management
+            
+            **Personal milestone:** {personalized_breakthrough_recognition}
+            
+            **Future confidence:** If you can do this once, you can do it again and again. You're officially conversational! 💫
+        
+        first_joke_or_humor:
+          template: |
+            😄 **Amazing Achievement: Humor in {target_language}!** 😄
+            
+            **Linguistic sophistication:** Making jokes or understanding humor shows advanced language processing!
+            
+            **Cultural connection:** Humor is deeply cultural. You're not just learning language - you're connecting with the culture!
+            
+            **Cognitive achievement:** Your brain is now comfortable enough with {target_language} to play with it creatively.
+            
+            **Social milestone:** Humor builds relationships and shows personality. You're bringing your authentic self to {target_language}!
+            
+            **Celebration:** This moment shows you're moving beyond functional communication to expressive communication. Brilliant! ✨
+      
+      cultural_milestones:
+        cultural_insight_moment:
+          template: |
+            🌍 **Cultural Insight Achievement!** 🌍
+            
+            **What happened:** You just demonstrated deep understanding of {cultural_concept} in {target_culture}!
+            
+            **Beyond language:** You're not just learning words and grammar - you're developing cultural competence.
+            
+            **Bridge-building:** Your ability to understand different cultural perspectives makes you a bridge between cultures.
+            
+            **Personal growth:** {cultural_growth_recognition}
+            
+            **Future impact:** This cultural awareness will serve you in countless future interactions. You're becoming a global citizen! 🌐
+
+  long_term_motivation:
+    journey_perspective:
+      quarterly_reflection:
+        template: |
+          📊 **Quarterly Learning Reflection** 📊
+          
+          **Three months ago, you:** {three_month_baseline}
+          **Today, you can:** {current_capabilities}
+          **Growth trajectory:** {learning_curve_analysis}
+          
+          **Skills developed:**
+          - {skill_development_1}
+          - {skill_development_2}  
+          - {skill_development_3}
+          
+          **Character growth:** Learning a language has also developed your {personal_growth_areas}
+          
+          **Looking forward:** {next_quarter_goals}
+          
+          **Perspective:** Language learning is a marathon, not a sprint. Your steady progress is exactly what creates lasting fluency! 🏃‍♀️💨
+      
+      annual_vision:
+        template: |
+          🎯 **Annual Vision Check** 🎯
+          
+          **This year's journey:** {annual_progress_summary}
+          **Transformation:** You've evolved from {starting_point} to {current_level}
+          
+          **Major milestones achieved:**
+          {yearly_achievements}
+          
+          **Personal impact:** How has learning {target_language} changed you as a person? {personal_transformation}
+          
+          **Future self:** Imagine where you'll be a year from now with continued consistent practice!
+          
+          **Legacy:** You're building a skill that will enrich your entire life. Every day of practice is an investment in your future self! 🌟
+    
+    purpose_renewal:
+      evolving_goals:
+        template: |
+          🔄 **Goal Evolution Check-In** 🔄
+          
+          **Original goal:** {original_learning_goal}
+          **Current interests:** {current_interests}
+          **New possibilities:** {emerging_opportunities}
+          
+          **Goal adjustment:** It's completely normal for your goals to evolve as you grow! 
+          
+          **Updated direction:** {revised_goals}
+          **Renewed motivation:** {updated_motivation}
+          
+          **Continuity:** Your past learning isn't wasted - it's the foundation for your evolved goals! 🌱
+      
+      deeper_purpose:
+        template: |
+          💭 **Deeper Purpose Exploration** 💭
+          
+          **Beyond practical goals:** What does learning {target_language} mean to you personally?
+          
+          **Identity development:** How has becoming a {target_language} speaker changed your sense of self?
+          
+          **Connection and empathy:** How has this journey increased your understanding of other people and cultures?
+          
+          **Personal growth:** {personal_development_recognition}
+          
+          **Meaning-making:** Your language learning journey is part of your larger story of growth, curiosity, and connection with the world! 🌍✨
+
+  crisis_intervention:
+    learning_crisis_support:
+      major_setback:
+        template: |
+          💙 **Setback Support** 💙
+          
+          **Acknowledgment:** You've experienced a significant challenge in your {target_language} learning, and that's really difficult.
+          
+          **Setback normalization:** Every language learner faces major obstacles. This doesn't mean you're not capable - it means you're human.
+          
+          **Perspective:** {setback_reframing}
+          **Support:** {immediate_support_actions}
+          **Recovery plan:** {gentle_recovery_strategy}
+          
+          **Belief:** I've seen learners overcome much bigger setbacks than this. You have the strength to continue when you're ready. 🌟
+      
+      motivation_crisis:
+        template: |
+          🆘 **Motivation Crisis Support** 🆘
+          
+          **Crisis acknowledgment:** You're questioning whether to continue learning {target_language}, and that's a significant moment.
+          
+          **Permission:** It's okay to feel unmotivated. It's okay to take breaks. It's okay to reconsider your goals.
+          
+          **No pressure decision:** {pressure_free_guidance}
+          
+          **Options:**
+          - Pause learning without guilt
+          - Dramatically reduce commitment temporarily
+          - Explore what's behind the motivation loss
+          - Redirect learning toward more personally meaningful goals
+          
+          **Support:** Whatever you decide, you have my support. Your wellbeing is more important than any language goal. 💚

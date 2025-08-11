@@ -1,0 +1,225 @@
+# Conversation Topics and Starters
+# Organized by level and category for engaging conversations
+
+topic_categories:
+  daily_life:
+    beginner:
+      morning_routine:
+        starter: |
+          Let's talk about your morning routine! This is great practice for everyday vocabulary.
+          
+          Can you tell me three things you do every morning? For example:
+          "I wake up at ___"
+          "I drink ___"
+          "I go to ___"
+          
+          Try to use {target_language} as much as possible!
+        
+        follow_ups:
+          - "What time do you usually wake up? Is that early or late for you?"
+          - "What's the first thing you do when you wake up?"
+          - "Do you prefer coffee or tea in the morning? Why?"
+          - "How long does your morning routine take?"
+        
+        vocabulary_targets:
+          - time_expressions
+          - daily_activities
+          - food_and_drinks
+          - personal_preferences
+      
+      family_and_friends:
+        starter: |
+          Family is such an important part of our lives! Let's practice talking about the people who matter to you.
+          
+          Can you tell me about your family? You can start simple:
+          "I have ___ brothers and ___ sisters"
+          "My mother is ___"
+          "My best friend is ___"
+          
+          Don't worry about being perfect - I'll help you along the way!
+        
+        follow_ups:
+          - "What do you like to do with your family on weekends?"
+          - "How often do you see your friends?"
+          - "Who do you talk to when you have a problem?"
+          - "What makes a good friend in your opinion?"
+        
+        vocabulary_targets:
+          - family_members
+          - personality_traits
+          - activities
+          - relationships
+    
+    intermediate:
+      travel_experiences:
+        starter: |
+          I love hearing about people's travel experiences! Whether it's a big trip or just visiting a nearby city.
+          
+          Can you tell me about a place you've visited recently? I'd like to know:
+          - Where did you go and why?
+          - What was the most interesting thing you saw or did?
+          - What surprised you about that place?
+          - Would you recommend it to others?
+        
+        follow_ups:
+          - "How did you decide to visit that place?"
+          - "What was different from what you expected?"
+          - "Did you try any local food? What did you think of it?"
+          - "What's the most beautiful place you've ever been to?"
+        
+        vocabulary_targets:
+          - travel_vocabulary
+          - past_tenses
+          - descriptions
+          - opinions_and_recommendations
+      
+      work_and_career:
+        starter: |
+          Let's talk about work and career - such an important part of our daily lives!
+          
+          Can you describe what you do for work? If you're a student, tell me about your studies.
+          
+          Try to explain:
+          - What your typical day looks like
+          - What you enjoy most about it
+          - What challenges you face
+          - Where you see yourself in the future
+        
+        follow_ups:
+          - "What motivated you to choose this field?"
+          - "How has your job changed in recent years?"
+          - "What skills are most important in your work?"
+          - "If you could change one thing about your work, what would it be?"
+        
+        vocabulary_targets:
+          - professional_vocabulary
+          - future_plans
+          - problem_solving
+          - time_management
+    
+    advanced:
+      social_issues:
+        starter: |
+          I'd love to discuss some of the social issues that are important today. These conversations help us practice more sophisticated language while exploring meaningful topics.
+          
+          Choose one of these topics that interests you:
+          1. The impact of social media on relationships
+          2. Work-life balance in modern society
+          3. Environmental responsibility vs. economic growth
+          4. The role of education in reducing inequality
+          
+          Share your perspective on whichever topic resonates with you most.
+        
+        follow_ups:
+          - "Can you give me a specific example of what you mean?"
+          - "How do you think this has changed over the past decade?"
+          - "What would an ideal solution look like to you?"
+          - "How does this issue affect people in your country specifically?"
+        
+        vocabulary_targets:
+          - abstract_concepts
+          - cause_and_effect
+          - hypothetical_situations
+          - complex_opinions
+
+  cultural_exchange:
+    beginner:
+      food_and_traditions:
+        starter: |
+          Food is such a wonderful way to learn about culture! Let's talk about your favorite foods and traditions.
+          
+          Can you tell me:
+          - What's a typical meal in your country?
+          - What's your favorite food?
+          - Do you have any special food traditions in your family?
+          
+          I'll share some from {target_culture} too!
+        
+        cultural_bridge: |
+          That's so interesting! In {target_culture}, we have something similar called {cultural_equivalent}. 
+          Have you ever tried {target_culture_food}?
+    
+    intermediate:
+      festivals_and_celebrations:
+        starter: |
+          Every culture has its special celebrations! I'm curious about the festivals and holidays that are important to you.
+          
+          Can you describe:
+          - Your favorite holiday or festival
+          - How people typically celebrate it
+          - What makes it special for you personally
+          - Any interesting traditions associated with it
+          
+          I'll tell you about how we celebrate similar occasions in {target_culture}!
+    
+    advanced:
+      cultural_perspectives:
+        starter: |
+          One of the most fascinating aspects of learning a language is discovering different cultural perspectives.
+          
+          I'd like to explore this question with you: How do cultural differences in {specific_topic} affect the way people communicate and build relationships?
+          
+          Think about your own cultural background and what you've observed in {target_culture}. What similarities and differences have you noticed?
+
+  current_events:
+    level_adaptive:
+      news_discussion:
+        beginner: |
+          Let's talk about something happening in the world right now, but we'll keep it simple and positive!
+          
+          Have you heard any good news recently? Maybe:
+          - A sports event
+          - A celebration in your city
+          - Something nice happening in your community
+          
+          Try to explain it in simple terms, and I'll help you expand your description!
+        
+        intermediate: |
+          Current events are great for practicing more complex language! 
+          
+          What's a news story that caught your attention recently? Can you:
+          - Summarize what happened
+          - Explain why it's important
+          - Share your opinion about it
+          
+          Don't worry about getting all the details perfect - we're practicing expressing ideas clearly!
+        
+        advanced: |
+          Let's have a thoughtful discussion about a current event that interests you.
+          
+          Choose a recent news story and help me understand:
+          - The different perspectives people might have on this issue
+          - The potential long-term implications
+          - How this connects to broader trends in society
+          
+          I'm interested in both your analysis and how you articulate complex ideas.
+
+conversation_flow:
+  topic_transitions:
+    natural: |
+      That's really interesting! Speaking of {connection_point}, I'm curious about {new_topic}...
+    
+    level_check: |
+      You're doing great with this topic! Let's try something that might challenge you a bit more: {advanced_topic}
+    
+    simplification: |
+      Let me ask about something a bit easier so we can practice the basics: {simpler_topic}
+  
+  encouraging_expansion:
+    prompt: |
+      {acknowledgment} Can you tell me a bit more about {specific_aspect}? 
+      
+      {guiding_question}
+      
+      Use this helpful phrase if you need it: "{useful_expression}"
+  
+  cultural_moments:
+    explanation_needed: |
+      That's a great opportunity to learn something cultural! In {target_culture}, {cultural_explanation}.
+      
+      How is this different from your culture?
+    
+    idiom_introduction: |
+      Perfect moment to learn an expression! We say "{idiomatic_expression}" which means {explanation}.
+      
+      Can you try using it in a sentence?

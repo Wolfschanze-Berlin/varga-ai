@@ -1,0 +1,214 @@
+# Image Generator Agent Configuration
+# Marketing-focused AI agent for generating high-quality images using DALL-E 3
+
+agent:
+  name: "image_generator"
+  description: "AI-powered marketing image generator using DALL-E 3 for creating professional visuals, advertisements, social media content, and promotional materials"
+  category: "marketing"
+  version: "1.0.0"
+  
+  # AutoGen Configuration
+  system_message: |
+    You are a professional Marketing Image Generator Agent specialized in creating high-quality visual content for business marketing needs.
+    
+    Your expertise includes:
+    - Creating compelling marketing visuals using DALL-E 3
+    - Understanding brand identity and visual consistency
+    - Optimizing images for different marketing channels (social media, websites, print)
+    - Providing guidance on visual marketing best practices
+    - Ensuring generated content aligns with marketing objectives
+    
+    You can generate images for:
+    - Product showcases and photography
+    - Social media posts and campaigns
+    - Website banners and hero images
+    - Advertisement creatives
+    - Brand identity elements
+    - Infographic components
+    - Event promotion materials
+    - Seasonal campaigns
+    
+    When users request images, you'll:
+    1. Understand their marketing goals and target audience
+    2. Enhance their prompts with professional marketing terminology
+    3. Suggest optimal sizes, styles, and qualities for their use case
+    4. Generate high-quality images using DALL-E 3
+    5. Provide guidance on how to best utilize the generated content
+    
+    Always consider:
+    - Brand consistency and professional appearance
+    - Platform-specific requirements and best practices
+    - Current visual trends in marketing
+    - Accessibility and inclusivity in visual content
+    - Legal and ethical considerations in image generation
+    
+    Be helpful, creative, and professional in all interactions while maintaining focus on marketing effectiveness.
+
+  # LLM Configuration
+  model: "gpt-4"
+  temperature: 0.7
+  max_tokens: 2000
+  
+  # Agent Behavior
+  human_input_mode: "NEVER"
+  max_consecutive_auto_reply: 10
+  enable_code_execution: false
+
+# Tool Configuration
+tools:
+  dalle:
+    enabled: true
+    rate_limit_per_minute: 50
+    rate_limit_per_hour: 1000
+    timeout_seconds: 120
+    retry_attempts: 3
+    max_prompt_length: 4000
+    save_directory: "./generated_images"
+    
+    # DALL-E 3 specific settings
+    default_size: "1024x1024"
+    default_quality: "standard"
+    default_style: "vivid"
+    max_images_per_request: 4
+    
+    # File management
+    auto_save: true
+    create_metadata: true
+    organize_by_tenant: true
+    cleanup_old_files: false
+    max_storage_gb: 10
+
+# Marketing Templates
+marketing_templates:
+  product_showcase:
+    description: "Professional product photography style"
+    prompt_template: "A professional product photography style image of {product} with {background} background, high quality, commercial photography lighting, clean composition"
+    recommended_size: "1024x1024"
+    recommended_quality: "hd"
+    
+  social_media_post:
+    description: "Engaging social media content"
+    prompt_template: "A vibrant and engaging {style} illustration for social media showing {subject}, modern design, eye-catching colors, social media optimized"
+    recommended_size: "1024x1024"
+    recommended_quality: "standard"
+    
+  advertisement:
+    description: "Commercial advertisement creative"
+    prompt_template: "A compelling advertisement image for {product_service} featuring {key_message}, professional marketing design, clean layout, commercial quality"
+    recommended_size: "1792x1024"
+    recommended_quality: "hd"
+    
+  brand_identity:
+    description: "Brand and logo elements"
+    prompt_template: "A minimalist and professional logo-style image representing {concept}, clean design, corporate branding style, scalable vector appearance"
+    recommended_size: "1024x1024"
+    recommended_quality: "hd"
+    
+  hero_banner:
+    description: "Website hero banner"
+    prompt_template: "A stunning hero banner image for {business_type} website featuring {main_element}, modern web design, high impact visual, banner proportions"
+    recommended_size: "1792x1024"
+    recommended_quality: "hd"
+    
+  infographic_element:
+    description: "Data visualization graphics"
+    prompt_template: "A clean and informative illustration showing {data_concept}, infographic style, professional data visualization, clear and readable"
+    recommended_size: "1024x1792"
+    recommended_quality: "standard"
+    
+  event_promotion:
+    description: "Event marketing materials"
+    prompt_template: "An exciting promotional image for {event_type} event featuring {theme}, vibrant colors, celebration atmosphere, event marketing style"
+    recommended_size: "1024x1792"
+    recommended_quality: "standard"
+    
+  seasonal_campaign:
+    description: "Seasonal marketing content"
+    prompt_template: "A {season} themed marketing image for {campaign_type}, seasonal colors and elements, festive atmosphere, holiday marketing style"
+    recommended_size: "1024x1024"
+    recommended_quality: "standard"
+
+# Platform Integration
+platforms:
+  social_media:
+    facebook:
+      recommended_sizes: ["1200x630", "1080x1080"]
+      aspect_ratios: ["16:9", "1:1"]
+    
+    instagram:
+      recommended_sizes: ["1080x1080", "1080x1350"]
+      aspect_ratios: ["1:1", "4:5"]
+    
+    twitter:
+      recommended_sizes: ["1200x675", "1080x1080"]
+      aspect_ratios: ["16:9", "1:1"]
+    
+    linkedin:
+      recommended_sizes: ["1200x627", "1080x1080"]
+      aspect_ratios: ["1.91:1", "1:1"]
+  
+  web:
+    hero_banner:
+      recommended_sizes: ["1920x800", "1792x1024"]
+      aspect_ratios: ["2.4:1", "16:9"]
+    
+    blog_header:
+      recommended_sizes: ["1200x600", "1024x512"]
+      aspect_ratios: ["2:1", "16:9"]
+  
+  print:
+    flyer:
+      recommended_sizes: ["1024x1792", "1152x1728"]
+      aspect_ratios: ["9:16", "2:3"]
+    
+    poster:
+      recommended_sizes: ["1792x1024", "1728x1152"]
+      aspect_ratios: ["16:9", "3:2"]
+
+# Quality Guidelines
+quality_standards:
+  professional:
+    minimum_resolution: "1024x1024"
+    preferred_quality: "hd"
+    style_preference: "natural"
+    keywords: ["professional", "clean", "corporate", "high quality"]
+  
+  creative:
+    minimum_resolution: "1024x1024"
+    preferred_quality: "standard"
+    style_preference: "vivid"
+    keywords: ["creative", "artistic", "vibrant", "innovative"]
+  
+  commercial:
+    minimum_resolution: "1024x1024"
+    preferred_quality: "hd"
+    style_preference: "vivid"
+    keywords: ["commercial", "marketing", "promotional", "engaging"]
+
+# Usage Limits and Monitoring
+limits:
+  max_daily_generations: 100
+  max_images_per_session: 20
+  max_concurrent_requests: 5
+  storage_limit_gb: 10
+  
+monitoring:
+  track_usage: true
+  log_prompts: true
+  save_metadata: true
+  performance_metrics: true
+  cost_tracking: true
+
+# Security and Compliance
+security:
+  content_filtering: true
+  prompt_sanitization: true
+  output_validation: true
+  tenant_isolation: true
+  audit_logging: true
+  
+compliance:
+  gdpr_compliant: true
+  data_retention_days: 90
+  anonymize_logs: true
+  secure_storage: true

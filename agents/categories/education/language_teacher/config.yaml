@@ -1,0 +1,593 @@
+# Language Teacher Agent Configuration
+# Comprehensive configuration for the language learning bot
+
+agent:
+  name: "language_teacher"
+  display_name: "Language Learning Assistant"
+  description: "Comprehensive language learning bot with multiple teacher personas"
+  version: "1.0.0"
+  category: "education"
+  
+  # LLM Configuration
+  llm:
+    model: "gpt-4"
+    temperature: 0.7
+    max_tokens: 2000
+    timeout_seconds: 30
+    retry_attempts: 3
+    
+  # Agent Behavior
+  behavior:
+    system_message_template: |
+      You are a comprehensive Language Teacher Assistant that helps users learn languages through interactive conversations and exercises.
+
+      Your capabilities include:
+      1. Language selection and level assessment
+      2. Personalized learning paths
+      3. Interactive conversation practice
+      4. Homework assignments and exercises
+      5. Progress tracking and achievements
+      6. Daily reminders and motivation
+
+      You work with different teacher personas:
+      - ConversationTeacher: For natural dialogue practice
+      - HomeworkTeacher: For structured exercises and assignments
+
+      Always be encouraging, patient, and adaptive to the user's learning style and pace.
+      Use emojis and interactive elements to make learning engaging and fun.
+      Provide immediate feedback and corrections in a supportive manner.
+
+      Remember to track user progress and celebrate achievements to maintain motivation.
+    
+    personality:
+      - encouraging
+      - patient
+      - adaptive
+      - engaging
+      - supportive
+      - motivational
+    
+    response_style: "conversational"
+    use_emojis: true
+    max_response_length: 4000
+    
+# Supported Languages Configuration
+languages:
+  english:
+    display_name: "🇺🇸 English"
+    native_name: "English"
+    code: "en"
+    enabled: true
+    default_level: "beginner"
+    content_available: true
+    
+  spanish:
+    display_name: "🇪🇸 Spanish"
+    native_name: "Español"
+    code: "es"
+    enabled: true
+    default_level: "beginner"
+    content_available: true
+    
+  french:
+    display_name: "🇫🇷 French"
+    native_name: "Français"
+    code: "fr"
+    enabled: true
+    default_level: "beginner"
+    content_available: false
+    
+  german:
+    display_name: "🇩🇪 German"
+    native_name: "Deutsch"
+    code: "de"
+    enabled: true
+    default_level: "beginner"
+    content_available: false
+    
+  italian:
+    display_name: "🇮🇹 Italian"
+    native_name: "Italiano"
+    code: "it"
+    enabled: true
+    default_level: "beginner"
+    content_available: false
+    
+  portuguese:
+    display_name: "🇵🇹 Portuguese"
+    native_name: "Português"
+    code: "pt"
+    enabled: true
+    default_level: "beginner"
+    content_available: false
+    
+  chinese:
+    display_name: "🇨🇳 Chinese (Mandarin)"
+    native_name: "中文"
+    code: "zh"
+    enabled: true
+    default_level: "beginner"
+    content_available: false
+    
+  japanese:
+    display_name: "🇯🇵 Japanese"
+    native_name: "日本語"
+    code: "ja"
+    enabled: true
+    default_level: "beginner"
+    content_available: false
+    
+  korean:
+    display_name: "🇰🇷 Korean"
+    native_name: "한국어"
+    code: "ko"
+    enabled: true
+    default_level: "beginner"
+    content_available: false
+    
+  russian:
+    display_name: "🇷🇺 Russian"
+    native_name: "Русский"
+    code: "ru"
+    enabled: true
+    default_level: "beginner"
+    content_available: false
+
+# Learning Levels Configuration
+levels:
+  beginner:
+    display_name: "🟢 Beginner"
+    description: "I'm just starting out"
+    order: 1
+    vocabulary_target: 100
+    lesson_duration_minutes: 10
+    
+  elementary:
+    display_name: "🟡 Elementary"
+    description: "I know basic words and phrases"
+    order: 2
+    vocabulary_target: 300
+    lesson_duration_minutes: 15
+    
+  intermediate:
+    display_name: "🟠 Intermediate"
+    description: "I can have simple conversations"
+    order: 3
+    vocabulary_target: 800
+    lesson_duration_minutes: 20
+    
+  upper_intermediate:
+    display_name: "🔴 Upper Intermediate"
+    description: "I'm quite comfortable with the language"
+    order: 4
+    vocabulary_target: 1500
+    lesson_duration_minutes: 25
+    
+  advanced:
+    display_name: "🟣 Advanced"
+    description: "I'm fluent but want to perfect my skills"
+    order: 5
+    vocabulary_target: 3000
+    lesson_duration_minutes: 30
+    
+  proficient:
+    display_name: "⚫ Proficient"
+    description: "I'm near-native level"
+    order: 6
+    vocabulary_target: 5000
+    lesson_duration_minutes: 30
+
+# Teacher Personas Configuration
+teachers:
+  conversation_teacher:
+    name: "ConversationTeacher"
+    display_name: "Conversation Partner"
+    description: "Interactive conversation practice and natural dialogue"
+    system_message: |
+      You are an expert Language Conversation Teacher who specializes in natural dialogue practice.
+
+      Your teaching approach:
+      1. Engage in natural, flowing conversations on various topics
+      2. Adapt your language complexity to the student's level
+      3. Provide gentle corrections in a supportive way
+      4. Introduce new vocabulary naturally within context
+      5. Ask follow-up questions to keep conversations going
+      6. Give positive reinforcement and encouragement
+
+      Correction format: When correcting mistakes, use this format:
+      "Great point! Just a small correction: instead of '[incorrect]', you could say '[correct]'. [Brief explanation if needed]"
+
+      Remember: The goal is fluent communication, not perfection!
+    
+    temperature: 0.8
+    max_tokens: 1500
+    
+    topics:
+      - daily_life
+      - hobbies
+      - travel
+      - food
+      - work
+      - family
+      - weather
+      - culture
+      - technology
+      - health
+      
+    level_adaptations:
+      beginner:
+        vocabulary_complexity: 1
+        sentence_length: "short"
+        correction_frequency: "high"
+        explanation_detail: "detailed"
+        
+      elementary:
+        vocabulary_complexity: 2
+        sentence_length: "medium"
+        correction_frequency: "medium"
+        explanation_detail: "moderate"
+        
+      intermediate:
+        vocabulary_complexity: 3
+        sentence_length: "medium"
+        correction_frequency: "selective"
+        explanation_detail: "brief"
+        
+      advanced:
+        vocabulary_complexity: 4
+        sentence_length: "varied"
+        correction_frequency: "minimal"
+        explanation_detail: "contextual"
+
+  homework_teacher:
+    name: "HomeworkTeacher"
+    display_name: "Exercise Coach"
+    description: "Structured exercises, assignments, and skill assessments"
+    system_message: |
+      You are an expert Language Homework Teacher who creates and manages structured language learning exercises.
+
+      Your teaching approach:
+      1. Create appropriate exercises based on student level
+      2. Provide clear instructions and examples
+      3. Give immediate feedback on answers
+      4. Explain correct answers with reasoning
+      5. Track progress and adjust difficulty
+      6. Offer hints when students are struggling
+      7. Celebrate correct answers and encourage improvement
+
+      Exercise feedback format:
+      - For correct answers: "✅ Excellent! [Brief reinforcement]"
+      - For incorrect answers: "❌ Not quite. The correct answer is [answer]. [Explanation]"
+      - For partial credit: "⚡ Good try! You're on the right track. [Guidance]"
+
+      Be clear and structured in explanations.
+    
+    temperature: 0.6
+    max_tokens: 1500
+    
+    exercise_types:
+      - vocabulary
+      - grammar
+      - sentence_building
+      - reading_comprehension
+      - translation
+      - fill_in_blanks
+      - multiple_choice
+      - writing_prompt
+      
+    difficulty_scaling:
+      points_multiplier:
+        beginner: 1
+        elementary: 2
+        intermediate: 3
+        upper_intermediate: 4
+        advanced: 5
+        proficient: 6
+
+# Progress Tracking Configuration
+progress:
+  database_path: "agents/data/language_progress.db"
+  
+  daily_goals:
+    default_minutes: 15
+    min_minutes: 5
+    max_minutes: 120
+    
+  streak_calculation:
+    grace_period_hours: 26  # Allow up to 26 hours between activities
+    min_activity_minutes: 1
+    
+  activity_types:
+    conversation:
+      display_name: "Conversation Practice"
+      icon: "💬"
+      base_points: 2
+      
+    homework:
+      display_name: "Homework Exercises"
+      icon: "✍️"
+      base_points: 3
+      
+    vocabulary:
+      display_name: "Vocabulary Practice"
+      icon: "📚"
+      base_points: 1
+      
+    grammar:
+      display_name: "Grammar Exercises"
+      icon: "🔤"
+      base_points: 2
+      
+    reading:
+      display_name: "Reading Practice"
+      icon: "📖"
+      base_points: 3
+      
+    assessment:
+      display_name: "Level Assessment"
+      icon: "📊"
+      base_points: 5
+
+# Achievement System Configuration
+achievements:
+  database_path: "agents/data/achievements.db"
+  
+  categories:
+    welcome:
+      display_name: "Welcome"
+      description: "Getting started achievements"
+      color: "🎉"
+      
+    streak:
+      display_name: "Streak"
+      description: "Daily learning streak achievements"
+      color: "🔥"
+      
+    activity:
+      display_name: "Activity"
+      description: "Learning activity milestones"
+      color: "📚"
+      
+    skill:
+      display_name: "Skill"
+      description: "Skill-specific achievements"
+      color: "🏆"
+      
+    milestone:
+      display_name: "Milestone"
+      description: "Major learning milestones"
+      color: "🎯"
+      
+    dedication:
+      display_name: "Dedication"
+      description: "Time and effort achievements"
+      color: "⏰"
+      
+    exploration:
+      display_name: "Exploration"
+      description: "Language and feature exploration"
+      color: "🌍"
+      
+    mastery:
+      display_name: "Mastery"
+      description: "Advanced mastery achievements"
+      color: "✨"
+  
+  rarity_levels:
+    common:
+      display_name: "Common"
+      color: "🟢"
+      points_min: 1
+      points_max: 25
+      
+    uncommon:
+      display_name: "Uncommon"
+      color: "🟡"
+      points_min: 26
+      points_max: 75
+      
+    rare:
+      display_name: "Rare"
+      color: "🟠"
+      points_min: 76
+      points_max: 150
+      
+    epic:
+      display_name: "Epic"
+      color: "🟣"
+      points_min: 151
+      points_max: 300
+      
+    legendary:
+      display_name: "Legendary"
+      color: "👑"
+      points_min: 301
+      points_max: 1000
+
+# Exercise Generator Configuration
+exercises:
+  content_database: "agents/data/exercise_content.json"
+  
+  generation_rules:
+    variety_factor: 0.8  # How much to vary exercise types in a set
+    difficulty_adaptation: true
+    personalization: true
+    
+  exercise_types:
+    vocabulary_match:
+      display_name: "Vocabulary Matching"
+      description: "Match words with their meanings"
+      base_points: 1
+      estimated_minutes: 1
+      
+    grammar_fill:
+      display_name: "Grammar Fill-in"
+      description: "Complete sentences with correct grammar"
+      base_points: 2
+      estimated_minutes: 2
+      
+    sentence_order:
+      display_name: "Sentence Building"
+      description: "Arrange words in correct order"
+      base_points: 2
+      estimated_minutes: 2
+      
+    translation:
+      display_name: "Translation"
+      description: "Translate phrases between languages"
+      base_points: 3
+      estimated_minutes: 3
+      
+    reading_comprehension:
+      display_name: "Reading Comprehension"
+      description: "Answer questions about text passages"
+      base_points: 3
+      estimated_minutes: 4
+      
+    word_association:
+      display_name: "Word Association"
+      description: "Connect related words and concepts"
+      base_points: 1
+      estimated_minutes: 1
+      
+    synonym_antonym:
+      display_name: "Synonyms & Antonyms"
+      description: "Find words with similar or opposite meanings"
+      base_points: 2
+      estimated_minutes: 2
+
+# Bot Interface Configuration
+bot:
+  command_prefix: "/"
+  
+  commands:
+    start:
+      description: "Start or restart the language learning bot"
+      aliases: ["begin", "restart"]
+      
+    help:
+      description: "Show available commands and help information"
+      aliases: ["h", "info"]
+      
+    language:
+      description: "Select or change your learning language"
+      aliases: ["lang", "languages"]
+      
+    conversation:
+      description: "Start conversation practice mode"
+      aliases: ["chat", "talk", "practice"]
+      
+    homework:
+      description: "Start homework and exercises mode"
+      aliases: ["exercise", "exercises", "hw"]
+      
+    progress:
+      description: "View your learning progress and statistics"
+      aliases: ["stats", "status", "report"]
+      
+    achievements:
+      description: "View your unlocked achievements and badges"
+      aliases: ["badges", "awards", "trophies"]
+      
+    streak:
+      description: "Check your learning streak information"
+      aliases: ["fire", "chain"]
+      
+    settings:
+      description: "Adjust your learning preferences and goals"
+      aliases: ["config", "preferences"]
+  
+  messages:
+    welcome: |
+      🌟 **Welcome to Language Learning Bot!** 🌟
+
+      Hello! I'm your personal language teacher, ready to help you learn a new language or improve your skills.
+
+      **What I can help you with:**
+      📚 Interactive conversations in your target language
+      ✍️ Homework assignments and exercises  
+      📈 Track your progress and achievements
+      🏆 Daily streaks and motivation
+      🎯 Personalized learning paths
+
+      **Let's get started!**
+      Please choose the language you'd like to learn.
+      
+    help: |
+      🤖 **Language Learning Bot Help**
+
+      **Main Commands:**
+      • /start - Start or restart the bot
+      • /language - Select or change language
+      • /conversation - Switch to conversation practice
+      • /homework - Switch to homework mode
+      • /progress - View your learning progress
+      • /achievements - See unlocked achievements
+      • /streak - Check your learning streak
+      • /settings - Adjust your preferences
+      • /help - Show this help message
+
+      **How to Use:**
+      1️⃣ Choose your target language
+      2️⃣ Set your current level
+      3️⃣ Start learning with conversations or exercises
+      4️⃣ Track progress and unlock achievements!
+
+      **Tips:**
+      💡 Practice daily to maintain your streak
+      💡 Mix conversation and homework for balanced learning
+      💡 Don't worry about mistakes - they help you learn!
+
+      Need more help? Just ask me anything! 😊
+      
+    error: |
+      Sorry, I encountered an error processing your request. 
+      Please try again or use /help for assistance.
+      
+    maintenance: |
+      🔧 I'm currently undergoing maintenance. 
+      Please try again in a few minutes. Thank you for your patience!
+
+# Database Configuration
+database:
+  connection_timeout: 30
+  retry_attempts: 3
+  backup_enabled: true
+  backup_interval_hours: 24
+  cleanup_old_data_days: 365
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_enabled: true
+  file_path: "logs/language_teacher.log"
+  max_file_size_mb: 10
+  backup_count: 5
+
+# Performance Configuration
+performance:
+  cache_enabled: true
+  cache_ttl_minutes: 10
+  max_concurrent_users: 1000
+  rate_limit_per_minute: 30
+  response_timeout_seconds: 30
+  
+# Feature Flags
+features:
+  voice_messages: false  # Future feature
+  image_exercises: false  # Future feature
+  group_learning: false  # Future feature
+  live_tutoring: false   # Future feature
+  premium_features: false # Future feature
+  analytics: true
+  notifications: true
+  reminders: true
+
+# Monitoring and Analytics
+monitoring:
+  enabled: true
+  metrics_collection: true
+  error_tracking: true
+  performance_monitoring: true
+  user_analytics: true  # Anonymized

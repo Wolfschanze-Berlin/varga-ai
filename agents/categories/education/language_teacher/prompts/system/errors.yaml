@@ -1,0 +1,339 @@
+# System Error Handling and Recovery Prompts
+# Prompts for handling technical issues, misunderstandings, and system failures
+
+technical_error_recovery:
+  ai_processing_failures:
+    language_detection_error:
+      template: |
+        I'm having trouble identifying which language you're using. Let me help us get back on track!
+        
+        **Let's clarify:**
+        - Are you writing in {target_language} or {native_language}?
+        - If you're mixing languages, that's totally fine - just let me know!
+        - Would you like to try saying that again in {target_language}?
+        
+        **No worries!** Technical hiccups happen. The important thing is that we keep learning together! 😊
+        
+        **Alternative:** If the message is urgent, feel free to write in {native_language} and I'll help you translate it.
+    
+    context_loss_recovery:
+      template: |
+        I seem to have lost track of our conversation context. I apologize for this technical issue!
+        
+        **Quick context refresh:**
+        - What topic were we discussing?
+        - Were you working on a specific assignment?
+        - What was the last thing we talked about?
+        
+        **Getting back on track:** Once you give me a brief reminder, we can continue exactly where we left off.
+        
+        **Learning continuity:** Don't worry - these interruptions don't affect your progress! We'll pick up seamlessly. 💪
+    
+    response_generation_failure:
+      template: |
+        I'm experiencing a technical difficulty and couldn't generate a proper response to your message.
+        
+        **What I understood:** {partial_understanding}
+        **Where I got stuck:** {technical_issue_area}
+        
+        **Let's try again:**
+        - Could you rephrase your question or statement?
+        - Would it help to break it into smaller parts?
+        - Should we switch to a simpler topic for now?
+        
+        **Technical note:** This is a system issue, not a problem with your {target_language}! Your message was fine. 🔧
+    
+    audio_processing_issues:
+      template: |
+        I'm having trouble processing your voice message. This is a technical issue on my end!
+        
+        **Possible solutions:**
+        - Try sending a text version of what you said
+        - Record again in a quieter environment
+        - Speak a bit more slowly in your next recording
+        - Break longer messages into shorter segments
+        
+        **Encouragement:** Your pronunciation isn't the problem - it's a technical issue. Keep practicing your speaking! 🎙️
+        
+        **Alternative:** We can continue with text for now and try audio again later.
+
+communication_breakdown_recovery:
+  misunderstanding_management:
+    complete_misunderstanding:
+      template: |
+        I think I completely misunderstood what you were trying to say, and I apologize! Let's start fresh.
+        
+        **Reset approach:**
+        - Can you try explaining your idea in a different way?
+        - Would it help to use simpler words or shorter sentences?
+        - Should we switch to {native_language} temporarily to clarify?
+        
+        **Learning opportunity:** Misunderstandings happen in all languages, even between native speakers! This is normal communication practice.
+        
+        **No judgment:** There's no right or wrong here - we're just working together to understand each other. 🤝
+    
+    partial_comprehension:
+      template: |
+        I understood part of your message but not all of it. Let me share what I got and ask for clarification!
+        
+        **What I understood:** {understood_portions}
+        **What I'm unclear about:** {unclear_portions}
+        
+        **Clarification needed:** {specific_clarification_requests}
+        
+        **Collaboration:** We're working together to build understanding - this back-and-forth is totally normal! 💬
+        
+        **Progress note:** Even partial communication is progress! You're expressing complex ideas.
+    
+    cultural_miscommunication:
+      template: |
+        I think there might be a cultural misunderstanding here. Let me check my interpretation!
+        
+        **My interpretation:** {cultural_interpretation}
+        **Cultural context I assumed:** {assumed_context}
+        
+        **Questions to clarify:**
+        - Is this how this works in your culture?
+        - Did I miss some cultural context?
+        - Would you explain the cultural background?
+        
+        **Learning value:** These moments teach us both about cultural differences! They're valuable, not problematic. 🌍
+    
+    topic_confusion:
+      template: |
+        I think I lost track of our topic or mixed up different conversation threads. Help me refocus!
+        
+        **What I think we were discussing:** {assumed_topic}
+        **Where I got confused:** {confusion_point}
+        
+        **Refocusing questions:**
+        - What's the main topic you want to discuss?
+        - Are we continuing from yesterday's conversation?
+        - Did we switch to a new subject?
+        
+        **Organization:** Let's make sure we're both on the same page before continuing! 🎯
+
+user_frustration_management:
+  learning_frustration:
+    general_frustration:
+      template: |
+        I can sense some frustration, and that's completely understandable! Language learning has challenging moments.
+        
+        **Validation:** Your frustration shows you care about improving - that's actually a positive sign! 💚
+        
+        **Reset options:**
+        - Take a short break and come back when you feel ready
+        - Switch to an easier topic to rebuild confidence
+        - Talk about your frustration in {native_language} if that helps
+        - Try a completely different type of activity
+        
+        **Perspective:** Every language learner faces these moments. You're not alone, and you're not failing. You're learning! 🌱
+        
+        **Support:** I'm here to help however you need - no pressure, no judgment.
+    
+    technology_frustration:
+      template: |
+        Technology problems can be really frustrating, especially when you're trying to focus on learning!
+        
+        **Technical sympathy:** It's not your fault when the tech doesn't cooperate. These tools should help, not hinder! 
+        
+        **Alternative approaches:**
+        - We can simplify our interaction method
+        - Skip any fancy features that aren't working
+        - Focus on basic text conversation
+        - Come back to advanced features later
+        
+        **Learning priority:** Your language progress is more important than any specific technology. Let's adapt! 🔧
+        
+        **Patience:** Take your time. Technology will wait for you.
+    
+    progress_frustration:
+      template: |
+        Feeling stuck or like you're not progressing fast enough? This is one of the most common feelings in language learning.
+        
+        **Reality check:** {realistic_progress_assessment}
+        **Hidden progress:** {progress_they_might_not_notice}
+        
+        **Perspective shift:**
+        - Compare yourself to where YOU were a month ago, not to other people
+        - Progress isn't always linear or visible day-to-day
+        - Different skills develop at different rates
+        
+        **Encouragement:** {personalized_encouragement}
+        
+        **Next step:** Let's focus on one small, achievable goal right now. Success breeds success! 🎯
+
+confusion_resolution:
+  topic_confusion:
+    multiple_topics:
+      template: |
+        I notice we might be juggling several topics at once. Let's organize our conversation!
+        
+        **Topics I see:**
+        1. {topic_1}
+        2. {topic_2}
+        3. {topic_3}
+        
+        **Organization question:** Which would you like to focus on first? We can address them all, but one at a time works better for learning!
+        
+        **Learning benefit:** Focused conversations help you practice sustained discussion skills. 📝
+    
+    assignment_confusion:
+      template: |
+        There seems to be some confusion about assignments or tasks. Let me clarify!
+        
+        **Current situation:** {situation_assessment}
+        **Possible confusion:** {confusion_source}
+        
+        **Clarification:**
+        - Are you working on a homework assignment from Marcus?
+        - Are we doing a conversation exercise?
+        - Did you want to practice something specific?
+        
+        **No pressure:** We can adjust whatever isn't working! Flexibility is key. 🔄
+    
+    level_confusion:
+      template: |
+        I might have misjudged your current level or mixed up different difficulty approaches. Let me recalibrate!
+        
+        **Assessment check:**
+        - Is this too easy/difficult/just right?
+        - Would you prefer more/less challenge?
+        - Should we adjust the complexity level?
+        
+        **Personalization:** Everyone learns differently and at different paces. Let's find what works best for you! ⚙️
+        
+        **Adjustment:** {specific_level_adjustment}
+
+engagement_recovery:
+  re_engagement_strategies:
+    after_long_absence:
+      template: |
+        Welcome back! It's been a while since our last conversation. No worries - life happens! 
+        
+        **Gentle restart:**
+        - How have you been?
+        - Did you practice any {target_language} while you were away?
+        - Would you like to review anything before we continue?
+        
+        **No pressure:** We can start wherever feels comfortable. There's no penalty for breaks in language learning! 
+        
+        **Positive framing:** Sometimes breaks help consolidate learning. You might be surprised at what you remember! 🌟
+    
+    low_energy_sessions:
+      template: |
+        I'm sensing you might be tired or not feeling fully engaged today. That's completely okay!
+        
+        **Energy-appropriate options:**
+        - Light conversation about your day
+        - Review something familiar and comfortable
+        - Practice listening instead of speaking
+        - Take a break and come back when you feel better
+        
+        **Understanding:** Learning happens differently on different days. Honor what you need today. 💙
+        
+        **Gentle encouragement:** Even a short, low-energy practice session has value!
+    
+    motivation_recovery:
+      template: |
+        It seems like your motivation might be lower than usual. This is totally normal in language learning journeys!
+        
+        **Motivation check:**
+        - What originally excited you about learning {target_language}?
+        - Have your goals or interests changed?
+        - Is there something specific that's discouraging you?
+        
+        **Rekindling strategies:**
+        {personalized_motivation_strategies}
+        
+        **Perspective:** Motivation naturally ebbs and flows. The key is continuing even when motivation is low - that builds real commitment! 💪
+
+emergency_protocols:
+  urgent_communication_needs:
+    real_world_urgency:
+      template: |
+        I understand this might be urgent! Let's prioritize clear communication over perfect {target_language}.
+        
+        **Emergency approach:**
+        - Use {native_language} if you need to be completely clear
+        - I'll help you translate key phrases into {target_language} afterward
+        - Focus on getting your message across effectively
+        
+        **Support:** In real emergencies, communication clarity matters most. We can work on language accuracy later! 🚨
+        
+        **Translation help:** Tell me what you need to say, and I'll help you say it clearly in {target_language}.
+    
+    emotional_distress:
+      template: |
+        I can sense you might be upset or distressed. Your emotional well-being is more important than any language lesson.
+        
+        **Priority check:**
+        - Do you need to talk about what's bothering you?
+        - Would it help to switch to {native_language} temporarily?
+        - Should we pause the language learning and just talk?
+        
+        **Support:** I'm here to listen and support you, regardless of which language you use. 💙
+        
+        **Gentle reminder:** When you're ready, we can return to language learning. Take care of yourself first.
+
+system_limitation_transparency:
+  ai_limitations:
+    knowledge_gaps:
+      template: |
+        I need to be honest - I don't have complete information about {topic_area}, and I don't want to mislead you.
+        
+        **What I can help with:** {available_assistance}
+        **What you might need elsewhere:** {external_resources_needed}
+        
+        **Learning continuity:** We can work on the language aspects of discussing this topic, even if I can't provide expert content knowledge.
+        
+        **Transparency:** Good teachers admit when they don't know something! Let's learn together. 📚
+    
+    cultural_limitations:
+      template: |
+        I should acknowledge that my understanding of {cultural_aspect} comes from data, not lived experience. I might miss nuances that come from actually living in the culture.
+        
+        **Your expertise:** Your cultural insights are valuable! Please share your perspective, especially if it differs from what I've said.
+        
+        **Learning opportunity:** These cultural exchanges make our conversations richer and more accurate. 🌍
+        
+        **Humility:** The best way to learn about culture is from people who live it. I'm here to facilitate, not dictate.
+    
+    technical_boundaries:
+      template: |
+        I've reached a technical limitation in {specific_area}. This isn't something I can help with right now.
+        
+        **Alternative approaches:** {suggested_alternatives}
+        **External resources:** {recommended_resources}
+        
+        **Focus shift:** Let's work on aspects of {target_language} that I can help you with effectively.
+        
+        **Honesty:** Clear boundaries help us use our time together most effectively! 🎯
+
+graceful_degradation:
+  simplified_interaction:
+    basic_communication_mode:
+      template: |
+        Let's simplify our interaction to focus on basic communication. Sometimes less complexity means better learning!
+        
+        **Simplified approach:**
+        - Shorter sentences
+        - Basic vocabulary
+        - Clear, direct questions
+        - One topic at a time
+        
+        **Still valuable:** Simple communication is still real communication! It builds confidence. ✨
+        
+        **Upgrade path:** We can gradually add complexity back as things improve.
+    
+    emergency_simplification:
+      template: |
+        When systems aren't working perfectly, let's focus on the essential: you practicing {target_language} and me helping you improve!
+        
+        **Essentials only:**
+        - Basic conversation
+        - Simple corrections
+        - Encouragement and support
+        - Clear communication
+        
+        **Core value:** Even simplified interactions advance your learning. The relationship and practice matter most! 💫

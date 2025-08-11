@@ -1,0 +1,373 @@
+# Advanced Level (C1-C2) Adaptive Prompts
+# Nuanced, idiomatic, and sophisticated prompts for near-native learners
+
+level_characteristics:
+  target_level: "C1-C2 (Advanced)"
+  vocabulary_range: "5000+ words including low-frequency and specialized terms"
+  grammar_complexity: "All structures including subtle nuances and stylistic variations"
+  sentence_length: "Varied and sophisticated, 15-30+ words with complex embedding"
+  error_tolerance: "Low - near-native accuracy expected"
+  repetition_frequency: "Minimal - focus on refinement and subtlety"
+  challenge_level: "Push toward native-like fluency and cultural competence"
+
+conversation_adaptations:
+  native_like_interactions:
+    sophisticated_discourse:
+      template: |
+        Your insights on {complex_topic} demonstrate sophisticated thinking. I'm particularly struck by your observation about {specific_insight} - that's a nuanced perspective that shows deep understanding of the issue.
+        
+        {intellectual_engagement}
+        
+        Let me push back slightly on your assertion that {debatable_point}. While I see the merit in your reasoning, consider this counterpoint: {sophisticated_counterargument}
+        
+        **Linguistic refinement:** Your use of "{student_phrase}" was effective, though you might consider "{more_nuanced_alternative}" for even greater precision in this context. The subtle difference lies in {nuance_explanation}.
+        
+        How would you reconcile these seemingly contradictory perspectives?
+      
+      examples:
+        complex_topic: "the intersection of artificial intelligence and human creativity"
+        specific_insight: "how AI might democratize creative tools while potentially devaluing traditional artistic skills"
+        intellectual_engagement: "This tension between accessibility and value preservation appears across many domains - from photography to music production to written translation."
+    
+    cultural_sophistication:
+      template: |
+        Your cultural analysis reveals deep cross-cultural awareness. The way you've connected {cultural_phenomenon_1} in your culture to {cultural_phenomenon_2} in {target_culture} shows sophisticated comparative thinking.
+        
+        **Subtle linguistic note:** Native speakers would likely use "{idiomatic_alternative}" rather than "{student_phrase}" in this context - not because your version is incorrect, but because it carries slightly different connotations. The idiom suggests {connotation_explanation}, which fits better with the cultural nuance you're exploring.
+        
+        **Challenge question:** Given these cultural differences, how do you think native speakers of {target_language} would interpret {ambiguous_cultural_scenario}? What unstated cultural assumptions might influence their response?
+    
+    register_sophistication:
+      template: |
+        Your command of formal register is impressive, and your argumentation structure follows academic conventions well. You're operating at a level where the focus shifts from correctness to sophistication and stylistic choice.
+        
+        **Stylistic options:** You wrote "{student_version}," which is perfectly correct. However, consider these alternatives, each with different stylistic effects:
+        - {formal_alternative} (emphasizes objectivity)
+        - {emphatic_alternative} (adds rhetorical force)  
+        - {nuanced_alternative} (suggests complexity)
+        
+        **Advanced question:** Which stylistic choice best serves your argumentative purpose here, and why?
+
+linguistic_precision:
+  lexical_sophistication:
+    precise_word_choice:
+      template: |
+        Let's explore the subtle differences between seemingly synonymous expressions - this precision distinguishes advanced from native-level competence.
+        
+        **Your phrase:** "{student_phrase}"
+        **Alternatives to consider:**
+        - {alternative_1}: {contextual_usage_1}
+        - {alternative_2}: {contextual_usage_2}
+        - {alternative_3}: {contextual_usage_3}
+        
+        **Nuanced differences:**
+        {detailed_semantic_analysis}
+        
+        **Challenge:** Rewrite your statement using each alternative. How does the meaning or tone shift subtly with each choice?
+        
+        **Native insight:** {native_speaker_preference_explanation}
+      
+      examples:
+        student_phrase: "I disagree with this viewpoint"
+        alternatives:
+          - "I take issue with this perspective"
+          - "I find this position problematic"  
+          - "I'm inclined to challenge this assertion"
+        nuanced_differences: "Each suggests different degrees of formality, certainty, and emotional investment in the disagreement"
+    
+    collocational_mastery:
+      template: |
+        Collocational accuracy is one of the final frontiers in achieving native-like fluency. Let's refine your instincts for natural word partnerships.
+        
+        **Area of focus:** {collocation_domain}
+        
+        **Subtle corrections needed:**
+        {collocational_refinements}
+        
+        **Pattern recognition:** {underlying_collocation_rule}
+        
+        **Advanced practice:** Create sophisticated sentences using these precise collocations in the context of {complex_context}. Aim for the kind of natural flow that comes automatically to native speakers.
+        
+        **Mastery indicator:** When these combinations feel instinctive rather than consciously chosen, you'll know you've internalized them.
+  
+  pragmatic_competence:
+    indirect_communication:
+      template: |
+        Mastering indirect communication strategies is essential for native-like pragmatic competence - let's explore the subtleties of implication and inference.
+        
+        **Scenario:** {indirect_communication_scenario}
+        
+        **Pragmatic challenge:** Express {communicative_goal} without stating it directly. Use implication, suggestion, and cultural cues that native speakers would recognize.
+        
+        **Considerations:**
+        - What can be left unsaid but understood?
+        - How do power dynamics affect indirectness?
+        - What cultural scripts apply here?
+        - How much ambiguity is appropriate?
+        
+        **Sophistication goal:** Navigate this interaction so smoothly that the indirectness feels natural, not evasive.
+    
+    register_switching:
+      template: |
+        Advanced speakers can seamlessly shift between registers within a single interaction - let's practice this sophisticated skill.
+        
+        **Multi-register scenario:** {complex_scenario}
+        
+        **Register requirements:**
+        - {register_1}: {register_1_requirements}
+        - {register_2}: {register_2_requirements}
+        - Transition moments: {transition_guidance}
+        
+        **Challenge:** Navigate this scenario switching appropriately between registers while maintaining coherent communication throughout.
+        
+        **Evaluation criteria:** Appropriateness, smoothness of transitions, and maintenance of communicative effectiveness across register shifts.
+
+cultural_and_stylistic_mastery:
+  idiomatic_fluency:
+    advanced_idioms:
+      template: |
+        True fluency involves not just knowing idioms but using them with the same naturalness as native speakers - including knowing when NOT to use them.
+        
+        **Context:** {idiomatic_context}
+        **Appropriate idioms:** {context_appropriate_idioms}
+        **Inappropriate idioms:** {context_inappropriate_idioms}
+        
+        **Subtlety:** Notice how {idiom_example} would be perfect here, while {inappropriate_example} would sound forced or register-inappropriate.
+        
+        **Challenge:** Discuss {complex_topic} incorporating these idioms naturally. The goal is seamless integration, not obvious display of idiomatic knowledge.
+        
+        **Native insight:** {cultural_context_of_idioms}
+    
+    stylistic_variation:
+      template: |
+        Advanced proficiency involves conscious stylistic choices - let's explore how different approaches affect your communicative impact.
+        
+        **Your content:** {student_content}
+        
+        **Stylistic alternatives:**
+        1. **Academic style:** {academic_version}
+        2. **Journalistic style:** {journalistic_version}  
+        3. **Conversational style:** {conversational_version}
+        4. **Persuasive style:** {persuasive_version}
+        
+        **Analysis:** Each version emphasizes different aspects and creates different reader relationships. 
+        
+        **Advanced task:** Choose the most effective style for {specific_purpose} and explain your reasoning using metalinguistic awareness.
+  
+  discourse_management:
+    coherence_and_cohesion:
+      template: |
+        At advanced levels, discourse management becomes as important as grammatical accuracy - let's refine your ability to create seamless, sophisticated text flow.
+        
+        **Your discourse structure:** {student_discourse_analysis}
+        
+        **Sophisticated cohesive devices to incorporate:**
+        {advanced_cohesive_devices}
+        
+        **Discourse organization enhancement:** {structural_suggestions}
+        
+        **Challenge:** Revise your response using these sophisticated discourse management techniques. The goal is text that flows so naturally that readers are carried along by the logic rather than noticing the language mechanics.
+        
+        **Expert level:** Create discourse that demonstrates not just linguistic competence but intellectual sophistication.
+
+critical_analysis_and_creativity:
+  analytical_sophistication:
+    deconstructive_analysis:
+      template: |
+        Let's engage in sophisticated critical analysis that demonstrates both linguistic mastery and intellectual depth.
+        
+        **Text/concept for analysis:** {analytical_target}
+        
+        **Multi-layered analytical approach:**
+        1. **Surface analysis:** {surface_level_guidance}
+        2. **Structural analysis:** {structural_level_guidance}
+        3. **Ideological analysis:** {ideological_level_guidance}
+        4. **Meta-analytical reflection:** {meta_level_guidance}
+        
+        **Linguistic goals:**
+        - Use analytical metalanguage precisely
+        - Employ sophisticated hedging and qualification
+        - Demonstrate awareness of analytical limitations
+        - Create original insights through synthesis
+        
+        **Excellence standard:** Your analysis should be publishable in an academic context.
+    
+    creative_synthesis:
+      template: |
+        Advanced language use often involves creating original connections and insights - let's push your creative and analytical boundaries simultaneously.
+        
+        **Synthesis challenge:** {creative_synthesis_task}
+        
+        **Requirements:**
+        - Original thinking that goes beyond obvious connections
+        - Sophisticated argumentation structure  
+        - Precise vocabulary that enhances rather than obscures meaning
+        - Awareness of potential counterarguments or limitations
+        
+        **Language sophistication goals:**
+        {linguistic_sophistication_targets}
+        
+        **Innovation criterion:** Your response should offer insights that a native speaker would find genuinely interesting and well-articulated.
+
+error_correction_at_advanced_level:
+  subtle_refinements:
+    near_native_polishing:
+      template: |
+        Your language control is excellent - we're now working on the subtle refinements that distinguish advanced learners from native speakers.
+        
+        **Micro-adjustment:** {subtle_correction}
+        **Why this matters:** {significance_of_correction}
+        **Pattern recognition:** {underlying_linguistic_principle}
+        
+        **Advanced insight:** This isn't about right versus wrong - it's about {native_like_intuition_explanation}
+        
+        **Mastery goal:** Develop intuitive feeling for these subtle preferences that native speakers acquire unconsciously.
+        
+        **Self-monitoring:** {advanced_self_correction_strategy}
+    
+    style_and_register_precision:
+      template: |
+        Your grammatical accuracy is solid - let's focus on stylistic sophistication and register precision.
+        
+        **Style observation:** {stylistic_feedback}
+        **Register analysis:** {register_appropriateness}
+        **Sophistication opportunity:** {enhancement_suggestion}
+        
+        **Native-like goal:** {native_standard_explanation}
+        
+        **Refinement challenge:** {specific_improvement_task}
+
+motivation_at_advanced_level:
+  perfectionism_management:
+    realistic_expectations:
+      template: |
+        At your level, the goal shifts from improvement to refinement and maintenance - this requires a different mindset about "perfection."
+        
+        **Reality check:** Even native speakers make errors, use imprecise language, and struggle with complex expression sometimes.
+        
+        **Your current competence:** {accurate_assessment}
+        **Remaining growth areas:** {realistic_improvement_targets}
+        **Maintenance priorities:** {what_to_maintain}
+        
+        **Advanced learner wisdom:** {sophisticated_learning_insight}
+        
+        **New goals:** Focus on {advanced_level_appropriate_goals} rather than error elimination.
+    
+    intellectual_engagement:
+      template: |
+        Language learning at your level becomes a tool for intellectual exploration rather than an end in itself.
+        
+        **Intellectual challenge:** {challenging_intellectual_task}
+        **Language as vehicle:** Use your sophisticated {target_language} to explore ideas that genuinely interest you.
+        
+        **Growth through complexity:** {complex_thinking_opportunity}
+        
+        **Advanced satisfaction:** Find fulfillment in using language to think, create, and connect at sophisticated levels.
+
+specialized_competencies:
+  professional_mastery:
+    domain_expertise:
+      template: |
+        Professional-level competence requires not just linguistic accuracy but the ability to function as an expert in your field using {target_language}.
+        
+        **Professional scenario:** {expert_level_scenario}
+        **Competency demonstration:** {professional_competency_requirements}
+        
+        **Language sophistication needed:**
+        - Technical precision without jargon overuse
+        - Appropriate hedging for professional claims
+        - Clear communication of complex concepts
+        - Persuasive presentation of recommendations
+        
+        **Expert standard:** Your communication should inspire confidence in your professional expertise while being accessible to your intended audience.
+    
+    academic_publication_level:
+      template: |
+        Let's work toward publication-quality academic writing in {target_language} - the gold standard for advanced language competence.
+        
+        **Academic writing challenge:** {publication_level_task}
+        
+        **Publication standards:**
+        {academic_publication_criteria}
+        
+        **Sophistication markers:**
+        - Original contribution to knowledge
+        - Methodological awareness  
+        - Sophisticated argumentation
+        - Precise academic register
+        - Appropriate hedging and qualification
+        
+        **Excellence goal:** Create text that could pass peer review in {target_language}.
+
+cultural_ambassador_competence:
+  cross_cultural_facilitation:
+    cultural_bridge_building:
+      template: |
+        At advanced levels, you can serve as a cultural bridge, helping speakers from different backgrounds understand each other.
+        
+        **Cross-cultural scenario:** {cultural_mediation_scenario}
+        
+        **Your role:** Facilitate understanding by:
+        - Explaining cultural contexts that may be unfamiliar
+        - Translating not just language but cultural concepts
+        - Identifying potential misunderstandings before they occur
+        - Helping both sides find common ground
+        
+        **Sophisticated skills needed:**
+        - Cultural sensitivity and awareness
+        - Diplomatic communication
+        - Ability to explain implicit cultural rules
+        - Conflict prevention and resolution
+        
+        **Ambassador goal:** Enable smooth intercultural communication through your advanced linguistic and cultural competence.
+  
+  cultural_critique:
+    sophisticated_cultural_analysis:
+      template: |
+        Your advanced proficiency enables you to engage in sophisticated cultural critique - analyzing both your own culture and {target_culture} with nuanced understanding.
+        
+        **Cultural analysis challenge:** {cultural_critique_task}
+        
+        **Sophisticated approach required:**
+        - Avoid cultural essentialism or stereotyping
+        - Acknowledge internal diversity within cultures
+        - Recognize power dynamics and historical context
+        - Use precise, non-judgmental analytical language
+        - Demonstrate awareness of your own cultural perspective
+        
+        **Advanced discourse goal:** Contribute to cross-cultural understanding through thoughtful, nuanced analysis that respects complexity and avoids oversimplification.
+
+advanced_level_scenarios:
+  intellectual_peer_interaction:
+    template: |
+      🎓 **Advanced Proficiency Recognition** 🎓
+      
+      **Your current competence:**
+      - Near-native grammatical control
+      - Sophisticated vocabulary and register awareness
+      - Cultural competence and sensitivity
+      - Ability to handle complex abstract topics
+      - Stylistic flexibility and discourse management
+      
+      **Continuing refinement areas:** {specific_advanced_goals}
+      
+      **Peer-level interaction:** You can now engage as an intellectual peer with native speakers in academic, professional, and cultural contexts.
+      
+      **New challenge:** {expert_level_challenge}
+      
+      **Recognition:** You've achieved remarkable proficiency. The journey continues toward ever-greater sophistication and cultural insight! 🌟
+  
+  language_stewardship:
+    template: |
+      🌍 **Language Stewardship Role** 🌍
+      
+      **Your new responsibility:** As an advanced speaker, you can help preserve and promote the sophisticated use of {target_language}.
+      
+      **Stewardship activities:**
+      - Mentor other learners
+      - Maintain high standards in your own use
+      - Contribute to {target_language} discourse in your field
+      - Bridge cultural understanding
+      - Preserve nuanced and sophisticated language use
+      
+      **Legacy thinking:** How will you use your advanced proficiency to contribute to the {target_language} speaking community? 💫

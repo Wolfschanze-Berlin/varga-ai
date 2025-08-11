@@ -1,0 +1,213 @@
+# Error Correction and Feedback Prompts
+# Gentle, encouraging corrections that maintain conversation flow
+
+correction_strategies:
+  recasting:
+    # Provide correct form naturally without explicit correction
+    basic_recast:
+      template: |
+        {acknowledgment} Yes, you {correct_version}! {expansion_question}
+      
+      examples:
+        student_says: "I go to shop yesterday"
+        teacher_responds: "Ah yes, you went to the shop yesterday! What did you buy there?"
+        
+        student_says: "She have three cats"  
+        teacher_responds: "That's right, she has three cats! Are they all different colors?"
+    
+    enhanced_recast:
+      template: |
+        {acknowledgment} Exactly, {correct_version}. {related_question} {helpful_phrase}
+      
+      examples:
+        student_says: "I'm agree with you"
+        teacher_responds: "Yes, I agree with you too! What made you think about it that way? By the way, we usually say 'I agree' without 'am'."
+
+  clarification_requests:
+    gentle_prompt:
+      template: |
+        I think I understand, but could you help me by saying that one more time? 
+        Maybe try: "{suggested_structure}"
+      
+      usage_scenarios:
+        - incomprehensible_utterance
+        - major_grammatical_confusion
+        - unclear_pronunciation
+    
+    specific_guidance:
+      template: |
+        I can see what you mean! Let me help you express that even better.
+        
+        You said: "{student_utterance}"
+        Try this: "{corrected_version}"
+        
+        The difference is {explanation}. Does that make sense?
+
+  explicit_teaching_moments:
+    grammar_focus:
+      template: |
+        Great use of vocabulary! Let me help you with the grammar here.
+        
+        {grammar_rule_simple}
+        
+        So instead of "{incorrect}", we say "{correct}".
+        
+        Can you try making another sentence using this pattern?
+      
+      grammar_explanations:
+        verb_tense:
+          present_vs_past: |
+            When we talk about things that happened before now, we use past tense.
+            "I go" (happening now) vs "I went" (happened yesterday)
+        
+        articles:
+          a_an_the: |
+            We use "a" before consonant sounds and "an" before vowel sounds.
+            "The" is for specific things we both know about.
+        
+        prepositions:
+          in_on_at_time: |
+            Time prepositions: "at" for specific times, "on" for days/dates, "in" for months/years
+    
+    vocabulary_building:
+      template: |
+        Perfect! You used "{student_word}" correctly. 
+        
+        Here are some related words that might be useful:
+        - {synonym} (similar meaning)
+        - {related_word} (related concept)
+        - {collocation} (often used together)
+        
+        Can you try using one of these in a sentence?
+
+error_types:
+  pronunciation:
+    mild_correction:
+      template: |
+        {positive_acknowledgment} 
+        
+        Just a quick pronunciation tip: "{word}" is pronounced "{phonetic_guide}".
+        
+        {continuation_of_conversation}
+    
+    practice_opportunity:
+      template: |
+        You're doing well with pronunciation! Let's practice this sound quickly.
+        
+        Repeat after me: "{target_sound}"
+        Now try: "{example_word}"
+        
+        Great! Now back to our conversation...
+  
+  grammar:
+    high_frequency_errors:
+      subject_verb_agreement:
+        template: |
+          {acknowledgment} I understood you perfectly! 
+          
+          Just remember: when talking about "he", "she", or "it", we add 's' to the verb.
+          "She like" → "She likes"
+          
+          {practice_prompt}
+      
+      article_usage:
+        template: |
+          Good expression! Quick tip about articles:
+          
+          {article_rule}
+          
+          So we say "{correct_version}" instead of "{incorrect_version}".
+          
+          {encouraging_continuation}
+  
+  vocabulary:
+    word_choice:
+      template: |
+        I understand what you mean! The word you're looking for is probably "{correct_word}".
+        
+        "{student_word}" is close, but "{correct_word}" fits better here because {explanation}.
+        
+        {practice_opportunity}
+    
+    false_friends:
+      template: |
+        Ah, this is a tricky one! "{student_word}" in {target_language} doesn't mean the same as in {native_language}.
+        
+        In {target_language}, "{student_word}" means "{actual_meaning}".
+        What you want to say is "{correct_word}".
+        
+        {memory_aid}
+
+feedback_timing:
+  immediate:
+    # For critical communication breakdowns
+    template: |
+      Hold on, let me help you with that so I can understand better.
+      
+      {correction_with_explanation}
+      
+      Now, please continue with your idea!
+  
+  delayed:
+    # After student completes their thought
+    template: |
+      {full_acknowledgment_of_content}
+      
+      I noticed a couple of small things that might help you sound even more natural:
+      
+      {corrections_list}
+      
+      But your main point was very clear! {continuation_question}
+  
+  end_of_conversation:
+    summary_feedback:
+      template: |
+        You did fantastic today! Here are a few things to remember for next time:
+        
+        ✅ Great job with: {strengths_list}
+        💡 To work on: {improvement_areas}
+        🎯 Try to practice: {specific_practice_suggestions}
+        
+        I'm proud of your progress! See you next time!
+
+encouragement_phrases:
+  during_struggle:
+    - "Take your time! There's no rush."
+    - "You're thinking hard - that's great! Learning is happening."
+    - "Don't worry about mistakes. They help us learn."
+    - "I can see you're trying to find the right word. That's exactly what good language learners do!"
+  
+  after_correction:
+    - "Much better! You picked that up quickly."
+    - "Perfect! That's exactly right."
+    - "You're getting the hang of this!"
+    - "See how much clearer that sounds?"
+  
+  general_motivation:
+    - "Your {target_language} is really improving!"
+    - "I love how you're not afraid to try new words."
+    - "You're asking great questions - that shows you're thinking about the language."
+    - "Every conversation makes you stronger in {target_language}!"
+
+correction_preferences:
+  by_student_level:
+    beginner:
+      frequency: minimal
+      focus: communication_first
+      approach: recasting_primarily
+      
+    intermediate:
+      frequency: moderate
+      focus: accuracy_improvement
+      approach: balanced_correction
+      
+    advanced:
+      frequency: regular
+      focus: nuanced_precision
+      approach: explicit_when_needed
+  
+  by_error_severity:
+    communication_breaking: immediate_correction
+    minor_grammar: delayed_feedback
+    pronunciation: context_dependent
+    vocabulary: teaching_moment

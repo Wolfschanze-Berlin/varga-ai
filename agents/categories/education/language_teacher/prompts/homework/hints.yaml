@@ -1,0 +1,365 @@
+# Homework Hints and Support Prompts
+# Progressive disclosure hints that guide without giving away answers
+
+hint_strategies:
+  progressive_disclosure:
+    level_1_gentle_nudge:
+      template: |
+        💡 **Gentle Hint**
+        
+        You're on the right track! Think about {general_direction}.
+        
+        **Question to consider:** {guiding_question}
+        
+        Try again, and if you're still stuck, I'll give you a more specific hint! 🤔
+    
+    level_2_specific_guidance:
+      template: |
+        🎯 **More Specific Help**
+        
+        Let me point you in the right direction:
+        
+        **Focus area:** {specific_area}
+        **Key insight:** {helpful_insight}
+        **Example pattern:** {pattern_example}
+        
+        **Now try:** {suggested_attempt}
+        
+        You're getting closer! 💪
+    
+    level_3_detailed_support:
+      template: |
+        📚 **Detailed Guidance**
+        
+        Let me break this down step by step:
+        
+        **Step 1:** {step_1}
+        **Step 2:** {step_2}
+        **Step 3:** {step_3}
+        
+        **Your part:** Now apply these steps to your specific answer.
+        
+        **Confidence builder:** This is exactly how language learning works - step by step! 🌟
+    
+    level_4_model_answer:
+      template: |
+        ✨ **Learning Example**
+        
+        Since you've been working hard on this, let me show you one way to approach it:
+        
+        **Model answer:** {example_answer}
+        
+        **Why this works:** {explanation}
+        
+        **Your turn:** Now create your own version using this as a guide. Focus on making it personal to you!
+        
+        **Remember:** The goal is understanding, not just getting the "right" answer!
+
+hint_categories:
+  vocabulary_hints:
+    word_meaning:
+      template: |
+        📖 **Vocabulary Help**
+        
+        **Stuck on:** "{target_word}"
+        
+        **Context clue:** Look at the words around it - they give you hints!
+        **Similar to:** {similar_concept}
+        **Think about:** {memory_association}
+        
+        **Sentence starter:** Try using it in: "{sentence_starter}..."
+        
+        **Still puzzling?** That's okay - ask me for the definition!
+    
+    word_choice:
+      template: |
+        🤔 **Word Choice Guidance**
+        
+        **Your word:** "{student_word}" - I understand what you mean!
+        **Better fit:** There's a word that fits this context more naturally
+        
+        **Hint:** Think about {context_clue}
+        **Sounds like:** {phonetic_hint}
+        **Used when:** {usage_context}
+        
+        **Try again:** Can you think of another word that means {meaning_hint}?
+    
+    collocation_help:
+      template: |
+        🔗 **Word Partnership Help**
+        
+        **You wrote:** "{student_phrase}"
+        **Almost there!** The idea is clear, but there's a more natural way to say this.
+        
+        **Think about:** What word usually goes with "{key_word}"?
+        **Common patterns:** 
+        - {pattern_1}
+        - {pattern_2}
+        
+        **Native speakers say:** "{partial_collocation}..."
+        
+        **Your turn:** Complete the natural phrase!
+
+  grammar_hints:
+    verb_tense_help:
+      template: |
+        ⏰ **Verb Tense Guidance**
+        
+        **Look at the time clues:** {time_indicators}
+        **This tells us:** {tense_reasoning}
+        
+        **Question:** When did this action happen?
+        - Past: Use {past_form}
+        - Present: Use {present_form}
+        - Future: Use {future_form}
+        
+        **Check your sentence:** Read it aloud - does the timing make sense?
+    
+    sentence_structure:
+      template: |
+        🏗️ **Sentence Building Help**
+        
+        **Your sentence:** "{student_sentence}"
+        **Good elements:** {positive_elements}
+        
+        **Structure tip:** {language} sentences usually follow this pattern: {structure_pattern}
+        
+        **Try reorganizing:** 
+        1. Start with {sentence_start}
+        2. Add {sentence_middle}
+        3. End with {sentence_end}
+        
+        **Does it flow better now?**
+    
+    word_order:
+      template: |
+        🔄 **Word Order Help**
+        
+        **All the right words!** You just need to arrange them differently.
+        
+        **Remember:** In {target_language}, we put:
+        - {position_1} first
+        - {position_2} in the middle  
+        - {position_3} at the end
+        
+        **Try rearranging:** Take your words and put them in this order: {order_template}
+        
+        **Read it aloud:** Does it sound more natural?
+    
+    article_preposition_help:
+      template: |
+        🎯 **Little Words, Big Impact**
+        
+        **Focus on:** The small words (a, an, the, in, on, at, etc.)
+        **Your sentence:** Almost perfect - just check the {grammar_element}
+        
+        **Rule reminder:** {simple_rule}
+        **Examples:** {rule_examples}
+        
+        **Quick check:** Does your sentence follow this pattern?
+
+  content_hints:
+    idea_development:
+      template: |
+        💭 **Developing Your Ideas**
+        
+        **Your main idea:** {student_main_idea} - Great start!
+        **To expand:** Think about the {expansion_areas}
+        
+        **Questions to help you:**
+        - Why {why_question}?
+        - How {how_question}?
+        - What {what_question}?
+        
+        **Goal:** Add 2-3 more sentences that give us more details about your main point.
+    
+    organization_help:
+      template: |
+        📋 **Organization Assistance**
+        
+        **You have good ideas!** Let's arrange them in the best order.
+        
+        **Try this structure:**
+        1. **First:** {organization_point_1}
+        2. **Then:** {organization_point_2}
+        3. **Finally:** {organization_point_3}
+        
+        **Connecting words:** Use {transition_words} to link your ideas smoothly.
+        
+        **Read through:** Does the order make logical sense?
+    
+    examples_and_details:
+      template: |
+        🌟 **Adding Examples and Details**
+        
+        **Your statement:** "{student_statement}"
+        **Make it vivid:** Add a specific example or personal detail!
+        
+        **Think about:**
+        - A specific time when {specific_scenario}
+        - What exactly did you see/hear/feel?
+        - Who was involved?
+        
+        **Starter phrases:** 
+        - "For example..."
+        - "I remember when..."
+        - "Specifically..."
+
+  task_comprehension:
+    understanding_assignment:
+      template: |
+        📝 **Assignment Clarification**
+        
+        I can see you might be unsure about what to do. Let me clarify:
+        
+        **Main goal:** {assignment_goal}
+        **What to include:** {requirements_list}
+        **Format:** {format_expectations}
+        
+        **Success looks like:** {success_criteria}
+        
+        **Start here:** {starting_suggestion}
+        
+        **Still confused?** Ask me specific questions about any part!
+    
+    breaking_down_tasks:
+      template: |
+        🔨 **Breaking It Into Steps**
+        
+        This assignment has several parts. Let's tackle them one at a time:
+        
+        **Step 1:** {step_1_description}
+        ↳ **Do this first:** {step_1_action}
+        
+        **Step 2:** {step_2_description}  
+        ↳ **Then do:** {step_2_action}
+        
+        **Step 3:** {step_3_description}
+        ↳ **Finally:** {step_3_action}
+        
+        **Focus on just Step 1 right now!** Once that's done, we'll move to Step 2.
+
+support_strategies:
+  confidence_building:
+    reassurance:
+      template: |
+        🤗 **You're Doing Fine!**
+        
+        I can sense some frustration, but you're actually making good progress!
+        
+        **What you're doing right:** {positive_aspects}
+        **This is normal:** {normalization_of_difficulty}
+        **Every learner:** {universal_experience}
+        
+        **Take a breath:** Learning languages means making mistakes and trying again. You're exactly where you should be! 💙
+    
+    effort_acknowledgment:
+      template: |
+        💪 **Effort Appreciated!**
+        
+        I can tell you're really trying hard with this assignment. That effort matters more than getting everything perfect!
+        
+        **What I notice:** {effort_indicators}
+        **This shows:** {what_effort_means}
+        
+        **Keep going:** You're building real skills, even when it feels challenging! 🌱
+  
+  different_approaches:
+    visual_learner_support:
+      template: |
+        🎨 **Visual Learning Help**
+        
+        Sometimes it helps to see things differently! Try:
+        
+        **Diagram it:** {visual_suggestion}
+        **Picture this:** {imagery_help}
+        **Draw/write:** {kinesthetic_activity}
+        
+        **Alternative:** {visual_alternative_approach}
+        
+        Does this way of thinking about it help?
+    
+    auditory_learner_support:
+      template: |
+        🎵 **Hearing It Out**
+        
+        Try these sound-based approaches:
+        
+        **Read aloud:** {reading_suggestion}
+        **Listen for:** {auditory_pattern}
+        **Rhythm:** {rhythm_help}
+        
+        **Say it different ways:** {variation_suggestion}
+        
+        How does it sound when you hear it?
+    
+    kinesthetic_support:
+      template: |
+        🏃 **Learning by Doing**
+        
+        Let's get hands-on with this:
+        
+        **Act it out:** {action_suggestion}
+        **Write it down:** {writing_activity}
+        **Move around:** {physical_activity}
+        
+        **Build it:** {construction_metaphor}
+        
+        Sometimes our bodies help our brains learn better!
+
+contextual_hints:
+  cultural_context:
+    template: |
+      🌍 **Cultural Context Help**
+      
+      **Understanding this better:** In {target_culture}, {cultural_explanation}
+      
+      **This affects the language because:** {language_connection}
+      **Compare to your culture:** {cultural_comparison}
+      
+      **Language tip:** {cultural_language_tip}
+      
+      Does this cultural background help explain the language use?
+  
+  real_world_application:
+    template: |
+      🌎 **Real-World Connection**
+      
+      **When you would use this:** {practical_situation}
+      **Who might say this:** {speaker_context}
+      **Setting:** {situational_context}
+      
+      **Imagine:** {scenario_visualization}
+      
+      **Now try:** Apply this to your own life - when might you need to say something similar?
+
+hint_delivery:
+  timing_sensitivity:
+    immediate_support:
+      template: |
+        🚀 **Quick Help Available**
+        
+        Stuck right now? Here's immediate help: {quick_hint}
+        
+        **Try this:** {immediate_suggestion}
+        
+        **If that doesn't work:** Ask for the next level of help! I'm here for you.
+    
+    progressive_waiting:
+      template: |
+        ⏳ **Think Time**
+        
+        Take a moment to think about {thinking_prompt}
+        
+        **No rush!** Good answers take time to develop.
+        **If you need more help after thinking:** Just ask - I have more specific hints ready!
+  
+  encouragement_with_hints:
+    template: |
+      🌟 **You're Closer Than You Think!**
+      
+      {specific_encouragement}
+      
+      **Small adjustment needed:** {minor_correction_hint}
+      
+      **You've got this!** Just one small change and you'll have it perfect.

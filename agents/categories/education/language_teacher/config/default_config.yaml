@@ -1,0 +1,134 @@
+# Language Teacher Agent Configuration
+
+agent:
+  name: "LanguageTeacher"
+  target_language: "english"
+  
+# Adaptive Learning Configuration
+adaptive_learning:
+  adaptation_strategy: "mixed"  # difficulty_based, mastery_based, mixed, spaced_repetition
+  difficulty_adjustment_rate: 0.1
+  min_items_for_adaptation: 3
+  success_rate_target: 0.75
+  mastery_threshold: 0.85
+
+# Spaced Repetition System Configuration  
+spaced_repetition:
+  algorithm: "sm2_plus"  # sm2_basic, sm2_plus, anki
+  min_ease_factor: 1.3
+  max_ease_factor: 5.0
+  ease_bonus: 0.15
+  ease_penalty: 0.20
+  min_interval: 1
+  max_interval: 365
+  graduation_interval: 4
+  initial_intervals: [1, 6]  # minutes, days
+
+# Learning Analytics Configuration
+analytics:
+  trend_window_days: 14
+  min_data_points: 5
+  insight_refresh_hours: 6
+  prediction_horizon_days: 7
+
+# Content Generation Configuration
+content_generation:
+  target_language: "english"
+  
+  # Difficulty level mappings
+  difficulty_levels:
+    beginner:
+      vocab_complexity: 0.2
+      sentence_length: [3, 8]
+      grammar_complexity: 0.3
+      topics: ["daily_life", "family", "food", "colors", "numbers"]
+    
+    elementary:
+      vocab_complexity: 0.4
+      sentence_length: [5, 12]
+      grammar_complexity: 0.5
+      topics: ["school", "work", "hobbies", "weather", "shopping"]
+    
+    intermediate:
+      vocab_complexity: 0.6
+      sentence_length: [8, 15]
+      grammar_complexity: 0.7
+      topics: ["travel", "culture", "technology", "health", "environment"]
+    
+    upper_intermediate:
+      vocab_complexity: 0.8
+      sentence_length: [10, 18]
+      grammar_complexity: 0.8
+      topics: ["business", "politics", "science", "literature", "philosophy"]
+    
+    advanced:
+      vocab_complexity: 0.9
+      sentence_length: [12, 25]
+      grammar_complexity: 0.9
+      topics: ["academic", "professional", "abstract_concepts", "critical_thinking"]
+
+# Natural Language Processing Configuration
+nlp_processing:
+  target_language: "english"
+  
+  # Complexity calculation weights
+  complexity_weights:
+    sentence_length: 0.2
+    word_complexity: 0.3
+    grammar_complexity: 0.25
+    vocabulary_level: 0.25
+  
+  # Error detection settings
+  error_detection:
+    enabled_types: ["grammar", "spelling", "vocabulary", "syntax", "semantic"]
+    severity_threshold: 0.5
+    max_errors_per_analysis: 10
+
+# AutoGen Configuration  
+autogen:
+  teacher_agent:
+    model: "gpt-4"
+    temperature: 0.7
+    max_tokens: 1000
+    
+  assessment_agent:
+    model: "gpt-4"
+    temperature: 0.6
+    max_tokens: 800
+    
+  content_agent:
+    model: "gpt-4"
+    temperature: 0.8
+    max_tokens: 1200
+    
+  group_chat:
+    max_rounds: 6
+    speaker_selection: "round_robin"
+
+# Session Configuration
+session:
+  default_duration_minutes: 15
+  max_activities_per_session: 10
+  min_response_time_seconds: 1
+  max_response_time_seconds: 300
+  
+  # Progress tracking
+  accuracy_targets:
+    beginner: 0.7
+    elementary: 0.75
+    intermediate: 0.8
+    upper_intermediate: 0.85
+    advanced: 0.9
+
+# Forgetting Curve Parameters
+forgetting_curve:
+  initial_strength: 1.0
+  decay_constant: 0.05
+  retrieval_threshold: 0.9
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  log_performance_metrics: true
+  log_student_interactions: true
+  log_ai_component_actions: true

@@ -1,0 +1,217 @@
+# Encouragement and Motivation Prompts
+# Building confidence and maintaining engagement
+
+motivation_types:
+  progress_recognition:
+    vocabulary_growth:
+      template: |
+        I'm so impressed! 🌟 You just used "{new_word}" perfectly - that's a word I haven't heard you use before! 
+        
+        Your vocabulary is definitely expanding. That's exactly how fluency develops - one new word at a time.
+      
+      grammar_improvement:
+        template: |
+          Did you notice what you just did? You used {grammar_point} correctly without even thinking about it! 
+          
+          A few weeks ago, this was something you were practicing, and now it's becoming natural. That's real progress! 👏
+      
+      fluency_development:
+        template: |
+          You're speaking so much more smoothly today! I can see you're not stopping to translate in your head as much.
+          
+          That's one of the biggest signs that {target_language} is starting to become more natural for you. Keep it up!
+    
+    conversation_skills:
+      active_participation:
+        template: |
+          I love how engaged you are in our conversations! You're asking follow-up questions and really developing ideas.
+          
+          This kind of active conversation is exactly what will make you fluent faster. You're not just learning words - you're learning to really communicate!
+      
+      risk_taking:
+        template: |
+          I noticed you tried to explain something complex just now, even though you weren't sure of all the words. That's EXACTLY what good language learners do!
+          
+          Being willing to take risks and try new ways of expressing yourself is how you grow. Well done! 🎯
+
+  effort_acknowledgment:
+    attempting_difficult:
+      template: |
+        Wow, you're tackling some challenging concepts here! Even if it's not perfect yet, I can see you're really pushing yourself to express complex ideas.
+        
+        This is how we make breakthrough progress - by stretching beyond our comfort zone. I'm proud of your effort!
+    
+    persistence_after_mistakes:
+      template: |
+        I love that you kept going even when you made a mistake! That shows real confidence and determination.
+        
+        Fluent speakers aren't perfect - they're brave. And you're showing that bravery every time you keep talking after a stumble.
+    
+    asking_for_help:
+      template: |
+        Great question! Asking when you're not sure is a sign of a smart learner. 
+        
+        Never hesitate to ask me anything - that's how we fill in the gaps and make your {target_language} stronger.
+
+  milestone_celebrations:
+    session_milestones:
+      first_week:
+        template: |
+          Congratulations! 🎉 You've completed your first week of conversation practice! 
+          
+          Look how much you've already improved:
+          {specific_improvements}
+          
+          The hardest part - getting started - is behind you now!
+      
+      streak_achievements:
+        template: |
+          Amazing! {streak_count} days in a row! 🔥
+          
+          Consistency is the secret to language learning success, and you're proving that every single day.
+          
+          {personalized_streak_message}
+        
+        streak_messages:
+          week_1: "Your brain is already starting to think in new patterns!"
+          week_2: "You're building a real habit now - this is when the magic starts happening!"
+          month_1: "A full month! You should be incredibly proud of this commitment."
+    
+    skill_milestones:
+      first_full_story:
+        template: |
+          Did you realize what just happened? You told me a complete story from beginning to end in {target_language}! 🌟
+          
+          That wasn't just vocabulary or grammar - that was real communication. You painted a picture with words and I could follow along perfectly!
+      
+      first_joke_or_humor:
+        template: |
+          You just made a joke in {target_language}! 😄 Humor is one of the most advanced language skills, and you're already there!
+          
+          When you can be funny in another language, you know you're really connecting with it.
+
+  overcoming_challenges:
+    frustration_support:
+      general_frustration:
+        template: |
+          I can sense some frustration, and that's completely normal! Every language learner goes through this.
+          
+          Think of it like this: frustration means you're aware of what you want to say but haven't quite figured out how yet. That awareness is actually a sign of progress!
+          
+          Let's take this step by step. What specifically is bothering you right now?
+      
+      plateau_feeling:
+        template: |
+          It sounds like you're feeling stuck, but let me show you something...
+          
+          {comparison_to_earlier_sessions}
+          
+          Sometimes progress feels slow because you're comparing yourself to where you want to be, not where you started. Trust me, you're moving forward!
+      
+      comparison_anxiety:
+        template: |
+          I hear you comparing yourself to other learners, but here's the truth: everyone's language journey is unique.
+          
+          Some people have different starting points, different amounts of study time, different natural strengths. What matters is YOUR progress, and you are definitely progressing!
+    
+    confidence_building:
+      after_major_mistake:
+        template: |
+          You know what? That mistake you just made actually shows me how much you understand about {target_language}!
+          
+          Only someone who really gets the language would attempt such a complex structure. The attempt itself is impressive, and now we can perfect it together.
+      
+      nervous_about_speaking:
+        template: |
+          I can tell you might be feeling nervous about speaking, and that's so understandable! 
+          
+          Remember, I'm here to help, not judge. Every word you say - right or wrong - teaches me how to help you better.
+          
+          Let's start with something comfortable. What's one thing that made you happy today?
+
+  cultural_encouragement:
+    cultural_understanding:
+      template: |
+        I'm impressed by how you picked up on that cultural nuance! Understanding the culture behind the language is just as important as grammar and vocabulary.
+        
+        You're not just learning to speak {target_language} - you're learning to connect with {target_culture}. That's beautiful!
+    
+    cross_cultural_sharing:
+      template: |
+        Thank you for sharing that about your culture! These exchanges make our conversations so much richer.
+        
+        This is what I love most about language learning - it's really about building bridges between people and cultures.
+
+engagement_strategies:
+  curiosity_building:
+    template: |
+      Your curiosity about {topic} is fantastic! Questions like yours are what make someone a successful language learner.
+      
+      Let's explore this together - I bet we can find some interesting connections between this topic and {target_culture}.
+  
+  personal_connection:
+    template: |
+      I can tell this topic really matters to you personally. When we talk about things we care about, the language learning becomes so much more powerful.
+      
+      Your passion comes through even when the words aren't perfect - and that's what real communication is about!
+  
+  future_orientation:
+    template: |
+      Can you imagine having this same conversation six months from now? You'll be explaining these ideas with such fluency and confidence!
+      
+      Every conversation we have is building toward that future version of you. I'm excited to be part of this journey with you!
+
+session_endings:
+  positive_closure:
+    template: |
+      What a fantastic conversation today! {specific_highlight}
+      
+      I'm so proud of how you {specific_achievement}. 
+      
+      Keep practicing, and I'll see you soon for our next chat! 🌟
+  
+  challenge_setup:
+    template: |
+      Great session today! I have a little challenge for you before we meet next time:
+      
+      {challenge_description}
+      
+      It's not required, but I think you'll enjoy it! See you soon!
+  
+  connection_reinforcement:
+    template: |
+      I really enjoyed our conversation about {topic} today. Your perspective on {specific_point} was so interesting!
+      
+      These kinds of meaningful exchanges are why I love being a language teacher. Until next time! 💫
+
+adaptive_encouragement:
+  by_personality_type:
+    perfectionist:
+      template: |
+        I know you want everything to be perfect, and I admire that attention to detail! But remember, communication is about connection, not perfection.
+        
+        Even native speakers make mistakes. What makes you impressive is your willingness to keep trying and improving!
+    
+    shy_learner:
+      template: |
+        I'm so grateful you shared that with me. I know it takes courage to speak in a new language, and you're doing it!
+        
+        Every word you say builds your confidence a little more. You're braver than you think!
+    
+    impatient_learner:
+      template: |
+        I can tell you're eager to improve quickly, and that enthusiasm is wonderful! 
+        
+        Languages are a bit like physical fitness - we build strength gradually, but every workout matters. You're definitely getting stronger!
+
+contextual_motivation:
+  time_of_day:
+    morning: "What a great way to start the day - learning and growing your {target_language} skills!"
+    afternoon: "Perfect timing for a language break! Your brain is really active right now."
+    evening: "I love that you're ending your day with language practice. Your brain will process this while you sleep!"
+  
+  seasonal:
+    new_year: "What a perfect time to commit to your language goals! This is going to be your year!"
+    spring: "Just like the season, your language skills are blooming beautifully!"
+    summer: "Summer learning is the best - relaxed and enjoyable, just like our conversations!"
+    fall: "Great season for growth and learning. You're harvesting the benefits of all your practice!"

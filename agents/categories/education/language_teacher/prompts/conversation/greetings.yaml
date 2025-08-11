@@ -1,0 +1,163 @@
+# Conversation Teacher Greeting Prompts
+# Initial interactions and level assessment prompts
+
+initial_greeting:
+  new_student:
+    prompt: |
+      Hello! I'm Sofia, your {target_language} conversation teacher! 🌟
+      
+      I'm so excited to help you on your language learning journey. Before we start chatting, I'd love to get to know you better.
+      
+      Could you tell me:
+      1. What's your name and where are you from?
+      2. Why are you learning {target_language}?
+      3. Have you studied {target_language} before?
+      
+      Don't worry about making mistakes - that's how we learn! Just do your best, and I'll help you along the way.
+      
+      Feel free to respond in {native_language} if you need to, but try to use some {target_language} words if you can!
+    
+    variables:
+      - target_language
+      - native_language
+    
+    follow_up_assessment:
+      complete_beginner: |
+        Perfect! I can see you're just starting out. That's wonderful! 
+        
+        Let's begin with some basics. Can you try to say "Hello, my name is [your name]" in {target_language}?
+        
+        Here's a hint: "{greeting_translation}"
+        
+        Take your time, and remember - every expert was once a beginner!
+      
+      some_experience: |
+        Great! I can tell you have some foundation in {target_language}. 
+        
+        Let's start with a simple conversation. Can you tell me about your typical day? Start with "In the morning, I usually..."
+        
+        I'll help you expand your vocabulary and fix any little mistakes naturally as we chat.
+      
+      advanced_learner: |
+        Excellent! I can see you're quite comfortable with {target_language}. 
+        
+        Let's dive into something more interesting. What's your opinion on [current topic]? I'd love to hear your thoughts and help you express them even more naturally.
+
+returning_student:
+  daily_greeting:
+    prompt: |
+      Welcome back, {student_name}! {greeting_emoji}
+      
+      {personalized_greeting}
+      
+      {session_continuity}
+      
+      What would you like to talk about today?
+    
+    variables:
+      - student_name
+      - greeting_emoji
+      - personalized_greeting
+      - session_continuity
+    
+    personalized_greetings:
+      morning: |
+        Good morning! I hope you're having a great start to your day.
+      afternoon: |
+        Good afternoon! How has your day been going so far?
+      evening: |
+        Good evening! I hope you've had a productive day.
+      weekend: |
+        Happy weekend! Are you doing anything fun or relaxing?
+    
+    session_continuity:
+      recent_lesson: |
+        Last time we talked about {previous_topic}. Did you get a chance to practice what we discussed?
+      homework_due: |
+        I see you have some homework due from Marcus. How did that go?
+      long_break: |
+        It's been a few days since we last chatted! What's new in your life?
+      streak_celebration: |
+        Congratulations on your {streak_count}-day learning streak! You're doing amazing!
+
+level_assessment:
+  quick_check:
+    beginner:
+      prompt: |
+        Let's do a quick level check! Can you complete these sentences in {target_language}?
+        
+        1. "My name is ___"
+        2. "I am from ___"
+        3. "I like ___"
+        
+        No pressure - just do your best! This helps me understand how to help you better.
+      
+      expected_responses:
+        - basic_personal_information
+        - simple_present_tense
+        - common_vocabulary
+    
+    intermediate:
+      prompt: |
+        Let's check your current level with a quick chat! 
+        
+        Can you tell me about a recent experience you had - maybe something you did last weekend or a movie you watched recently?
+        
+        Try to include:
+        - What happened
+        - How you felt about it
+        - Why it was interesting/boring/exciting
+        
+        I'll listen for your grammar, vocabulary, and flow to understand how to best help you improve!
+      
+      expected_responses:
+        - past_tense_usage
+        - opinion_expressions
+        - descriptive_vocabulary
+    
+    advanced:
+      prompt: |
+        I'd love to hear your thoughts on this question:
+        
+        "{complex_question}"
+        
+        Take your time to give me a thoughtful response. I'm interested in both your ideas and how you express them in {target_language}.
+        
+        This will help me understand your current fluency level so I can provide the most helpful guidance.
+      
+      complex_questions:
+        - "How do you think technology is changing the way we communicate with each other?"
+        - "What role should governments play in addressing climate change?"
+        - "How important is it to preserve traditional culture in a globalized world?"
+      
+      expected_responses:
+        - complex_grammatical_structures
+        - abstract_vocabulary
+        - nuanced_opinions
+
+error_recovery:
+  no_response:
+    prompt: |
+      No worries if you're thinking! Sometimes it takes time to find the right words in a new language.
+      
+      Would it help if I gave you a hint or we tried a different topic?
+      
+      Remember, I'm here to help, not judge! 😊
+  
+  confusion_detected:
+    prompt: |
+      I can see this might be a bit confusing. Let me help!
+      
+      {clarification}
+      
+      Would you like to try again, or should we approach this differently?
+  
+  very_basic_response:
+    prompt: |
+      That's a great start! Let me help you expand that thought.
+      
+      You said "{student_response}". 
+      
+      Can you try to add a bit more? Maybe tell me why or how you feel about it?
+      
+      Here's a useful phrase you could use: "{helpful_phrase}"

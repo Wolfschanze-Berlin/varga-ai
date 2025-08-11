@@ -1,0 +1,389 @@
+# Enhanced Image Generator Agent Configuration
+# Advanced AutoGen-based image generation with multi-agent workflows
+
+agent:
+  name: "enhanced_image_generator"
+  description: "Advanced AI agent for collaborative image generation using AutoGen framework with DALL-E 3"
+  category: "marketing"
+  version: "2.0.0"
+  
+  # Enhanced AutoGen Configuration
+  system_message: |
+    You are an Advanced Marketing Image Generator Agent, part of a sophisticated multi-agent system.
+    
+    **Core Capabilities:**
+    - Collaborative image generation using DALL-E 3
+    - Multi-agent workflow coordination
+    - Advanced conversation management
+    - Consensus building and peer review
+    - Brand consistency enforcement
+    
+    **Agent Roles You Can Coordinate With:**
+    - Creative Director: Strategic visual direction
+    - Prompt Engineer: Technical prompt optimization  
+    - Brand Officer: Brand compliance and consistency
+    - QA Reviewer: Quality assessment and feedback
+    
+    **Workflow Types You Support:**
+    - Simple Generation: Direct image creation
+    - Campaign Development: Multi-step campaign creation
+    - Brand Development: Consistent brand asset creation
+    - A/B Testing: Variant generation and comparison
+    - Collaborative Review: Team-based refinement process
+    
+    **Conversation States You Manage:**
+    - Concept: Initial idea development
+    - Refinement: Iterative improvement
+    - Generation: Actual image creation
+    - Review: Quality assessment and feedback
+    - Finalization: Final approval and delivery
+    - Completed: Finished workflow
+    
+    **Advanced Features:**
+    - Context-aware prompt enhancement
+    - Multi-modal conversation handling
+    - Intelligent agent collaboration
+    - Workflow state management
+    - Performance optimization
+    
+    You excel at understanding complex marketing requirements, coordinating with specialized agents,
+    managing sophisticated workflows, and delivering high-quality visual content that meets
+    professional marketing standards.
+    
+    Always maintain professional communication, provide detailed reasoning for decisions,
+    and actively collaborate with other agents to achieve the best possible outcomes.
+
+  # AutoGen LLM Configuration
+  model: "gpt-4"
+  temperature: 0.7
+  max_tokens: 3000
+  
+  # Enhanced Agent Behavior
+  human_input_mode: "NEVER"
+  max_consecutive_auto_reply: 15
+  enable_code_execution: false
+  
+  # Multi-Agent Settings
+  group_chat:
+    max_agents: 6
+    speaker_selection_method: "auto"
+    allow_repeat_speaker: false
+    enable_consensus_building: true
+    
+  conversation:
+    state_management: true
+    context_compression: true
+    memory_limit_tokens: 8000
+    save_conversation_history: true
+
+# Enhanced Tool Configuration
+tools:
+  dalle:
+    enabled: true
+    rate_limit_per_minute: 60
+    rate_limit_per_hour: 1500
+    timeout_seconds: 180
+    retry_attempts: 5
+    max_prompt_length: 4000
+    save_directory: "./generated_images"
+    
+    # Advanced DALL-E 3 Settings
+    default_size: "1024x1024"
+    default_quality: "hd"
+    default_style: "vivid"
+    max_images_per_request: 4
+    max_batch_size: 8
+    
+    # Enhanced File Management
+    auto_save: true
+    create_metadata: true
+    organize_by_tenant: true
+    organize_by_workflow: true
+    cleanup_old_files: true
+    max_storage_gb: 50
+    backup_images: true
+    
+    # Performance Optimization
+    enable_caching: true
+    cache_duration_hours: 24
+    parallel_generation: true
+    queue_management: true
+
+# Multi-Agent Workflow Configuration
+workflows:
+  simple_generation:
+    description: "Direct image generation without collaboration"
+    agents: ["image_generator"]
+    steps:
+      - id: "generate"
+        agent: "image_generator"
+        timeout: 180
+    
+  campaign_development:
+    description: "Full campaign image development with team collaboration"
+    agents: ["creative_director", "prompt_engineer", "image_generator", "brand_officer", "qa_reviewer"]
+    steps:
+      - id: "concept"
+        agent: "creative_director"
+        timeout: 120
+      - id: "prompt_engineering"
+        agent: "prompt_engineer"
+        timeout: 90
+        depends_on: ["concept"]
+      - id: "initial_generation"
+        agent: "image_generator"
+        timeout: 180
+        depends_on: ["prompt_engineering"]
+      - id: "brand_review"
+        agent: "brand_officer"
+        timeout: 60
+        depends_on: ["initial_generation"]
+      - id: "quality_review"
+        agent: "qa_reviewer" 
+        timeout: 60
+        depends_on: ["brand_review"]
+      - id: "final_generation"
+        agent: "image_generator"
+        timeout: 180
+        depends_on: ["quality_review"]
+        optional: true
+
+  brand_development:
+    description: "Consistent brand asset creation"
+    agents: ["brand_officer", "image_generator", "qa_reviewer"]
+    steps:
+      - id: "brand_guidelines"
+        agent: "brand_officer"
+        timeout: 90
+      - id: "asset_generation"
+        agent: "image_generator"
+        timeout: 180
+        depends_on: ["brand_guidelines"]
+      - id: "consistency_check"
+        agent: "brand_officer"
+        timeout: 60
+        depends_on: ["asset_generation"]
+      - id: "final_review"
+        agent: "qa_reviewer"
+        timeout: 60
+        depends_on: ["consistency_check"]
+
+  ab_testing:
+    description: "Generate variants for A/B testing"
+    agents: ["prompt_engineer", "image_generator", "qa_reviewer"]
+    steps:
+      - id: "variant_planning"
+        agent: "prompt_engineer"
+        timeout: 90
+      - id: "variant_generation"
+        agent: "image_generator"
+        timeout: 300
+        depends_on: ["variant_planning"]
+      - id: "variant_review"
+        agent: "qa_reviewer"
+        timeout: 120
+        depends_on: ["variant_generation"]
+
+  collaborative_review:
+    description: "Team-based iterative refinement"
+    agents: ["creative_director", "image_generator", "brand_officer", "qa_reviewer"]
+    steps:
+      - id: "initial_concept"
+        agent: "creative_director"
+        timeout: 120
+      - id: "first_generation"
+        agent: "image_generator"
+        timeout: 180
+        depends_on: ["initial_concept"]
+      - id: "team_review"
+        agent: "brand_officer"
+        timeout: 90
+        depends_on: ["first_generation"]
+      - id: "refinement_cycle"
+        agent: "image_generator"
+        timeout: 180
+        depends_on: ["team_review"]
+        max_iterations: 3
+      - id: "final_approval"
+        agent: "qa_reviewer"
+        timeout: 60
+        depends_on: ["refinement_cycle"]
+
+# Specialized Agent Configurations
+specialized_agents:
+  creative_director:
+    role: "Strategic visual direction and creative concepts"
+    system_message: "You are a Creative Director focused on high-level visual strategy, brand positioning, and creative concept development."
+    expertise: ["visual_strategy", "brand_positioning", "creative_concepts", "campaign_development"]
+    
+  prompt_engineer:
+    role: "Technical prompt optimization and DALL-E expertise"
+    system_message: "You are a Prompt Engineering specialist focused on optimizing text prompts for DALL-E 3 to achieve specific visual outcomes."
+    expertise: ["prompt_optimization", "dalle_expertise", "technical_specifications", "quality_enhancement"]
+    
+  brand_officer:
+    role: "Brand compliance and visual consistency"
+    system_message: "You are a Brand Officer responsible for ensuring all generated content aligns with brand guidelines and maintains visual consistency."
+    expertise: ["brand_guidelines", "visual_consistency", "compliance_checking", "style_enforcement"]
+    
+  qa_reviewer:
+    role: "Quality assessment and final approval"
+    system_message: "You are a QA Reviewer responsible for final quality checks, technical validation, and approval of generated content."
+    expertise: ["quality_assessment", "technical_validation", "final_approval", "performance_review"]
+
+# Advanced Conversation Management
+conversation_management:
+  state_transitions:
+    concept:
+      next_states: ["refinement", "generation"]
+      required_agents: ["creative_director"]
+    refinement:
+      next_states: ["generation", "review"]
+      required_agents: ["prompt_engineer", "brand_officer"]
+    generation:
+      next_states: ["review", "finalization"]
+      required_agents: ["image_generator"]
+    review:
+      next_states: ["refinement", "finalization", "generation"]
+      required_agents: ["qa_reviewer", "brand_officer"]
+    finalization:
+      next_states: ["completed"]
+      required_agents: ["qa_reviewer"]
+    completed:
+      next_states: []
+      required_agents: []
+  
+  consensus_building:
+    voting_methods: ["unanimous", "majority", "weighted"]
+    minimum_participants: 2
+    timeout_seconds: 300
+    require_justification: true
+    
+  context_management:
+    max_context_length: 10000
+    compression_threshold: 8000
+    preserve_key_decisions: true
+    maintain_agent_history: true
+
+# Enhanced Platform Integration
+platforms:
+  social_media:
+    facebook:
+      recommended_sizes: ["1200x630", "1080x1080", "1200x1200"]
+      aspect_ratios: ["1.91:1", "1:1"]
+      quality_preference: "hd"
+      style_preference: "vivid"
+      
+    instagram:
+      recommended_sizes: ["1080x1080", "1080x1350", "1080x608"]
+      aspect_ratios: ["1:1", "4:5", "16:9"]
+      quality_preference: "hd"
+      style_preference: "vivid"
+      
+    twitter:
+      recommended_sizes: ["1200x675", "1080x1080", "1200x600"]
+      aspect_ratios: ["16:9", "1:1", "2:1"]
+      quality_preference: "standard"
+      style_preference: "vivid"
+      
+    linkedin:
+      recommended_sizes: ["1200x627", "1080x1080", "1128x1504"]
+      aspect_ratios: ["1.91:1", "1:1", "3:4"]
+      quality_preference: "hd"
+      style_preference: "natural"
+      
+    tiktok:
+      recommended_sizes: ["1080x1920", "1080x1350"]
+      aspect_ratios: ["9:16", "4:5"]
+      quality_preference: "hd"
+      style_preference: "vivid"
+
+  web:
+    hero_banner:
+      recommended_sizes: ["1920x800", "1792x1024", "2560x1080"]
+      aspect_ratios: ["2.4:1", "16:9", "21:9"]
+      quality_preference: "hd"
+      
+    blog_header:
+      recommended_sizes: ["1200x600", "1024x512", "1600x800"]
+      aspect_ratios: ["2:1", "16:9"]
+      quality_preference: "standard"
+      
+    product_showcase:
+      recommended_sizes: ["1024x1024", "1200x1200", "800x800"]
+      aspect_ratios: ["1:1"]
+      quality_preference: "hd"
+
+  print:
+    poster:
+      recommended_sizes: ["1728x1152", "2048x1152", "1920x1080"]
+      aspect_ratios: ["3:2", "16:9"]
+      quality_preference: "hd"
+      
+    flyer:
+      recommended_sizes: ["1024x1792", "1152x1728", "816x1056"]
+      aspect_ratios: ["9:16", "2:3", "8.5:11"]
+      quality_preference: "hd"
+
+# Performance and Monitoring
+performance:
+  monitoring:
+    track_usage: true
+    log_prompts: true
+    save_metadata: true
+    performance_metrics: true
+    cost_tracking: true
+    agent_collaboration_metrics: true
+    workflow_performance: true
+    
+  optimization:
+    enable_caching: true
+    parallel_processing: true
+    queue_management: true
+    resource_pooling: true
+    smart_retry_logic: true
+    
+  limits:
+    max_daily_generations: 500
+    max_images_per_session: 50
+    max_concurrent_requests: 10
+    max_workflow_duration_minutes: 30
+    storage_limit_gb: 50
+
+# Security and Compliance
+security:
+  content_filtering: true
+  prompt_sanitization: true
+  output_validation: true
+  tenant_isolation: true
+  audit_logging: true
+  agent_authentication: true
+  encrypted_communication: true
+  
+compliance:
+  gdpr_compliant: true
+  data_retention_days: 180
+  anonymize_logs: true
+  secure_storage: true
+  audit_trail: true
+  data_export_capability: true
+
+# Error Handling and Resilience
+error_handling:
+  circuit_breaker:
+    enabled: true
+    failure_threshold: 5
+    timeout_seconds: 60
+    half_open_max_calls: 3
+    
+  retry_logic:
+    max_attempts: 5
+    backoff_strategy: "exponential"
+    base_delay_seconds: 1
+    max_delay_seconds: 30
+    
+  fallback_strategies:
+    degraded_mode: true
+    simplified_workflows: true
+    alternative_agents: true
+    notification_system: true
