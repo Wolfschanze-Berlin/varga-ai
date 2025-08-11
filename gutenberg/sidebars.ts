@@ -22,7 +22,22 @@ const sidebars: SidebarsConfig = {
       collapsible: true,
       collapsed: false,
       items: [
+        'project/index',
         'project/brief',
+        {
+          type: 'category',
+          label: 'Architecture',
+          items: [
+            'project/architecture/index',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Agent Catalog',
+          items: [
+            'project/agents/index',
+          ],
+        },
       ],
     },
     {
@@ -62,6 +77,55 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'guides/getting-started',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Agents',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'agents/index',
+        {
+          type: 'category',
+          label: 'Language Teacher',
+          items: [
+            'agents/language-teacher/index',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Image Generator',
+          items: [
+            'agents/image-generator/index',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Telegram Bots',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'telegram-bots/index',
+        {
+          type: 'category',
+          label: 'Language Teacher Bot',
+          items: [
+            'telegram-bots/language-teacher/overview',
+            'telegram-bots/language-teacher/setup',
+            'telegram-bots/language-teacher/user-guide',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Smart Assistant Bot',
+          items: [
+            'telegram-bots/smart-assistant/overview',
+            'telegram-bots/smart-assistant/setup',
+          ],
+        },
       ],
     },
     {
