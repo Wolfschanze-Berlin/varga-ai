@@ -4,12 +4,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a dual-purpose project for building an AutoGen-based SaaS platform for SME automation:
+This is a comprehensive AutoGen-based SaaS platform for AI automation with focus on education and SME solutions:
 
 1. **Python Backend**: Core AutoGen-based automation platform (`main.py`, dependencies in `pyproject.toml`)
-2. **Documentation Site**: Docusaurus-based documentation in `gutenberg/` directory
+2. **AI Agent Library**: Pre-built specialized agents for various domains:
+   - **Education**: Advanced Language Teacher Agent with adaptive learning AI
+   - **SME Automation**: Business agents for customer service, invoicing, and scheduling
+3. **Documentation Site**: Docusaurus-based documentation in `gutenberg/` directory
+4. **Telegram Bot Integration**: Multi-agent conversational interfaces
 
-The project aims to create a platform that democratizes AI automation for SMEs through pre-built AutoGen agents that handle common business tasks like customer service, invoicing, and scheduling.
+### Key AI Implementation: Language Teacher Agent
+
+The project features a comprehensive AI-powered language learning system (`agents/categories/education/language_teacher/`) including:
+
+- **Adaptive Learning Engine**: IRT/BKT models for personalized difficulty adjustment
+- **Natural Language Processing**: Grammar error detection, semantic analysis, complexity assessment
+- **Spaced Repetition System**: SM-2+ algorithm for optimal retention scheduling  
+- **Learning Analytics**: Progress tracking, learning style identification, performance forecasting
+- **Content Generation**: Dynamic exercise creation with personalized scenarios
+- **AutoGen Multi-Agent Framework**: Teacher, Assessment, and Content Creation agents
+
+The system provides production-ready AI components with proper error handling, performance optimization, and Telegram bot integration.
 
 ## Development Commands
 
@@ -141,3 +156,6 @@ This project is in early development phase. The `projectBrief.md` contains compr
 The documentation site (gutenberg/) will serve as both project documentation and potential customer-facing content for the SaaS platform.
 - FOLLOW STRICTLY @projectBrief.md
 - ULTRA IMPORTANT ALL DOCS NEEDS TO BE WRITTE IN gutenberg/ with proper folder structure
+- Everytime when compact you create/update a file in .claude/context/history.json file and write all impoortant fixes and learned know how in it. important do not delete previous data.
+- ALWAYS before you start read the .claude/context/ folder and read all files and ultrathink it.
+- When you start pls output what you files you read
