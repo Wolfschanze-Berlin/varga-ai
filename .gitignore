@@ -146,7 +146,6 @@ dmypy.json
 cython_debug/
 
 # Claude Configuration (keep CLAUDE.md and context)
-.claude/agents/
 !.claude/CLAUDE.md
 !.claude/context/
 
