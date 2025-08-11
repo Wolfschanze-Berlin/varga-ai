@@ -12,7 +12,7 @@ from .tool_interface import (
 )
 from .base_tool import BaseTool, RateLimiter
 from .tool_registry import (
-    ToolRegistry,
+    AsyncToolRegistry as ToolRegistry,
     ToolRegistrationError,
     get_tool_registry,
     register_tool,

@@ -10,6 +10,7 @@ from .base import get_tool_registry, ToolRegistry
 from .web_search_tool import WebSearchTool
 from .text_generation_tool import TextGenerationTool
 from .chatbot_interface_tool import ChatbotInterfaceTool
+from .integrations.browser_automation.browser_automation_tool import BrowserAutomationTool
 from .utilities import add_rate_limit_rule, RateLimitScope, RateLimitStrategy
 from ..config import get_settings, get_tool_config
 from ..log_service import get_logger
@@ -49,12 +50,15 @@ class ToolInitializer:
             tools_to_initialize = [
                 ("web_search", WebSearchTool, self.settings.web_search),
                 ("text_generation", TextGenerationTool, self.settings.text_generation),
-                ("chatbot_interface", ChatbotInterfaceTool, self.settings.chatbot)
+                ("chatbot_interface", ChatbotInterfaceTool, self.settings.chatbot),
+                ("browser_automation", BrowserAutomationTool, {"enabled": True, "max_concurrent_tasks": 5})
             ]
             
             for tool_name, tool_class, tool_config in tools_to_initialize:
                 try:
-                    await self._initialize_tool(tool_name, tool_class, tool_config.dict())
+                    # Handle both dict and object configs
+                    config_dict = tool_config.dict() if hasattr(tool_config, 'dict') else tool_config
+                    await self._initialize_tool(tool_name, tool_class, config_dict)
                     results["initialized_tools"].append(tool_name)
                     self.logger.info(f"Successfully initialized tool: {tool_name}")
                 
@@ -130,6 +134,11 @@ class ToolInitializer:
         if tool_name in ["web_search", "text_generation", "chatbot_interface"]:
             if not config.get("api_key"):
                 raise ValueError(f"API key is required for {tool_name}")
+        
+        # Browser automation has different requirements
+        if tool_name == "browser_automation":
+            # Browser automation tool will handle its own configuration validation
+            pass
         
         # Register the tool
         self.registry.register_tool(tool_class, config)

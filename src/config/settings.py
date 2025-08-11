@@ -3,8 +3,8 @@ Configuration management for the AutoGen SME platform.
 Handles environment variables, API keys, and tool configurations.
 """
 
-import os
 from __future__ import annotations
+import os
 from typing import Optional, Dict, Any, List, Annotated
 from pathlib import Path
 from pydantic import BaseModel, Field, field_validator, ConfigDict
@@ -19,7 +19,7 @@ class ToolConfig(BaseSettings):
         env_prefix="TOOL_",
         case_sensitive=False,
         validate_default=True,
-        extra='forbid'
+        extra='ignore'  # Changed to allow flexibility
     )
     
     name: str
@@ -105,7 +105,7 @@ class PlatformSettings(BaseSettings):
         env_file_encoding="utf-8",
         case_sensitive=False,
         validate_default=True,
-        extra='forbid',
+        extra='ignore',  # Changed from 'forbid' to 'ignore' to allow tool-specific env vars
         secrets_dir=Path.home() / '.secrets' if Path.home().exists() else None
     )
     
@@ -128,6 +128,10 @@ class PlatformSettings(BaseSettings):
     # AutoGen
     autogen_cache_dir: Path = Field(default_factory=lambda: Path(".cache/autogen"), env="AUTOGEN_CACHE_DIR")
     autogen_work_dir: Path = Field(default_factory=lambda: Path("./work_dir"), env="AUTOGEN_WORK_DIR")
+    
+    # Telegram Configuration
+    TELEGRAM_BOT_TOKEN: Optional[str] = Field(None, env="TELEGRAM_BOT_TOKEN")
+    TELEGRAM_CHAT_ID: Optional[str] = Field(None, env="TELEGRAM_CHAT_ID")
     
     # Tool Configurations (disabled by default to avoid requiring API keys)
     web_search: WebSearchConfig = Field(default_factory=lambda: WebSearchConfig(enabled=False))
@@ -270,3 +274,6 @@ def get_config_manager() -> ConfigManager:
     if _config_manager is None:
         _config_manager = ConfigManager()
     return _config_manager
+
+# Create singleton settings instance for easy import
+settings = get_settings()

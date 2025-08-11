@@ -12,7 +12,8 @@ from .settings import (
     ConfigManager,
     get_settings,
     get_tool_config,
-    get_config_manager
+    get_config_manager,
+    settings
 )
 
 __all__ = [
@@ -24,5 +25,6 @@ __all__ = [
     "ConfigManager",
     "get_settings",
     "get_tool_config",
-    "get_config_manager"
+    "get_config_manager",
+    "settings"
 ]

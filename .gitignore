@@ -1,11 +1,223 @@
-# Python-generated files
+# Python
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+*.so
+*.pyo
+*.pyd
+.Python
 build/
+develop-eggs/
 dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
 wheels/
-*.egg-info
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
 
-# Virtual environments
+# Virtual Environments
+.env
 .venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
 .sample/
+
+# UV Package Manager
+.uv/
+uv.lock
+
+# AutoGen Specific
+autogen*.db
+browser_sessions/
+work_dir/
+.cache/
+conversation_memory/
+agent_logs/
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+database.sqlite
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+!.env.template
+
+# IDE and Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.fleet/
+*.sublime-project
+*.sublime-workspace
+
+# Node.js (for Docusaurus in gutenberg/)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+.npm
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Docusaurus (gutenberg/)
+gutenberg/.docusaurus/
+gutenberg/.cache-loader/
+gutenberg/build/
+gutenberg/node_modules/
+
+# Testing
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Environments
+.spyderproject
+.spyproject
+.ropeproject
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython
+cython_debug/
+
+# Claude Configuration (keep CLAUDE.md and context)
+.claude/agents/
+!.claude/CLAUDE.md
+!.claude/context/
+
+# Screenshots and Media
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.avi
+!gutenberg/static/img/
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+~*
+tmp/
+temp/
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Secrets and Keys
+*.pem
+*.key
+*.crt
+*.cert
+secrets/
+private/
+credentials/
+
+# Archive Files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Monitoring and Profiling
+*.prof
+*.stats
+.monitor/
+
+# Project Specific
+files/
+alembic/versions/*.py
+!alembic/versions/__init__.py
+configs/*.yaml
+!configs/example.yaml
+
+# Keep Important Files
+!README.md
+!CLAUDE.md
+!projectBrief.md
+!LICENSE
+!.gitignore
+!.gitmodules
+!pyproject.toml
+!package.json
+!package-lock.json
+!tsconfig.json
+!docusaurus.config.ts
+!sidebars.ts
