@@ -16,6 +16,7 @@ from pydantic import BaseModel, Field
 
 from ....log_service import get_logger
 from ...base.base_tool import BaseTool, ToolResult, ToolStatus
+from ...base.tool_interface import ToolMetadata, ToolCapability
 from .browser_use_wrapper import BrowserUseWrapper
 from .session_manager import BrowserSessionManager
 from .task_classifier import TaskClassifier, TaskType, TaskComplexity
@@ -111,6 +112,107 @@ class BrowserOrchestrator(BaseTool):
             "playwright_successes": 0,
             "routing_decisions": {}
         }
+    
+    @property
+    def metadata(self) -> ToolMetadata:
+        """Get tool metadata."""
+        return ToolMetadata(
+            name="browser_orchestrator",
+            version="0.1.0",
+            description="Orchestrates browser automation tasks between browser-use and playwright",
+            capabilities=[ToolCapability.AUTOMATION, ToolCapability.ANALYSIS],
+            input_schema={
+                "type": "object",
+                "properties": {
+                    "description": {
+                        "type": "string",
+                        "description": "Natural language description of the browser task"
+                    },
+                    "url": {
+                        "type": "string",
+                        "description": "Optional starting URL for the task"
+                    },
+                    "parameters": {
+                        "type": "object",
+                        "description": "Additional parameters for task execution"
+                    },
+                    "timeout_seconds": {
+                        "type": "integer",
+                        "description": "Task timeout in seconds",
+                        "default": 300
+                    }
+                },
+                "required": ["description"]
+            },
+            output_schema={
+                "type": "object",
+                "properties": {
+                    "success": {"type": "boolean"},
+                    "data": {"type": "object"},
+                    "error": {"type": "string"},
+                    "execution_time_ms": {"type": "number"},
+                    "tool_used": {"type": "string"},
+                    "screenshots": {
+                        "type": "array",
+                        "items": {"type": "string"}
+                    }
+                }
+            },
+            tags=["browser", "automation", "orchestrator"]
+        )
+    
+    async def validate_input(self, input_data: Dict[str, Any]) -> bool:
+        """
+        Validate input data for browser automation tasks.
+        
+        Args:
+            input_data: Input data to validate
+            
+        Returns:
+            True if input is valid, False otherwise
+        """
+        try:
+            # Check required fields
+            if not input_data.get("description"):
+                self.logger.error("Missing required field: description")
+                return False
+            
+            # Validate description is string and not empty
+            description = input_data.get("description")
+            if not isinstance(description, str) or len(description.strip()) == 0:
+                self.logger.error("Description must be a non-empty string")
+                return False
+            
+            # Validate URL if provided
+            url = input_data.get("url")
+            if url is not None:
+                if not isinstance(url, str):
+                    self.logger.error("URL must be a string")
+                    return False
+                
+                # Basic URL format validation
+                if not (url.startswith("http://") or url.startswith("https://")):
+                    self.logger.error("URL must start with http:// or https://")
+                    return False
+            
+            # Validate parameters if provided
+            parameters = input_data.get("parameters")
+            if parameters is not None and not isinstance(parameters, dict):
+                self.logger.error("Parameters must be a dictionary")
+                return False
+            
+            # Validate timeout if provided
+            timeout = input_data.get("timeout_seconds")
+            if timeout is not None:
+                if not isinstance(timeout, int) or timeout <= 0 or timeout > 3600:
+                    self.logger.error("Timeout must be a positive integer <= 3600 seconds")
+                    return False
+            
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Input validation error: {e}")
+            return False
     
     async def setup(self) -> bool:
         """Setup the browser orchestrator and all components."""

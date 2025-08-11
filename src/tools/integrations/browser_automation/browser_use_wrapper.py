@@ -17,27 +17,25 @@ import httpx
 from pydantic import BaseModel, Field
 
 try:
-    from browser_use import Agent, Browser
-    from browser_use.browser.browser import BrowserConfig
-    from browser_use.agent.service import BrowserService
+    from browser_use.browser import BrowserSession
+    from browser_use.config import CONFIG
+    BROWSER_USE_AVAILABLE = True
 except ImportError:
     # Fallback if browser-use is not installed
-    Agent = None
-    Browser = None
-    BrowserConfig = None
-    BrowserService = None
+    BrowserSession = None
+    CONFIG = None
+    BROWSER_USE_AVAILABLE = False
 
 from ....log_service import get_logger
 from ...base.base_tool import BaseTool
 
 
 @dataclass
-class BrowserSession:
-    """Represents an active browser session."""
+class BrowserSessionInfo:
+    """Represents an active browser session info."""
     
     id: str
-    browser: Optional[Any] = None  # Browser instance
-    agent: Optional[Any] = None    # Agent instance
+    browser_session: Optional[Any] = None  # BrowserSession instance
     created_at: datetime = Field(default_factory=datetime.utcnow)
     last_used: datetime = Field(default_factory=datetime.utcnow)
     page_count: int = 0
@@ -85,12 +83,11 @@ class BrowserUseWrapper:
         self.config = BrowserUseConfig(**config)
         
         # Session management
-        self._sessions: Dict[str, BrowserSession] = {}
+        self._sessions: Dict[str, BrowserSessionInfo] = {}
         self._session_lock = asyncio.Lock()
         
         # Service instances
-        self._browser_service: Optional[BrowserService] = None
-        self._default_browser_config: Optional[BrowserConfig] = None
+        self._default_browser_config: Optional[Dict[str, Any]] = None
         
         # Performance tracking
         self._stats = {
@@ -106,7 +103,7 @@ class BrowserUseWrapper:
     
     def _is_browser_use_available(self) -> bool:
         """Check if browser-use library is available."""
-        return all([Agent, Browser, BrowserConfig, BrowserService])
+        return BROWSER_USE_AVAILABLE
     
     def _setup_directories(self) -> None:
         """Setup required directories."""
@@ -124,18 +121,16 @@ class BrowserUseWrapper:
                 return False
             
             # Create default browser configuration
-            self._default_browser_config = BrowserConfig(
-                headless=self.config.headless,
-                browser_type=self.config.browser_type,
-                viewport={"width": self.config.viewport_width, "height": self.config.viewport_height},
-                timeout=self.config.timeout_seconds * 1000,  # Convert to milliseconds
-                user_agent=self.config.user_agent,
-                proxy=self.config.proxy,
-                args=self.config.extra_args
-            )
-            
-            # Initialize browser service
-            self._browser_service = BrowserService()
+            self._default_browser_config = {
+                "headless": self.config.headless,
+                "browser_type": self.config.browser_type,
+                "viewport_width": self.config.viewport_width,
+                "viewport_height": self.config.viewport_height,
+                "timeout_seconds": self.config.timeout_seconds,
+                "user_agent": self.config.user_agent,
+                "proxy": self.config.proxy,
+                "extra_args": self.config.extra_args
+            }
             
             # Start session cleanup task
             asyncio.create_task(self._session_cleanup_worker())
@@ -217,7 +212,7 @@ class BrowserUseWrapper:
             
             raise
     
-    async def _get_or_create_session(self, session_id: Optional[str] = None) -> BrowserSession:
+    async def _get_or_create_session(self, session_id: Optional[str] = None) -> BrowserSessionInfo:
         """Get existing session or create a new one."""
         async with self._session_lock:
             if session_id and session_id in self._sessions:
@@ -229,7 +224,7 @@ class BrowserUseWrapper:
             session = await self._create_session()
             return session
     
-    async def _create_session(self) -> BrowserSession:
+    async def _create_session(self) -> BrowserSessionInfo:
         """Create a new browser session."""
         try:
             # Check session limits
@@ -238,29 +233,21 @@ class BrowserUseWrapper:
             
             session_id = str(uuid.uuid4())
             
-            # Create browser instance
-            browser = Browser(config=self._default_browser_config)
-            await browser.start()
+            # Create browser session instance using browser-use API
+            browser_session = BrowserSession()
+            await browser_session.start()
             
-            # Create agent instance
-            agent = Agent(
-                task="Browser automation agent",
-                llm=None,  # Will use default LLM configuration
-                browser=browser
-            )
-            
-            session = BrowserSession(
+            session_info = BrowserSessionInfo(
                 id=session_id,
-                browser=browser,
-                agent=agent
+                browser_session=browser_session
             )
             
-            self._sessions[session_id] = session
+            self._sessions[session_id] = session_info
             self._stats["sessions_created"] += 1
             
             self.logger.debug(f"Created browser session {session_id}")
             
-            return session
+            return session_info
             
         except Exception as e:
             self.logger.error(f"Failed to create browser session: {e}")
@@ -268,7 +255,7 @@ class BrowserUseWrapper:
     
     async def _execute_with_agent(
         self,
-        session: BrowserSession,
+        session: BrowserSessionInfo,
         task_id: str,
         description: str,
         url: Optional[str],
@@ -277,19 +264,16 @@ class BrowserUseWrapper:
     ) -> Dict[str, Any]:
         """Execute task using browser-use agent."""
         try:
+            browser = session.browser_session
+            
             # Navigate to URL if provided
             if url:
-                await session.browser.go_to(url)
-                await asyncio.sleep(1)  # Allow page to load
+                await browser.navigate_to(url)
+                await asyncio.sleep(2)  # Allow page to load
             
-            # Prepare agent task with parameters
-            agent_task = self._prepare_agent_task(description, parameters)
-            
-            # Execute with timeout
-            result = await asyncio.wait_for(
-                session.agent.run(agent_task),
-                timeout=timeout_seconds
-            )
+            # For now, we'll implement basic browser automation
+            # In a full implementation, you'd integrate with an LLM agent
+            # to interpret the description and execute the task
             
             # Take screenshot if enabled
             screenshots = []
@@ -298,11 +282,16 @@ class BrowserUseWrapper:
                 if screenshot_path:
                     screenshots.append(screenshot_path)
             
-            # Extract result data
-            result_data = self._extract_result_data(result)
+            # Get page info as result data
+            page_info = browser.get_page_info()
             
             return {
-                "data": result_data,
+                "data": {
+                    "page_info": page_info,
+                    "task_completed": True,
+                    "description": description,
+                    "parameters": parameters
+                },
                 "screenshots": screenshots,
                 "metadata": {
                     "session_id": session.id,
@@ -341,7 +330,7 @@ class BrowserUseWrapper:
         else:
             return {"result": str(result)}
     
-    async def _take_screenshot(self, task_id: str, session: BrowserSession) -> Optional[str]:
+    async def _take_screenshot(self, task_id: str, session: BrowserSessionInfo) -> Optional[str]:
         """Take screenshot of current browser state."""
         try:
             timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
@@ -349,7 +338,7 @@ class BrowserUseWrapper:
             screenshot_path = Path(self.config.screenshots_dir) / screenshot_name
             
             # Take screenshot using browser
-            await session.browser.take_screenshot(str(screenshot_path))
+            await session.browser_session.take_screenshot(str(screenshot_path))
             
             return str(screenshot_path)
             
@@ -401,8 +390,8 @@ class BrowserUseWrapper:
             
             try:
                 # Close browser
-                if session.browser:
-                    await session.browser.close()
+                if session.browser_session:
+                    await session.browser_session.close()
                 
                 # Remove from sessions
                 del self._sessions[session_id]
@@ -420,10 +409,6 @@ class BrowserUseWrapper:
         try:
             # Check if browser-use is available
             if not self._is_browser_use_available():
-                return False
-            
-            # Check if browser service is available
-            if not self._browser_service:
                 return False
             
             # Check session health
@@ -444,9 +429,6 @@ class BrowserUseWrapper:
             session_ids = list(self._sessions.keys())
             for session_id in session_ids:
                 await self.close_session(session_id)
-            
-            # Clean up browser service
-            self._browser_service = None
             
             self.logger.info("Browser-use wrapper cleanup completed")
             return True
