@@ -1,4 +1,6 @@
+# ==========================================
 # Python
+# ==========================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -26,7 +28,9 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
+# ==========================================
 # Virtual Environments
+# ==========================================
 .env
 .venv
 env/
@@ -36,50 +40,130 @@ env.bak/
 venv.bak/
 .sample/
 
-# UV Package Manager
+# ==========================================
+# Package Managers
+# ==========================================
+# UV
 .uv/
 uv.lock
 
-# AutoGen Specific
-autogen*.db
-.cache/
-agent_logs/
-*.log
+# Poetry
+poetry.lock
+.poetry/
 
-# Data directories (all data is deployment-specific)
+# Pipenv
+Pipfile.lock
+
+# ==========================================
+# Project Structure - Runtime Data
+# ==========================================
+# All runtime/deployment data in hidden .data directory
 .data/
+
+# Legacy data directories (if they exist)
 browser_sessions/
 work_dir/
 conversation_memory/
 logs/
 files/
 screenshots/
+data/
 
+# ==========================================
+# AutoGen & AI Specific
+# ==========================================
+# AutoGen databases
+autogen*.db
+*.autogen.db
+
+# Agent runtime
+agent_logs/
+agent_cache/
+agent_sessions/
+
+# Model caches
+.cache/
+model_cache/
+.model_cache/
+
+# ==========================================
 # Database
+# ==========================================
 *.db
 *.sqlite
 *.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
 database.sqlite
 
-# Environment Variables
+# Alembic versions (keep only __init__.py)
+src/alembic/versions/*.py
+!src/alembic/versions/__init__.py
+
+# ==========================================
+# Logs
+# ==========================================
+*.log
+*.log.*
+logs/
+log/
+*.out
+*.err
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
 .env
 .env.*
 !.env.example
 !.env.template
 
-# IDE and Editor
+# Secrets
+*.pem
+*.key
+*.crt
+*.cert
+secrets/
+private/
+credentials/
+.secrets/
+
+# ==========================================
+# IDE and Editors
+# ==========================================
+# VSCode
 .vscode/
+*.code-workspace
+
+# IntelliJ/PyCharm
 .idea/
-*.swp
-*.swo
-*~
-.DS_Store
-Thumbs.db
-.fleet/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
 *.sublime-project
 *.sublime-workspace
 
-# Node.js (for Docusaurus in gutenberg/)
+# Vim
+*.swp
+*.swo
+*.swn
+*~
+.*.swp
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# JetBrains
+.fleet/
+
+# ==========================================
+# Node.js & Frontend (gutenberg/)
+# ==========================================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
@@ -87,19 +171,19 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 .npm
-.yarn/cache
-.yarn/unplugged
-.yarn/build-state.yml
-.yarn/install-state.gz
+.yarn/
 .pnp.*
 
-# Docusaurus (gutenberg/)
+# Docusaurus specific
 gutenberg/.docusaurus/
 gutenberg/.cache-loader/
 gutenberg/build/
 gutenberg/node_modules/
+gutenberg/.env.local
 
-# Testing
+# ==========================================
+# Testing & Coverage
+# ==========================================
 htmlcov/
 .tox/
 .nox/
@@ -113,24 +197,36 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
+test-results/
+test-reports/
 
-# Jupyter Notebook
+# ==========================================
+# Jupyter Notebooks
+# ==========================================
 .ipynb_checkpoints
 *.ipynb
+!examples/*.ipynb
+!docs/*.ipynb
 
+# ==========================================
+# Python Tools
+# ==========================================
 # pyenv
 .python-version
 
 # Celery
 celerybeat-schedule
 celerybeat.pid
+celerybeat-schedule.db
 
 # SageMath
 *.sage.py
 
-# Environments
+# Spyder
 .spyderproject
 .spyproject
+
+# Rope
 .ropeproject
 
 # mkdocs
@@ -150,20 +246,31 @@ dmypy.json
 # Cython
 cython_debug/
 
-# Claude Configuration (keep CLAUDE.md and context)
-!.claude/CLAUDE.md
-!.claude/context/
-
-# Media Files
+# ==========================================
+# Media & Binary Files
+# ==========================================
 *.png
 *.jpg
 *.jpeg
 *.gif
+*.bmp
+*.svg
+*.ico
 *.mp4
+*.mp3
 *.avi
-!gutenberg/static/img/
+*.mov
+*.wav
+*.pdf
 
+# Keep documentation images
+!gutenberg/static/img/**
+!docs/images/**
+!README_images/**
+
+# ==========================================
 # Temporary Files
+# ==========================================
 *.tmp
 *.temp
 *.bak
@@ -172,52 +279,84 @@ cython_debug/
 ~*
 tmp/
 temp/
+.tmp/
+.temp/
 
+# ==========================================
 # OS Files
+# ==========================================
+# macOS
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
+
+# Windows
 Thumbs.db
+ehthumbs.db
 desktop.ini
+$RECYCLE.BIN/
 
-# Secrets and Keys
-*.pem
-*.key
-*.crt
-*.cert
-secrets/
-private/
-credentials/
+# Linux
+.directory
+.Trash-*
 
-# Archive Files
+# ==========================================
+# Archives
+# ==========================================
 *.zip
 *.tar
 *.tar.gz
+*.tar.bz2
 *.rar
 *.7z
+*.gz
+*.bz2
 
-# Monitoring and Profiling
+# ==========================================
+# Monitoring & Profiling
+# ==========================================
 *.prof
 *.stats
 .monitor/
+.profiling/
 
-# Project Specific
-src/alembic/versions/*.py
-!src/alembic/versions/__init__.py
+# ==========================================
+# Claude Configuration
+# ==========================================
+# Keep Claude configuration files
+!.claude/
+!.claude/**
+.claude/cache/
+.claude/tmp/
 
+# ==========================================
 # Keep Important Files
+# ==========================================
 !README.md
 !CLAUDE.md
 !projectBrief.md
 !LICENSE
 !.gitignore
+!.gitkeep
 !.gitmodules
+
+# Configuration files
 !pyproject.toml
 !package.json
 !package-lock.json
 !tsconfig.json
 !docusaurus.config.ts
 !sidebars.ts
+!alembic.ini
+!requirements.txt
+!requirements-dev.txt
+
+# GitHub
+!.github/
+!.github/**
+
+# Documentation
+!docs/
+!*.md
