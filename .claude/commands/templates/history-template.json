@@ -1,0 +1,208 @@
+{
+  "project": {
+    "name": "[PROJECT_NAME]",
+    "type": "[web-app|cli|library|api|desktop|mobile|ml-model|other]",
+    "initialized": "[YYYY-MM-DD]",
+    "version": "0.1.0",
+    "language": "[python|javascript|typescript|go|rust|java|csharp|other]",
+    "framework": "[react|vue|angular|django|fastapi|express|spring|other]",
+    "description": "[Brief project description]",
+    "repository": "[Git repository URL]",
+    "team_size": "[Number of developers]",
+    "phase": "[discovery|development|testing|staging|production]"
+  },
+  "metadata": {
+    "workflow_version": "1.0.0",
+    "claude_version": "[Claude version used]",
+    "last_updated": "[YYYY-MM-DD HH:MM]",
+    "update_frequency": "[daily|weekly|on-change]"
+  },
+  "history": [
+    {
+      "timestamp": "[YYYY-MM-DD HH:MM]",
+      "action": "[Action taken]",
+      "category": "[setup|feature|bugfix|refactor|docs|test|deploy|config]",
+      "details": {
+        "description": "[Detailed description]",
+        "files_affected": [],
+        "dependencies_added": [],
+        "dependencies_removed": [],
+        "breaking_changes": false,
+        "migration_required": false,
+        "rollback_procedure": "[If applicable]"
+      },
+      "outcome": {
+        "status": "[success|partial|failed|rolled-back]",
+        "metrics": {
+          "time_taken": "[Duration]",
+          "tests_passed": "[Number or percentage]",
+          "coverage_change": "[+/- percentage]",
+          "performance_impact": "[improved|neutral|degraded]"
+        },
+        "lessons": []
+      },
+      "author": "[Developer name or Claude]",
+      "reviewed_by": "[Reviewer if applicable]"
+    }
+  ],
+  "learned": {
+    "patterns": {
+      "successful": [
+        {
+          "pattern": "[Pattern name]",
+          "description": "[What works well]",
+          "use_cases": [],
+          "examples": []
+        }
+      ],
+      "avoid": [
+        {
+          "pattern": "[Anti-pattern name]",
+          "description": "[What to avoid]",
+          "reason": "[Why it should be avoided]",
+          "alternative": "[Better approach]"
+        }
+      ]
+    },
+    "conventions": {
+      "naming": {
+        "files": "[File naming convention]",
+        "functions": "[Function naming convention]",
+        "variables": "[Variable naming convention]",
+        "classes": "[Class naming convention]",
+        "constants": "[Constant naming convention]"
+      },
+      "structure": {
+        "folder_organization": "[How folders are organized]",
+        "module_pattern": "[Module organization pattern]",
+        "component_pattern": "[Component structure pattern]"
+      },
+      "code_style": {
+        "indentation": "[spaces|tabs] x [number]",
+        "line_length": "[max characters]",
+        "quotes": "[single|double]",
+        "semicolons": "[always|never|asi]",
+        "trailing_comma": "[always|never|multiline]"
+      }
+    },
+    "decisions": [
+      {
+        "id": "ADR-[NUMBER]",
+        "date": "[YYYY-MM-DD]",
+        "title": "[Decision title]",
+        "status": "[proposed|accepted|deprecated|superseded]",
+        "context": "[Why this decision was needed]",
+        "decision": "[What was decided]",
+        "consequences": {
+          "positive": [],
+          "negative": [],
+          "neutral": []
+        },
+        "alternatives_considered": [],
+        "related_decisions": []
+      }
+    ],
+    "gotchas": [
+      {
+        "issue": "[Common problem]",
+        "symptoms": "[How it manifests]",
+        "solution": "[How to fix it]",
+        "prevention": "[How to avoid it]",
+        "frequency": "[rare|occasional|common]",
+        "severity": "[low|medium|high|critical]"
+      }
+    ],
+    "performance": {
+      "bottlenecks": [],
+      "optimizations": [],
+      "benchmarks": {}
+    },
+    "dependencies": {
+      "critical": [],
+      "problematic": [],
+      "alternatives": {}
+    },
+    "testing": {
+      "strategies": [],
+      "tools": [],
+      "coverage_targets": {},
+      "test_data_locations": []
+    },
+    "deployment": {
+      "environments": [],
+      "procedures": [],
+      "rollback_strategies": [],
+      "monitoring_points": []
+    }
+  },
+  "resources": {
+    "documentation": {
+      "internal": [],
+      "external": []
+    },
+    "tools": {
+      "development": [],
+      "testing": [],
+      "deployment": [],
+      "monitoring": []
+    },
+    "services": {
+      "external_apis": [],
+      "databases": [],
+      "message_queues": [],
+      "cache_systems": []
+    },
+    "team": {
+      "contacts": {},
+      "responsibilities": {},
+      "expertise_areas": {}
+    }
+  },
+  "metrics": {
+    "code_quality": {
+      "test_coverage": "[percentage]",
+      "technical_debt": "[low|medium|high]",
+      "code_complexity": "[metric value]",
+      "documentation_coverage": "[percentage]"
+    },
+    "performance": {
+      "response_time_p50": "[ms]",
+      "response_time_p95": "[ms]",
+      "response_time_p99": "[ms]",
+      "throughput": "[requests/second]",
+      "error_rate": "[percentage]"
+    },
+    "development": {
+      "velocity": "[story points/sprint]",
+      "cycle_time": "[average days]",
+      "deployment_frequency": "[per day|week|month]",
+      "mttr": "[mean time to recovery]",
+      "change_failure_rate": "[percentage]"
+    }
+  },
+  "roadmap": {
+    "completed": [],
+    "in_progress": [],
+    "planned": [],
+    "backlog": [],
+    "ideas": []
+  },
+  "risks": {
+    "identified": [
+      {
+        "risk": "[Risk description]",
+        "probability": "[low|medium|high]",
+        "impact": "[low|medium|high]",
+        "mitigation": "[Mitigation strategy]",
+        "owner": "[Responsible person]",
+        "status": "[open|mitigated|accepted|closed]"
+      }
+    ]
+  },
+  "notes": {
+    "important": [],
+    "tips": [],
+    "warnings": [],
+    "todo": []
+  }
+}

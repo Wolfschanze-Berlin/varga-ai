@@ -159,3 +159,4 @@ The documentation site (gutenberg/) will serve as both project documentation and
 - Everytime when compact you create/update a file in .claude/context/history.json file and write all impoortant fixes and learned know how in it. important do not delete previous data.
 - ALWAYS before you start read the .claude/context/ folder and read all files and ultrathink it.
 - When you start pls output what you files you read
+- Before you start always use context7 mcp tool to get the latest docs
