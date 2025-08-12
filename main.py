@@ -10,12 +10,13 @@ import asyncio
 from typing import Optional, Dict, Any
 from pathlib import Path
 
-# Add project root to path
+# Add project root and src to path
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
+sys.path.insert(0, str(project_root / "src"))
 
 # Configure environment
-os.environ.setdefault('PYTHONPATH', str(project_root))
+os.environ.setdefault('PYTHONPATH', f"{project_root}:{project_root / 'src'}")
 
 # Import logging first
 from src.log_service import get_logger

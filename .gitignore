@@ -42,13 +42,18 @@ uv.lock
 
 # AutoGen Specific
 autogen*.db
+.cache/
+agent_logs/
+*.log
+
+# Data directories (all data is deployment-specific)
+.data/
 browser_sessions/
 work_dir/
-.cache/
 conversation_memory/
-agent_logs/
 logs/
-*.log
+files/
+screenshots/
 
 # Database
 *.db
@@ -149,8 +154,7 @@ cython_debug/
 !.claude/CLAUDE.md
 !.claude/context/
 
-# Screenshots and Media
-screenshots/
+# Media Files
 *.png
 *.jpg
 *.jpeg
@@ -201,11 +205,8 @@ credentials/
 .monitor/
 
 # Project Specific
-files/
-alembic/versions/*.py
-!alembic/versions/__init__.py
-configs/*.yaml
-!configs/example.yaml
+src/alembic/versions/*.py
+!src/alembic/versions/__init__.py
 
 # Keep Important Files
 !README.md
